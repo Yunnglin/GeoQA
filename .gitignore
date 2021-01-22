@@ -1,7 +1,7 @@
 data/
 
-.idea
-.vscode
+.idea/
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -133,6 +133,3 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .idea/.gitignore
-.vscode/
-test/
-utils/
