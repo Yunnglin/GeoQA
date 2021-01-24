@@ -1,5 +1,9 @@
 data/
 
+*.zip
+*.bin
+bert-base-chinese.tar.gz
+
 .idea/
 .vscode/
 

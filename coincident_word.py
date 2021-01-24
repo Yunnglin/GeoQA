@@ -53,8 +53,6 @@ def get_same_word(s1: str, s2: str, word_len=3):
             index += lens
         else:
             index += 1
-    print(s1)
-    print(s2)
     return res, res_index
 
 
@@ -67,6 +65,12 @@ def get_words_with_jieba(s1: str, s2: str):
 
 
 def generate_tags(n, words_index):
+    """
+    根据长度和位置索引产生标签
+    :param n: 长度
+    :param words_index: 位置索引
+    :return: 标签
+    """
     tags = ['O'] * n
     for index in words_index:
         start = index[0]
@@ -78,8 +82,13 @@ def generate_tags(n, words_index):
 
 
 def tagging(cut=False):
-    dicts = read_json_data('../data/data_all/53_data.json')
-    with open('../data/train.txt', 'w', encoding='utf8') as f:
+    """
+    根据最长匹配方法产生BIO标签
+    :param cut: 是否使用jieba分词
+    :return: None
+    """
+    dicts = read_json_data('data/raw/data_all/53_data.json')
+    with open('data/train.txt', 'w', encoding='utf8') as f:
         for question in dicts:
             background = preprocess(question['background'])
             explain = preprocess(question['explanation'])
@@ -88,9 +97,10 @@ def tagging(cut=False):
             else:
                 words, words_index = get_same_word(background, explain)
             print(words)
-            tags = (generate_tags(len(background), words_index))
-            for i in range(len(background)):
-                f.write(background[i] + '\t' + tags[i] + '\n')
+            tags = generate_tags(len(background), words_index)
+            # for i in range(len(background)):
+            #     f.write(background[i] + '\t' + tags[i] + '\n')
+            f.write(' '.join(background) + '|||' + ' '.join(tags) + '\n')
 
 
 tagging(False)
