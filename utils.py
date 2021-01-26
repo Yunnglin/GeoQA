@@ -42,14 +42,14 @@ def read_corpus(path, max_length, label_dic, vocab):
         text, label = line.strip().split('|||')
         tokens = text.split()
         label = label.split()
-        if len(tokens) > max_length-2:
-            tokens = tokens[0:(max_length-2)]
-            label = label[0:(max_length-2)]
-        tokens_f =['[CLS]'] + tokens + ['[SEP]']
+        if len(tokens) > max_length - 2:
+            tokens = tokens[0:(max_length - 2)]
+            label = label[0:(max_length - 2)]
+        tokens_f = ['[CLS]'] + tokens + ['[SEP]']
         label_f = ["<start>"] + label + ['<eos>']
         input_ids = [int(vocab[i]) if i in vocab else int(vocab['[UNK]']) for i in tokens_f]
         label_ids = [label_dic[i] for i in label_f]
-        input_mask = [1] * len(input_ids)
+        input_mask = [1] * len(input_ids)  # user bool instead of uint8
         while len(input_ids) < max_length:
             input_ids.append(0)
             input_mask.append(0)
@@ -75,7 +75,7 @@ def save_model(model, epoch, path='result', **kwargs):
     if not os.path.exists(path):
         os.mkdir(path)
     if kwargs.get('name', None) is None:
-        cur_time = datetime.datetime.now().strftime('%Y-%m-%d#%H:%M:%S')
+        cur_time = datetime.datetime.now().strftime('%Y-%m-%d#%H_%M_%S')
         name = cur_time + '--epoch:{}'.format(epoch)
         full_name = os.path.join(path, name)
         torch.save(model.state_dict(), full_name)
@@ -91,10 +91,8 @@ def load_model(model, path='result', **kwargs):
             content = file.read().strip()
             name = os.path.join(path, content)
     else:
-        name=kwargs['name']
-        name = os.path.join(path,name)
+        name = kwargs['name']
+        name = os.path.join(path, name)
     model.load_state_dict(torch.load(name, map_location=lambda storage, loc: storage))
     print('load model {} successfully'.format(name))
     return model
-
-

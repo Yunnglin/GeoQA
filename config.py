@@ -11,7 +11,7 @@ class Config(object):
         self.max_length = 300
         self.use_cuda = True
         self.gpu = 0
-        self.batch_size = 50
+        self.batch_size = 5
         self.bert_path = './data/bert'
         self.rnn_hidden = 500
         self.bert_embedding = 768

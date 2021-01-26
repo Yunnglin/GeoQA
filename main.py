@@ -25,14 +25,14 @@ def train(**kwargs):
     dev_data = read_corpus(config.dev_file, max_length=config.max_length, label_dic=label_dic, vocab=vocab)
 
     train_ids = torch.LongTensor([temp.input_id for temp in train_data])
-    train_masks = torch.LongTensor([temp.input_mask for temp in train_data])
+    train_masks = torch.BoolTensor([temp.input_mask for temp in train_data])
     train_tags = torch.LongTensor([temp.label_id for temp in train_data])
 
     train_dataset = TensorDataset(train_ids, train_masks, train_tags)
     train_loader = DataLoader(train_dataset, shuffle=True, batch_size=config.batch_size)
 
     dev_ids = torch.LongTensor([temp.input_id for temp in dev_data])
-    dev_masks = torch.LongTensor([temp.input_mask for temp in dev_data])
+    dev_masks = torch.BoolTensor([temp.input_mask for temp in dev_data])
     dev_tags = torch.LongTensor([temp.label_id for temp in dev_data])
 
     dev_dataset = TensorDataset(dev_ids, dev_masks, dev_tags)
@@ -61,7 +61,7 @@ def train(**kwargs):
             loss = model.loss(feats, masks, tags)
             loss.backward()
             optimizer.step()
-            if step % 50 == 0:
+            if step % 10 == 0:
                 print('step: {} |  epoch: {}|  loss: {}'.format(step, epoch, loss.item()))
         loss_temp = dev(model, dev_loader, epoch, config)
         if loss_temp < eval_loss:

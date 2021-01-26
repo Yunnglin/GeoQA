@@ -76,10 +76,10 @@ class CRF(nn.Module):
                 batch_size, tag_size, 1).expand(batch_size, tag_size, tag_size)
             cur_partition = log_sum_exp(cur_values, tag_size)
             mask_idx = mask[idx, :].view(batch_size, 1).expand(batch_size, tag_size)
-            masked_cur_partition = cur_partition.masked_select(mask_idx.byte())
+            masked_cur_partition = cur_partition.masked_select(mask_idx.byte().bool())
             if masked_cur_partition.dim() != 0:
                 mask_idx = mask_idx.contiguous().view(batch_size, tag_size, 1)
-                partition.masked_scatter_(mask_idx.byte(), masked_cur_partition)
+                partition.masked_scatter_(mask_idx.byte().bool(), masked_cur_partition)
         cur_values = self.transitions.view(1, tag_size, tag_size).expand(
             batch_size, tag_size, tag_size) + partition.contiguous().view(
                 batch_size, tag_size, 1).expand(batch_size, tag_size, tag_size)
@@ -129,7 +129,7 @@ class CRF(nn.Module):
             partition, cur_bp = torch.max(cur_values, 1)
             partition_history.append(partition.unsqueeze(-1))
 
-            cur_bp.masked_fill_(mask[idx].view(batch_size, 1).expand(batch_size, tag_size), 0)
+            cur_bp.masked_fill_(mask[idx].view(batch_size, 1).bool().expand(batch_size, tag_size), 0)
             back_points.append(cur_bp)
 
         partition_history = torch.cat(partition_history).view(
@@ -204,7 +204,7 @@ class CRF(nn.Module):
         new_tags = new_tags.transpose(1, 0).contiguous().view(seq_len, batch_size, 1)
         tg_energy = torch.gather(scores.view(seq_len, batch_size, -1), 2, new_tags).view(
             seq_len, batch_size)
-        tg_energy = tg_energy.masked_select(mask.transpose(1, 0))
+        tg_energy = tg_energy.masked_select(mask.transpose(1, 0).bool())
 
         gold_score = tg_energy.sum() + end_energy.sum()
 
