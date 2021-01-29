@@ -11,6 +11,15 @@ from torch.utils.data import DataLoader
 import fire
 
 
+def get_model(config, tagset_size):
+    model = BERT_LSTM_CRF(config.bert_path, tagset_size, config.bert_embedding, config.rnn_hidden, config.rnn_layer,
+                          dropout_ratio=config.dropout_ratio, dropout1=config.dropout1, use_cuda=config.use_cuda)
+
+    assert config.load_path is not None
+    model = load_model(model, name=config.load_path)
+    return model
+
+
 def train(**kwargs):
     config = Config()
     config.update(**kwargs)
@@ -81,7 +90,7 @@ def dev(model, dev_loader, epoch, config):
         if config.use_cuda:
             inputs, masks, tags = inputs.cuda(), masks.cuda(), tags.cuda()
         feats = model(inputs, masks)
-        path_score, best_path = model.crf(feats, masks.byte())
+        path_score, best_path = model.crf(feats, masks.byte().bool())
         loss = model.loss(feats, masks, tags)
         eval_loss += loss.item()
         pred.extend([t for t in best_path])
