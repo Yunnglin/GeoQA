@@ -7,12 +7,12 @@ class Config(object):
         self.train_file = './data/train.txt'
         self.dev_file = './data/dev.txt'
         self.test_file = './data/test.txt'
-        self.vocab = './data/bert/vocab.txt'
+        self.vocab = './bert/vocab.txt'
         self.max_length = 300
         self.use_cuda = True
         self.gpu = 0
         self.batch_size = 5
-        self.bert_path = './data/bert'
+        self.bert_path = 'bert'
         self.rnn_hidden = 500
         self.bert_embedding = 768
         self.dropout1 = 0.5

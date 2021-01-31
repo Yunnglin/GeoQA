@@ -1,9 +1,11 @@
-data/
+data/raw/
 result/
+test/
+
+train.txt
 
 *.zip
 *.bin
-bert-base-chinese.tar.gz
 
 .idea/
 .vscode/
