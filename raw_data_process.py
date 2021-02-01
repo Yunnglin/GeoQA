@@ -1,11 +1,15 @@
 import json
 import re
+from collections import defaultdict
+
 import jieba
 
 E_symbols = u',.!?[]()<>'
 C_symbols = u'，。！？【】（）《》'
 
 STOPWORDS = ['图示', '我国', '图中', '国家']
+
+SINGAL_DICT = defaultdict(int)  # 统计单字
 
 
 def preprocess(sentence: str) -> str:
@@ -34,7 +38,7 @@ def get_stopwords(file_path) -> list:
     return stopwords
 
 
-def get_same_word(s1: str, s2: str, word_len=2):
+def get_same_word(s1: str, s2: str, word_len=1):
     """
     提取两个字符串的相同部分，尽量长
     :param word_len: 标注的连续词语长度
@@ -60,6 +64,9 @@ def get_same_word(s1: str, s2: str, word_len=2):
             if len(word) >= word_len and word not in STOPWORDS:
                 res.append(word)
                 res_index.append([index, index + lens])
+                # 统计单字词频
+                if len(word) == 1:
+                    SINGAL_DICT[word] += 1
             index += lens
         else:
             index += 1
@@ -102,37 +109,42 @@ def tagging(files=[], cut=False):
     for file in files:
         dicts.extend(read_json_data(file))
     with open('data/train.txt', 'w', encoding='utf8') as f:
-        for idx, question in enumerate(dicts):
+        for idx, total_question in enumerate(dicts):
             # 提取背景和解析
             background_keys = ['background', 'scenario_text']
             for k in background_keys:
-                if k in question:
-                    background = question[k]
+                if k in total_question:
+                    background = total_question[k]
                     break
-            explain = question['explanation']
+            explain = total_question['explanation']
+            question = total_question['question']
             # 预处理
             background = preprocess(background)
             explain = preprocess(explain)
+            question = preprocess(question)
             # 寻找重合词
-            words, words_index_back = get_same_word(background, explain)
-            words, words_index_explain = get_same_word(explain, background)
+            words_back, words_index_back = get_same_word(background, explain, word_len=2)
+            words_question, words_index_question = get_same_word(question, explain, word_len=2)
             # 生成标签
             tags_back = generate_tags(len(background), words_index_back)
-            tags_explain = generate_tags(len(explain), words_index_explain)
-            if idx < 5:
-                print(f"--example_{idx}--")
+            tags_question = generate_tags(len(question), words_index_question)
+            if idx < 10:
+                print(f"--example_{idx + 1}--")
+                print("question: " + question)
+                print("words_question: " + ' | '.join(words_question))
+                print("tags_question: " + ' '.join(tags_question))
                 print("background: " + background)
                 print("tags_back: " + ' '.join(tags_back))
+                print("words_back: " + ' | '.join(words_back))
                 print("explain: " + explain)
-                print("tags_explain: " + ' '.join(tags_explain))
-                print("words: " + ' | '.join(words))
 
             f.write('-DOC_START-\n')
+            for i in range(len(question)):
+                f.write(question[i] + ' ' + tags_question[i] + '\n')
+            f.write('\n')
             for i in range(len(background)):
                 f.write(background[i] + ' ' + tags_back[i] + '\n')
-            f.write('\n')
-            for i in range(len(explain)):
-                f.write(explain[i] + ' ' + tags_explain[i] + '\n')
+
             # f.write(' '.join(background) + '|||' + ' '.join(tags) + '\n')
 
 
@@ -140,4 +152,5 @@ if __name__ == '__main__':
     STOPWORDS.extend(get_stopwords('./data/stopwords.txt'))
     file_paths = ['./data/raw/data_all/53_data.json', './data/raw/data_all/websoft_data.json']
     tagging(file_paths, cut=False)
+    # print(sorted(SINGAL_DICT.items(), key=lambda kv: (kv[1], kv[0]), reverse=True))
     # print(type(read_json_data('data/raw/data_all/53_data.json')))
