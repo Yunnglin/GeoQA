@@ -166,11 +166,11 @@ def convert_examples_to_features(examples: [InputExample],
         text_a_len += 1  # 扩展一位SEP
         segment_ids = [sequence_a_segment_id] * text_a_len
         segment_ids += [sequence_b_segment_id] * (len(tokens) - text_a_len)
-
+        # 添加CLS标记
         tokens = [cls_token] + tokens
         label_ids = [label_map['O']] + label_ids
         segment_ids = [cls_token_segment_id] + segment_ids
-
+        # token转id
         input_ids = tokenizer.convert_tokens_to_ids(tokens)
         input_mask = [1 if mask_padding_with_zero else 0] * len(input_ids)
         input_len = len(label_ids)
