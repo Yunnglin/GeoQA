@@ -92,12 +92,17 @@ class DataProcessor(object):
                 elif line == "" or line == '\n':
                     data_dict['text_a_len'] = text_a_len
                 else:
-                    splits = line.split(' ')
-                    words.append(splits[0])  # 词
-                    labels.append(splits[1].replace('\n', ''))  # 词的标注
-                    text_a_len += 1
+                    try:
+                        splits = line.strip().split(' ')
+                        words.append(splits[0])  # 词
+                        labels.append(splits[1])  # 词的标注
+                        text_a_len += 1
+                    except IndexError:
+                        print(splits[0])
             if words:
-                datas_list.append(data_dict)
+                data_dict['words'] = words
+                data_dict['labels'] = labels
+                datas_list.append(data_dict.copy())
         return datas_list
 
 
@@ -154,7 +159,7 @@ def convert_examples_to_features(examples: [InputExample],
 
     features = []
     for (ex_index, example) in enumerate(examples):
-        tokens: list = example.text
+        tokens = example.text
         text_a_len = example.text_a_len
         label_ids = [label_map[x] for x in example.labels]
 
@@ -173,16 +178,18 @@ def convert_examples_to_features(examples: [InputExample],
         text_a_len += 1  # 扩展一位SEP
         segment_ids = [sequence_a_segment_id] * text_a_len
         segment_ids += [sequence_b_segment_id] * (len(tokens) - text_a_len)
+
         # 添加CLS标记
         tokens = [cls_token] + tokens
         # 判断是否有重合词
         label_ids = [label_map['<CLS_Y>'] if label_map['B'] in label_ids else label_map['<CLS_N>']] + label_ids
         segment_ids = [cls_token_segment_id] + segment_ids
+
         # token转id
         input_ids = tokenizer.convert_tokens_to_ids(tokens)
         input_mask = [1 if mask_padding_with_zero else 0] * len(input_ids)
         input_len = len(label_ids)
-        padding_length = max_seq_length - len(input_ids)
+        padding_length = max_seq_length - input_len
         if pad_on_left:
             input_ids = ([pad_token] * padding_length) + input_ids
             input_mask = ([0 if mask_padding_with_zero else 1] * padding_length) + input_mask
@@ -193,11 +200,21 @@ def convert_examples_to_features(examples: [InputExample],
             input_mask += [0 if mask_padding_with_zero else 1] * padding_length
             segment_ids += [pad_token_segment_id] * padding_length
             label_ids += [label_map['<PAD>']] * padding_length
+        try:
+            assert len(input_ids) == max_seq_length
+            assert len(input_mask) == max_seq_length
+            assert len(segment_ids) == max_seq_length
+            assert len(label_ids) == max_seq_length
+        except AssertionError:
+            print("ERROR: ")
+            print("tokens: {}".format(" ".join([str(x) for x in tokens])))
+            print("labels: {}".format(" ".join([str(map_label[x]) for x in label_ids])))
+            print("input_ids: {}".format(" ".join([str(x) for x in input_ids])))
+            print("input_mask: {}".format(" ".join([str(x) for x in input_mask])))
+            print("segment_ids: {}".format(" ".join([str(x) for x in segment_ids])))
+            print("label_ids: {}".format(" ".join([str(x) for x in label_ids])))
+            raise Exception
 
-        assert len(input_ids) == max_seq_length
-        assert len(input_mask) == max_seq_length
-        assert len(segment_ids) == max_seq_length
-        assert len(label_ids) == max_seq_length
         if ex_index < 5:
             print("*** Example ***")
             print("guid: {}".format(example.guid))

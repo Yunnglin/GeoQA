@@ -112,7 +112,8 @@ def evaluate(args, model, tokenizer, prefix=""):
 
 if __name__ == "__main__":
     args = get_argparse().parse_args()
-    device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
+    # device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
+    device = 'cpu'
 
     if not os.path.exists(args.output_dir):  # 输出文件
         os.mkdir(args.output_dir)
