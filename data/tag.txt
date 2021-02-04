@@ -1,6 +1,0 @@
-<pad>
-B
-I
-O
-<start>
-<eos>

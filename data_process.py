@@ -112,8 +112,14 @@ class CnerProcessor(DataProcessor):
         return self._create_examples(self.read_text(os.path.join(data_dir, "test.txt")), "test")
 
     def get_labels(self):
-        """See base class."""
-        return ["B", "I", "O", "[START]", "[END]"]
+        """
+        常规BIO标签
+        <CLS_Y> 该数据有重合词时CLS的标签
+        <CLS_N> 该数据没有重合词时CLS的标签
+        <SEP> SEP的标签
+        <PAD> PAD的标签
+        """
+        return ["<PAD>", "B", "I", "O", "<CLS_Y>", "<CLS_N>", "<SEP>", ]
 
     def _create_examples(self, lines, set_type):
         #  {"words": [词1, 词2....],"text_a_len":int, 'labels":[label1, label2, ...]}
@@ -144,6 +150,7 @@ def convert_examples_to_features(examples: [InputExample],
                                  sequence_b_segment_id=1,
                                  mask_padding_with_zero=True, ):
     label_map = {label: i for i, label in enumerate(label_list)}
+    map_label = {i: label for i, label in enumerate(label_list)}
 
     features = []
     for (ex_index, example) in enumerate(examples):
@@ -160,15 +167,16 @@ def convert_examples_to_features(examples: [InputExample],
         tokens += [sep_token]
         tokens.insert(text_a_len, sep_token)
 
-        label_ids += [label_map['O']]
-        label_ids.insert(text_a_len, label_map['O'])
+        label_ids += [label_map['<SEP>']]
+        label_ids.insert(text_a_len, label_map['<SEP>'])
 
         text_a_len += 1  # 扩展一位SEP
         segment_ids = [sequence_a_segment_id] * text_a_len
         segment_ids += [sequence_b_segment_id] * (len(tokens) - text_a_len)
         # 添加CLS标记
         tokens = [cls_token] + tokens
-        label_ids = [label_map['O']] + label_ids
+        # 判断是否有重合词
+        label_ids = [label_map['<CLS_Y>'] if label_map['B'] in label_ids else label_map['<CLS_N>']] + label_ids
         segment_ids = [cls_token_segment_id] + segment_ids
         # token转id
         input_ids = tokenizer.convert_tokens_to_ids(tokens)
@@ -179,12 +187,12 @@ def convert_examples_to_features(examples: [InputExample],
             input_ids = ([pad_token] * padding_length) + input_ids
             input_mask = ([0 if mask_padding_with_zero else 1] * padding_length) + input_mask
             segment_ids = ([pad_token_segment_id] * padding_length) + segment_ids
-            label_ids = ([pad_token] * padding_length) + label_ids
+            label_ids = ([label_map['<PAD>']] * padding_length) + label_ids
         else:
             input_ids += [pad_token] * padding_length
             input_mask += [0 if mask_padding_with_zero else 1] * padding_length
             segment_ids += [pad_token_segment_id] * padding_length
-            label_ids += [pad_token] * padding_length
+            label_ids += [label_map['<PAD>']] * padding_length
 
         assert len(input_ids) == max_seq_length
         assert len(input_mask) == max_seq_length
@@ -194,6 +202,7 @@ def convert_examples_to_features(examples: [InputExample],
             print("*** Example ***")
             print("guid: {}".format(example.guid))
             print("tokens: {}".format(" ".join([str(x) for x in tokens])))
+            print("labels: {}".format(" ".join([str(map_label[x]) for x in label_ids])))
             print("input_ids: {}".format(" ".join([str(x) for x in input_ids])))
             print("input_mask: {}".format(" ".join([str(x) for x in input_mask])))
             print("segment_ids: {}".format(" ".join([str(x) for x in segment_ids])))

@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2020/9/4 15:27
-# @Author  : xiaolu
-# @FileName: metrics.py
-# @Software: PyCharm
 import torch
 from collections import Counter
 

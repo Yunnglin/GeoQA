@@ -178,7 +178,8 @@ if __name__ == "__main__":
             for step, batch in enumerate(train_dataloader):
                 start_time = time.time()
                 batch = tuple(t.to(device) for t in batch)
-                inputs = {'input_ids': batch[0], 'attention_mask': batch[1], 'labels': batch[3], 'input_lens': batch[4]}
+                inputs = {'input_ids': batch[0], 'attention_mask': batch[1], 'token_type_ids': batch[2],
+                          'labels': batch[3], 'input_lens': batch[4]}
                 outputs = model(**inputs)
                 loss = outputs[0]  # model outputs are always tuple in pytorch-transformers (see doc)
 

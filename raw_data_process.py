@@ -1,4 +1,5 @@
 import json
+import random
 import re
 from collections import defaultdict
 
@@ -98,6 +99,14 @@ def generate_tags(n, words_index):
     return tags
 
 
+class ProcessedData:
+    def __init__(self, question, question_label, background, background_label):
+        self.question = question
+        self.question_label = question_label
+        self.background = background
+        self.background_label = background_label
+
+
 def tagging(files=[], cut=False):
     """
     根据最长匹配方法产生BIO标签
@@ -105,52 +114,76 @@ def tagging(files=[], cut=False):
     :param cut: 是否使用jieba分词
     :return: None
     """
-    dicts = []
+    raw_data = []
+    res_data = []
+
     for file in files:
-        dicts.extend(read_json_data(file))
-    with open('data/train.txt', 'w', encoding='utf8') as f:
-        for idx, total_question in enumerate(dicts):
-            # 提取背景和解析
-            background_keys = ['background', 'scenario_text']
-            for k in background_keys:
-                if k in total_question:
-                    background = total_question[k]
-                    break
-            explain = total_question['explanation']
-            question = total_question['question']
-            # 预处理
-            background = preprocess(background)
-            explain = preprocess(explain)
-            question = preprocess(question)
-            # 寻找重合词
-            words_back, words_index_back = get_same_word(background, explain, word_len=2)
-            words_question, words_index_question = get_same_word(question, explain, word_len=2)
-            # 生成标签
-            tags_back = generate_tags(len(background), words_index_back)
-            tags_question = generate_tags(len(question), words_index_question)
-            if idx < 10:
-                print(f"--example_{idx + 1}--")
-                print("question: " + question)
-                print("words_question: " + ' | '.join(words_question))
-                print("tags_question: " + ' '.join(tags_question))
-                print("background: " + background)
-                print("tags_back: " + ' '.join(tags_back))
-                print("words_back: " + ' | '.join(words_back))
-                print("explain: " + explain)
+        raw_data.extend(read_json_data(file))
 
+    for idx, total_question in enumerate(raw_data):
+        # 提取背景和解析
+        background_keys = ['background', 'scenario_text']
+        background = []
+        for k in background_keys:
+            if k in total_question:
+                background = total_question[k]
+                break
+        explain = total_question['explanation']
+        question = total_question['question']
+        # 预处理
+        background = preprocess(background)
+        explain = preprocess(explain)
+        question = preprocess(question)
+        # 寻找重合词
+        words_back, words_index_back = get_same_word(background, explain, word_len=2)
+        words_question, words_index_question = get_same_word(question, explain, word_len=2)
+        # 生成标签
+        tags_back = generate_tags(len(background), words_index_back)
+        tags_question = generate_tags(len(question), words_index_question)
+
+        res_data.append(ProcessedData(question=question,
+                                      question_label=tags_question,
+                                      background=background,
+                                      background_label=tags_back))
+        if idx < 10:
+            print(f"--example_{idx + 1}--")
+            print("question: " + question)
+            print("words_question: " + ' | '.join(words_question))
+            print("tags_question: " + ' '.join(tags_question))
+            print("background: " + background)
+            print("tags_back: " + ' '.join(tags_back))
+            print("words_back: " + ' | '.join(words_back))
+            print("explain: " + explain)
+
+    return res_data
+
+
+def write_processed_data(data_type, processed_data: [ProcessedData]):
+    with open('data/{}.txt'.format(data_type), 'w', encoding='utf8') as f:
+        for data in processed_data:
             f.write('-DOC_START-\n')
-            for i in range(len(question)):
-                f.write(question[i] + ' ' + tags_question[i] + '\n')
+            for i in range(len(data.question)):
+                f.write(data.question[i] + ' ' + data.question_label[i] + '\n')
             f.write('\n')
-            for i in range(len(background)):
-                f.write(background[i] + ' ' + tags_back[i] + '\n')
+            for i in range(len(data.background)):
+                f.write(data.background[i] + ' ' + data.background_label[i] + '\n')
 
-            # f.write(' '.join(background) + '|||' + ' '.join(tags) + '\n')
+
+def prepare_data(processed_data, data_split_dict):
+    random.shuffle(processed_data)
+    total_size = len(processed_data)
+    train_size = int(data_split_dict['train'] * total_size)
+    dev_size = int(data_split_dict['dev'] * total_size)
+    # [a,b)左开右闭区间
+    write_processed_data('train', processed_data[:train_size])
+    write_processed_data('dev', processed_data[train_size:dev_size + train_size])
+    write_processed_data('test', processed_data[dev_size + train_size:])
 
 
 if __name__ == '__main__':
     STOPWORDS.extend(get_stopwords('./data/stopwords.txt'))
     file_paths = ['./data/raw/data_all/53_data.json', './data/raw/data_all/websoft_data.json']
-    tagging(file_paths, cut=False)
+    processed_data = tagging(file_paths, cut=False)
+    prepare_data(processed_data, {'train': 0.7, 'dev': 0.2, 'test': 0.1})
     # print(sorted(SINGAL_DICT.items(), key=lambda kv: (kv[1], kv[0]), reverse=True))
     # print(type(read_json_data('data/raw/data_all/53_data.json')))
