@@ -7,8 +7,11 @@ import torch
 
 def collate_fn(batch):
     """
-    batch should be a list of (sequence, target, length) tuples...
-    Returns a padded tensor of sequences sorted from longest to shortest,
+    将batch根据最长的样例截断
+    map(function, iterable)
+    `batch` is a list of tuple id mask token_type_id len label
+    stack 沿着一个新维度对输入张量序列进行连接。 序列中所有的张量都应该为相同形状。
+    在自然语言处理和卷及神经网络中， 通常为了保留–[序列(先后)信息] 和 [张量的矩阵信息] 才会使用stack。
     """
     all_input_ids, all_attention_mask, all_token_type_ids, all_lens, all_labels = map(torch.stack, zip(*batch))
     max_len = max(all_lens).item()

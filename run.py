@@ -59,9 +59,9 @@ def evaluate(args, model, tokenizer, prefix=""):
     eval_dataloader = DataLoader(eval_dataset, sampler=eval_sampler, batch_size=args.eval_batch_size,
                                  collate_fn=collate_fn)
 
-    print("***** Running evaluation %s *****", prefix)
-    print("  Num examples = %d", len(eval_dataset))
-    print("  Batch size = %d", args.eval_batch_size)
+    print("***** Running evaluation %s *****" % prefix)
+    print("  Num examples = %d" % len(eval_dataset))
+    print("  Batch size = %d" % args.eval_batch_size)
     eval_loss = 0.0
     nb_eval_steps = 0
 
