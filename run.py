@@ -9,6 +9,7 @@ from transformers import BertTokenizer, AdamW, get_linear_schedule_with_warmup
 from bert_crf_model import BertCRF
 from config import get_argparse
 from data_process import CnerProcessor as Processor, convert_examples_to_features, collate_fn
+from evaluate import get_metrics
 from metrics import SeqEntityScore
 
 
@@ -52,7 +53,6 @@ def load_and_cache_examples(args, tokenizer, data_type='train'):
 
 
 def evaluate(args, model, tokenizer, prefix=""):
-    metric = SeqEntityScore(args.id2label)
     eval_dataset = load_and_cache_examples(args, tokenizer, data_type='dev')
 
     eval_sampler = SequentialSampler(eval_dataset)
@@ -69,45 +69,24 @@ def evaluate(args, model, tokenizer, prefix=""):
         model.eval()
         batch = tuple(t.to(device) for t in batch)
         with torch.no_grad():
-            inputs = {"input_ids": batch[0], "attention_mask": batch[1], "labels": batch[3], 'input_lens': batch[4]}
-
+            inputs = {"input_ids": batch[0], "attention_mask": batch[1], 'token_type_ids': batch[2], "labels": batch[3],
+                      'input_lens': batch[4]}
             outputs = model(**inputs)
-
             tmp_eval_loss, logits = outputs[:2]
-
             tags = model.crf.decode(logits, inputs['attention_mask'])
 
         eval_loss += tmp_eval_loss.item()
         nb_eval_steps += 1
-        out_label_ids = inputs['labels'].cpu().numpy().tolist()
+        out_label_ids = inputs['labels'].cpu().numpy().tolist()  # 真实标签
         input_lens = inputs['input_lens'].cpu().numpy().tolist()
         tags = tags.squeeze(0).cpu().numpy().tolist()
-        for i, label in enumerate(out_label_ids):
-            temp_1 = []
-            temp_2 = []
-            for j, m in enumerate(label):
-                if j == 0:
-                    continue
-                elif j == input_lens[i] - 1:
-                    metric.update(pred_paths=[temp_2], label_paths=[temp_1])
-                    break
-                else:
-                    temp_1.append(args.id2label[out_label_ids[i][j]])
-                    temp_2.append(args.id2label[tags[i][j]])
+
+        # TODO: 每个batch更新四项指标
+        print(get_metrics(real_label=out_label_ids, predict_label=tags, id2label=args.id2label))
+
     print("\n")
     eval_loss = eval_loss / nb_eval_steps
-    eval_info, entity_info = metric.result()
-    results = {f'{key}': value for key, value in eval_info.items()}
-    results['loss'] = eval_loss
-    print("***** Eval results %s *****", prefix)
-    info = "-".join([f' {key}: {value:.4f} ' for key, value in results.items()])
-    print(info)
-    print("***** Entity results %s *****", prefix)
-    for key in sorted(entity_info.keys()):
-        print("******* %s results ********" % key)
-        info = "-".join([f' {key}: {value:.4f} ' for key, value in entity_info[key].items()])
-        print(info)
-    return results
+    # TODO：输出四项指标
 
 
 if __name__ == "__main__":

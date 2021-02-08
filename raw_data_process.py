@@ -170,7 +170,7 @@ def write_processed_data(data_type, processed_data: [ProcessedData]):
 
 
 def prepare_data(processed_data, data_split_dict):
-    random.shuffle(processed_data)
+    # random.shuffle(processed_data)
     total_size = len(processed_data)
     train_size = int(data_split_dict['train'] * total_size)
     dev_size = int(data_split_dict['dev'] * total_size)
