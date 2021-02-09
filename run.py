@@ -175,8 +175,7 @@ if __name__ == "__main__":
 
                 global_step += 1
 
-            result = evaluate(args, model, tokenizer, prefix="")
-            print(result)
+            evaluate(args, model, tokenizer, prefix="")
 
             model_to_save = model.module if hasattr(model, 'module') else model
             torch.save(model_to_save.state_dict(), join(args.checkpoint_path, "ckpt_epoch_{}.bin".format(epoch)))

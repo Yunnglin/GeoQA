@@ -122,12 +122,12 @@ class CnerProcessor(DataProcessor):
     def get_labels(self):
         """
         常规BIO标签
-        <O_CLS_Y> 该数据有重合词时CLS的标签
-        <O_CLS_N> 该数据没有重合词时CLS的标签
-        <O_SEP> SEP的标签
-        <O_PAD> PAD的标签
+        O_CLS_Y 该数据有重合词时CLS的标签
+        O_CLS_N 该数据没有重合词时CLS的标签
+        O_SEP SEP的标签
+        O_PAD PAD的标签
         """
-        return ["<O_PAD>", "B", "I", "O", "<O_CLS_Y>", "<O_CLS_N>", "<O_SEP>", ]
+        return ["O_PAD", "B", "I", "O", "O_CLS_Y", "O_CLS_N", "O_SEP", ]
 
     def _create_examples(self, lines, set_type):
         #  {"words": [词1, 词2....],"text_a_len":int, 'labels":[label1, label2, ...]}
@@ -175,8 +175,8 @@ def convert_examples_to_features(examples: [InputExample],
         tokens += [sep_token]
         tokens.insert(text_a_len, sep_token)
 
-        label_ids += [label_map['<O_SEP>']]
-        label_ids.insert(text_a_len, label_map['<O_SEP>'])
+        label_ids += [label_map['O_SEP']]
+        label_ids.insert(text_a_len, label_map['O_SEP'])
 
         text_a_len += 1  # 扩展一位SEP
         segment_ids = [sequence_a_segment_id] * text_a_len
@@ -185,7 +185,7 @@ def convert_examples_to_features(examples: [InputExample],
         # 添加CLS标记
         tokens = [cls_token] + tokens
         # 判断是否有重合词
-        label_ids = [label_map['<O_CLS_Y>'] if label_map['B'] in label_ids else label_map['<O_CLS_N>']] + label_ids
+        label_ids = [label_map['O_CLS_Y'] if label_map['B'] in label_ids else label_map['O_CLS_N']] + label_ids
         segment_ids = [cls_token_segment_id] + segment_ids
 
         # token转id
@@ -197,12 +197,12 @@ def convert_examples_to_features(examples: [InputExample],
             input_ids = ([pad_token] * padding_length) + input_ids
             input_mask = ([0 if mask_padding_with_zero else 1] * padding_length) + input_mask
             segment_ids = ([pad_token_segment_id] * padding_length) + segment_ids
-            label_ids = ([label_map['<O_PAD>']] * padding_length) + label_ids
+            label_ids = ([label_map['O_PAD']] * padding_length) + label_ids
         else:
             input_ids += [pad_token] * padding_length
             input_mask += [0 if mask_padding_with_zero else 1] * padding_length
             segment_ids += [pad_token_segment_id] * padding_length
-            label_ids += [label_map['<O_PAD>']] * padding_length
+            label_ids += [label_map['O_PAD']] * padding_length
         try:
             assert len(input_ids) == max_seq_length
             assert len(input_mask) == max_seq_length
