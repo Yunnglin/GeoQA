@@ -9,8 +9,7 @@ from transformers import BertTokenizer, AdamW, get_linear_schedule_with_warmup
 from bert_crf_model import BertCRF
 from config import get_argparse
 from data_process import CnerProcessor as Processor, convert_examples_to_features, collate_fn
-from evaluate import get_metrics
-from metrics import SeqEntityScore
+from metrics import Performance
 
 
 def load_and_cache_examples(args, tokenizer, data_type='train'):
@@ -53,8 +52,8 @@ def load_and_cache_examples(args, tokenizer, data_type='train'):
 
 
 def evaluate(args, model, tokenizer, prefix=""):
+    performance = Performance(id2label=args.id2label)
     eval_dataset = load_and_cache_examples(args, tokenizer, data_type='dev')
-
     eval_sampler = SequentialSampler(eval_dataset)
     eval_dataloader = DataLoader(eval_dataset, sampler=eval_sampler, batch_size=args.eval_batch_size,
                                  collate_fn=collate_fn)
@@ -77,22 +76,22 @@ def evaluate(args, model, tokenizer, prefix=""):
 
         eval_loss += tmp_eval_loss.item()
         nb_eval_steps += 1
-        out_label_ids = inputs['labels'].cpu().numpy().tolist()  # 真实标签
-        input_lens = inputs['input_lens'].cpu().numpy().tolist()
-        tags = tags.squeeze(0).cpu().numpy().tolist()
+        out_label_ids = inputs['labels'].cpu().numpy().tolist()  # 真实标签id
+        tags = tags.squeeze(0).cpu().numpy().tolist()  # 预测标签id
+        # 每个batch更新三项指标
+        performance.update_performance(real_label=out_label_ids, predict_label=tags)
 
-        # TODO: 每个batch更新四项指标
-        print(get_metrics(real_label=out_label_ids, predict_label=tags, id2label=args.id2label))
-
-    print("\n")
+    # 输出指标
+    print("\n ***** Eval results %s ***** " % prefix)
     eval_loss = eval_loss / nb_eval_steps
-    # TODO：输出四项指标
+    performance.res_dict['eval_loss'] = eval_loss
+    print(performance)
 
 
 if __name__ == "__main__":
     args = get_argparse().parse_args()
-    # device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
-    device = 'cpu'
+    device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
+    # device = 'cpu'
 
     if not os.path.exists(args.output_dir):  # 输出文件
         os.mkdir(args.output_dir)

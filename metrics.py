@@ -1,180 +1,118 @@
-import torch
-from collections import Counter
+from collections import defaultdict
+from typing import List
+
+import numpy as np
+from seqeval.metrics.sequence_labeling import get_entities, precision_recall_fscore_support
 
 
-def get_entities(seq,id2label,markup='bios'):
-    assert markup in ['bio','bios']
-    if markup =='bio':
-        return get_entity_bio(seq,id2label)
-    else:
-        return get_entity_bios(seq,id2label)
-
-
-def get_entity_bio(seq, id2label):
-    chunks = []
-    chunk = [-1, -1, -1]
-    for indx, tag in enumerate(seq):
-        if not isinstance(tag, str):
-            tag = id2label[tag]
-        if tag.startswith("B-"):
-            if chunk[2] != -1:
-                chunks.append(chunk)
-            chunk = [-1, -1, -1]
-            chunk[1] = indx
-            chunk[0] = tag.split('-')[1]
-            chunk[2] = indx
-            if indx == len(seq) - 1:
-                chunks.append(chunk)
-        elif tag.startswith('I-') and chunk[1] != -1:
-            _type = tag.split('-')[1]
-            if _type == chunk[0]:
-                chunk[2] = indx
-
-            if indx == len(seq) - 1:
-                chunks.append(chunk)
-        else:
-            if chunk[2] != -1:
-                chunks.append(chunk)
-            chunk = [-1, -1, -1]
-    return chunks
-
-
-def get_entity_bios(seq,id2label):
-    """Gets entities from sequence.
-    note: BIOS
-    Args:
-        seq (list): sequence of labels.
-    Returns:
-        list: list of (chunk_type, chunk_start, chunk_end).
-    Example:
-        # >>> seq = ['B-PER', 'I-PER', 'O', 'S-LOC']
-        # >>> get_entity_bios(seq)
-        [['PER', 0,1], ['LOC', 3, 3]]
+def split_entity(label_sequence):
     """
-    chunks = []
-    chunk = [-1, -1, -1]
-    for indx, tag in enumerate(seq):
-        if not isinstance(tag, str):
-            tag = id2label[tag]
-        if tag.startswith("S-"):
-            if chunk[2] != -1:
-                chunks.append(chunk)
-            chunk = [-1, -1, -1]
-            chunk[1] = indx
-            chunk[2] = indx
-            chunk[0] = tag.split('-')[1]
-            chunks.append(chunk)
-            chunk = (-1, -1, -1)
-        if tag.startswith("B-"):
-            if chunk[2] != -1:
-                chunks.append(chunk)
-            chunk = [-1, -1, -1]
-            chunk[1] = indx
-            chunk[0] = tag.split('-')[1]
-        elif tag.startswith('I-') and chunk[1] != -1:
-            _type = tag.split('-')[1]
-            if _type == chunk[0]:
-                chunk[2] = indx
-            if indx == len(seq) - 1:
-                chunks.append(chunk)
-        else:
-            if chunk[2] != -1:
-                chunks.append(chunk)
-            chunk = [-1, -1, -1]
-    return chunks
+    从标签序列中抽取实体
+        >>> label_sequence=[['O', 'B', 'O', 'B', 'I', 'B'], ['O', 'O', 'B']]
+        >>> chunks=[('_', 1, 1), ('_', 3, 4), ('_', 5, 5), ('_', 9, 9)]
+    :param label_sequence:
+    :return: list of (chunk_type, chunk_start, chunk_end).
+    """
+    return get_entities(label_sequence)
 
 
-class SeqEntityScore(object):
-    def __init__(self, id2label,markup='bios'):
+def label_id_to_label(label_ids: List[List[int]], id2label: dict):
+    for label_id in label_ids:
+        for i, idx in enumerate(label_id):
+            label_id[i] = id2label[idx]
+
+
+def get_metrics(real_label, predict_label, id2label=None):
+    if id2label:
+        label_id_to_label(real_label, id2label)
+        label_id_to_label(predict_label, id2label)
+    precision, recall, f_score, true_sum = precision_recall_fscore_support(real_label, predict_label)
+    res_dict = {'precision': precision.item(),
+                'recall': recall.item(),
+                'f1_score': f_score.item(),
+                'true_sum': true_sum.item()}
+    return res_dict
+
+
+def extract_tp_actual_correct(real_label, predict_label):
+    # 获取对应的标签数量
+    entities_true = defaultdict(set)
+    entities_pred = defaultdict(set)
+    for type_name, start, end in split_entity(real_label):
+        entities_true[type_name].add((start, end))
+    for type_name, start, end in split_entity(predict_label):
+        entities_pred[type_name].add((start, end))
+
+    target_names = sorted(set(entities_true.keys()) | set(entities_pred.keys()))
+
+    tp_sum = np.array([], dtype=np.int32)
+    pred_sum = np.array([], dtype=np.int32)
+    true_sum = np.array([], dtype=np.int32)
+    for type_name in target_names:
+        entities_true_type = entities_true.get(type_name, set())
+        entities_pred_type = entities_pred.get(type_name, set())
+        tp_sum = np.append(tp_sum, len(entities_true_type & entities_pred_type))
+        pred_sum = np.append(pred_sum, len(entities_pred_type))
+        true_sum = np.append(true_sum, len(entities_true_type))
+
+    return tp_sum, pred_sum, true_sum
+
+
+class Performance:
+    def __init__(self, id2label=None):
+        self.performance = {
+            'tp_sum': 0,  # pred and true
+            'pred_sum': 0,  # pred
+            'true_sum': 0,  # true
+        }
         self.id2label = id2label
-        self.markup = markup
-        self.reset()
+        self.res_dict = {
+            'precision': 0.0,  # tp_sum / pred_sum
+            'recall': 0.0,  # tp_sum / true_sum
+            'f1_score': 0.0
+        }
 
-    def reset(self):
-        self.origins = []
-        self.founds = []
-        self.rights = []
+    def update_performance(self, real_label, predict_label):
+        if self.id2label:
+            label_id_to_label(real_label, self.id2label)
+            label_id_to_label(predict_label, self.id2label)
+        # performance_measure获取的是label级别的performance不正确，需要自行获取
+        # 更新
+        new_performance = extract_tp_actual_correct(real_label, predict_label)
+        self.performance['tp_sum'] += new_performance[0].item()
+        self.performance['pred_sum'] += new_performance[1].item()
+        self.performance['true_sum'] += new_performance[2].item()
 
-    def compute(self, origin, found, right):
-        recall = 0 if origin == 0 else (right / origin)
-        precision = 0 if found == 0 else (right / found)
-        f1 = 0. if recall + precision == 0 else (2 * precision * recall) / (precision + recall)
-        return recall, precision, f1
+    def _cal_performance(self):
+        try:
+            self.res_dict['precision'] = self.performance['tp_sum'] / self.performance['pred_sum']
+            self.res_dict['recall'] = self.performance['tp_sum'] / self.performance['true_sum']
+            self.res_dict['f1_score'] = 2 * self.res_dict['precision'] * self.res_dict['recall'] / (
+                    self.res_dict['recall'] + self.res_dict['precision'])
+            for key in self.res_dict:
+                self.res_dict[key] = self.res_dict[key]
+        except ZeroDivisionError as e:
+            print(e)
 
-    def result(self):
-        class_info = {}
-        origin_counter = Counter([x[0] for x in self.origins])
-        found_counter = Counter([x[0] for x in self.founds])
-        right_counter = Counter([x[0] for x in self.rights])
-        for type_, count in origin_counter.items():
-            origin = count
-            found = found_counter.get(type_, 0)
-            right = right_counter.get(type_, 0)
-            recall, precision, f1 = self.compute(origin, found, right)
-            class_info[type_] = {"acc": round(precision, 4), 'recall': round(recall, 4), 'f1': round(f1, 4)}
-        origin = len(self.origins)
-        found = len(self.founds)
-        right = len(self.rights)
-        recall, precision, f1 = self.compute(origin, found, right)
-        return {'acc': precision, 'recall': recall, 'f1': f1}, class_info
-
-    def update(self, label_paths, pred_paths):
-        '''
-        labels_paths: [[],[],[],....]
-        pred_paths: [[],[],[],.....]
-
-        :param label_paths:
-        :param pred_paths:
-        :return:
-        Example:
-            >>> labels_paths = [['O', 'O', 'O', 'B-MISC', 'I-MISC', 'I-MISC', 'O'], ['B-PER', 'I-PER', 'O']]
-            >>> pred_paths = [['O', 'O', 'B-MISC', 'I-MISC', 'I-MISC', 'I-MISC', 'O'], ['B-PER', 'I-PER', 'O']]
-        '''
-        for label_path, pre_path in zip(label_paths, pred_paths):
-            label_entities = get_entities(label_path, self.id2label,self.markup)
-            pre_entities = get_entities(pre_path, self.id2label,self.markup)
-            self.origins.extend(label_entities)
-            self.founds.extend(pre_entities)
-            self.rights.extend([pre_entity for pre_entity in pre_entities if pre_entity in label_entities])
+    def __str__(self):
+        self._cal_performance()
+        info = " | ".join([f'{key}: {value:.4f}' for key, value in self.res_dict.items()])
+        return info
 
 
-class SpanEntityScore(object):
-    def __init__(self, id2label):
-        self.id2label = id2label
-        self.reset()
-
-    def reset(self):
-        self.origins = []
-        self.founds = []
-        self.rights = []
-
-    def compute(self, origin, found, right):
-        recall = 0 if origin == 0 else (right / origin)
-        precision = 0 if found == 0 else (right / found)
-        f1 = 0. if recall + precision == 0 else (2 * precision * recall) / (precision + recall)
-        return recall, precision, f1
-
-    def result(self):
-        class_info = {}
-        origin_counter = Counter([self.id2label[x[0]] for x in self.origins])
-        found_counter = Counter([self.id2label[x[0]] for x in self.founds])
-        right_counter = Counter([self.id2label[x[0]] for x in self.rights])
-        for type_, count in origin_counter.items():
-            origin = count
-            found = found_counter.get(type_, 0)
-            right = right_counter.get(type_, 0)
-            recall, precision, f1 = self.compute(origin, found, right)
-            class_info[type_] = {"acc": round(precision, 4), 'recall': round(recall, 4), 'f1': round(f1, 4)}
-        origin = len(self.origins)
-        found = len(self.founds)
-        right = len(self.rights)
-        recall, precision, f1 = self.compute(origin, found, right)
-        return {'acc': precision, 'recall': recall, 'f1': f1}, class_info
-
-    def update(self, true_subject, pred_subject):
-        self.origins.extend(true_subject)
-        self.founds.extend(pred_subject)
-        self.rights.extend([pre_entity for pre_entity in pred_subject if pre_entity in true_subject])
-
-
-
+if __name__ == '__main__':
+    id2label = {0: 'O_LS_Y', 1: 'O', 2: 'B', 3: 'I'}
+    y_true = [['O_LS_Y', 'O', 'O', 'B', 'I', 'B'], ['B', 'I', 'B']]
+    y_pred = [['O_LS_Y', 'B', 'O', 'B', 'I', 'B'], ['O', 'O', 'B']]
+    y_true_id = [[0, 1, 1, 2, 3, 2, ], [2, 3, 2]]
+    y_pred_id = [[0, 1, 1, 2, 3, 2, ], [1, 1, 2]]
+    p = Performance(id2label)
+    p.update_performance([[0, 1, 1, 2, 3, 2, ]], [[0, 1, 1, 2, 3, 2, ]])
+    print(p)
+    p.res_dict['res'] = 2.1
+    p.update_performance([[2, 3, 2]], [[1, 1, 2]])
+    print(p)
+    # print(split_entity(y_pred))
+    y_true_id = [[0, 1, 1, 2, 3, 2, ], [2, 3, 2]]
+    y_pred_id = [[0, 1, 1, 2, 3, 2, ], [1, 1, 2]]
+    print(get_metrics(y_true_id, y_pred_id, id2label))
