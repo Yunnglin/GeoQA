@@ -13,7 +13,7 @@ from inference import evaluate, load_and_cache_examples
 
 if __name__ == "__main__":
     args = get_argparse().parse_args()
-    device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() and args.device != '-1' else 'cpu')
     # device = 'cpu'
 
     if not os.path.exists(args.output_dir):  # 输出文件
@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
                 global_step += 1
 
-            evaluate(args, model, tokenizer, data_type="dev")
+            evaluate(args, model, tokenizer, processor=processor, data_type="dev")
 
             model_to_save = model.module if hasattr(model, 'module') else model
             torch.save(model_to_save.state_dict(), join(args.checkpoint_path, "ckpt_epoch_{}.bin".format(epoch)))
