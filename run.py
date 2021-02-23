@@ -6,7 +6,7 @@ import torch
 from torch.utils.data import RandomSampler, DataLoader
 from transformers import BertTokenizer, AdamW, get_linear_schedule_with_warmup
 
-from bert_crf_model import BertCRF
+from model.bert_crf_model import BertCRF
 from config import get_argparse
 from data_process import CnerProcessor, collate_fn
 from inference import evaluate, load_and_cache_examples
@@ -26,10 +26,10 @@ if __name__ == "__main__":
     args.label2id = {label: i for i, label in enumerate(label_list)}
     num_labels = len(label_list)
 
-    tokenizer = BertTokenizer.from_pretrained('./bert/vocab.txt')
+    tokenizer = BertTokenizer.from_pretrained(join(args.bert_path, 'vocab.txt'))
 
     # 实例化模型
-    model = BertCRF(num_labels)
+    model = BertCRF(args, num_labels)
     model.to(device)
 
     # Training

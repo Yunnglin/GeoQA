@@ -1,19 +1,22 @@
+import os
+
 from torch import nn
 from transformers import BertConfig, BertModel
 
-from crf import CRF
+from model.crf import CRF
 
 
 class BertCRF(nn.Module):
-    def __init__(self, num_labels):
+    def __init__(self, args, num_labels):
         super(BertCRF, self).__init__()
         # bert模型
-        self.config = BertConfig.from_pretrained('./bert/bert_config.json')
-        self.bert = BertModel.from_pretrained('./bert/pytorch_model.bin', config=self.config)
+        self.bert_config = BertConfig.from_pretrained(os.path.join(args.bert_path, 'bert_config.json'))
+        self.bert = BertModel.from_pretrained(os.path.join(args.bert_path, 'pytorch_model.bin'),
+                                              config=self.bert_config)
 
         # 每个token进行分类
-        self.dropout = nn.Dropout(self.config.hidden_dropout_prob)
-        self.classifier = nn.Linear(self.config.hidden_size, num_labels)
+        self.dropout = nn.Dropout(self.bert_config.hidden_dropout_prob)
+        self.classifier = nn.Linear(self.bert_config.hidden_size, num_labels)
 
         # 送入CRF进行预测
         self.crf = CRF(num_tags=num_labels, batch_first=True)

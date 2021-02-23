@@ -1,11 +1,10 @@
 import os
 
 import torch
-from torch.cuda import device
 from torch.utils.data import SequentialSampler, DataLoader, TensorDataset
 from transformers import BertTokenizer
 
-from bert_crf_model import BertCRF
+from model.bert_crf_model import BertCRF
 from config import get_argparse
 from data_process import collate_fn, CnerProcessor, convert_examples_to_features
 from metrics import Performance
@@ -52,7 +51,7 @@ def load_and_cache_examples(args, tokenizer, processor, data_type='train'):
 
 def load_model(num_labels, epoch_num=0):
     try:
-        model = BertCRF(num_labels)
+        model = BertCRF(args, num_labels)
         model.load_state_dict(torch.load(f'./save_model/ckpt_epoch_{epoch_num}.bin', map_location='cpu'))
     except FileNotFoundError as e:
         print(e)
@@ -109,6 +108,6 @@ if __name__ == "__main__":
     args.label2id = {label: i for i, label in enumerate(label_list)}
 
     model = load_model(num_labels=num_labels, epoch_num=9)
-    tokenizer = BertTokenizer.from_pretrained('./bert/vocab.txt')
+    tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
 
     evaluate(args, model, tokenizer, processor=processor, data_type="test")
