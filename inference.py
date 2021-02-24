@@ -61,6 +61,8 @@ def load_model(num_labels, epoch_num=0):
 
 
 def evaluate(args, model, tokenizer, processor, data_type):
+    device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() and args.device != '-1' else 'cpu')
+
     performance = Performance(id2label=args.id2label)
     eval_dataset = load_and_cache_examples(args, tokenizer, processor=processor, data_type=data_type)
     eval_sampler = SequentialSampler(eval_dataset)
@@ -75,8 +77,9 @@ def evaluate(args, model, tokenizer, processor, data_type):
     eval_loss = 0.0
     nb_eval_steps = 0
 
+    model.eval()
     for step, batch in enumerate(eval_dataloader):
-        model.eval()
+        batch = tuple(t.to(device) for t in batch)
         with torch.no_grad():
             inputs = {"input_ids": batch[0], "attention_mask": batch[1], 'token_type_ids': batch[2], "labels": batch[3],
                       'input_lens': batch[4]}

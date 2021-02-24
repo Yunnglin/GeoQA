@@ -6,6 +6,7 @@ import torch
 from torch.utils.data import RandomSampler, DataLoader
 from transformers import BertTokenizer, AdamW, get_linear_schedule_with_warmup
 
+from model import BertLSTMCRF
 from model.bert_crf_model import BertCRF
 from config import get_argparse
 from data_process import CnerProcessor, collate_fn
@@ -29,7 +30,12 @@ if __name__ == "__main__":
     tokenizer = BertTokenizer.from_pretrained(join(args.bert_path, 'vocab.txt'))
 
     # 实例化模型
-    model = BertCRF(args, num_labels)
+    if args.use_lstm:
+        model = BertLSTMCRF(args=args, num_labels=num_labels)
+        store_name = 'ckpt_lstm'
+    else:
+        model = BertCRF(args=args, num_labels=num_labels)
+        store_name = 'ckpt'
     model.to(device)
 
     # Training
@@ -41,9 +47,14 @@ if __name__ == "__main__":
         t_total = len(train_dataset) // args.gradient_accumulation_steps * args.epochs
 
         no_decay = ["bias", "LayerNorm.weight"]
-        bert_param_optimizer = list(model.bert.named_parameters())
+        if not args.use_lstm:
+            bert_param_optimizer = list(model.bert.named_parameters())
+            linear_param_optimizer = list(model.classifier.named_parameters())
+        else:
+            bert_param_optimizer = list(model.word_embeds.named_parameters())
+            linear_param_optimizer = list(model.hidden2tag.named_parameters())
         crf_param_optimizer = list(model.crf.named_parameters())
-        linear_param_optimizer = list(model.classifier.named_parameters())
+
         optimizer_grouped_parameters = [
             {'params': [p for n, p in bert_param_optimizer if not any(nd in n for nd in no_decay)],
              'weight_decay': args.weight_decay, 'lr': args.learning_rate},
@@ -75,8 +86,8 @@ if __name__ == "__main__":
         global_step = 0
         tr_loss, logging_loss = 0.0, 0.0
         model.zero_grad()
-        model.train()
         for epoch in range(int(args.epochs)):
+            model.train()
             for step, batch in enumerate(train_dataloader):
                 start_time = time.time()
                 batch = tuple(t.to(device) for t in batch)
@@ -101,4 +112,6 @@ if __name__ == "__main__":
             evaluate(args, model, tokenizer, processor=processor, data_type="dev")
 
             model_to_save = model.module if hasattr(model, 'module') else model
-            torch.save(model_to_save.state_dict(), join(args.checkpoint_path, "ckpt_epoch_{}.bin".format(epoch)))
+            model_path = join(args.checkpoint_path, f"{store_name}_epoch_{epoch}.bin")
+            torch.save(model_to_save.state_dict(), model_path)
+            print("Saved model at" + model_path)

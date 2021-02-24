@@ -4,7 +4,7 @@ import argparse
 def get_argparse():
     parser = argparse.ArgumentParser()
     # paths
-    parser.add_argument("--device", type=str, default="1", help="which device to use, if -1 use cpu, else use gpu")
+    parser.add_argument("--device", type=str, default="0", help="which device to use, if -1 use cpu, else use gpu")
     parser.add_argument("--data_dir", type=str, default='./data', help="this is dataset path")
     parser.add_argument("--output_dir", default='./outputs', type=str, required=False, help='this output directory')
     parser.add_argument("--checkpoint_path", type=str, default='./save_model', help="path to save the model")
@@ -23,6 +23,8 @@ def get_argparse():
     parser.add_argument("--learning_rate", default=5e-5, type=float, help='the initial learning rate for Adam')
     parser.add_argument("--crf_learning_rate", default=5e-5, type=float, help='the initial learning rate for '
                                                                               'crf and linear layer')
+
+    parser.add_argument("--use_lstm", default=True, type=bool, help="whether to use lstm")
     parser.add_argument("--lstm_hidden_dim", default=384, type=int, help='the hidden size of lSTM')
     parser.add_argument("--lstm_rnn_layers", default=1, type=int, help="layers of rnn")
     parser.add_argument("--lstm_dropout", default=0.2, type=float, help="probability of dropout")

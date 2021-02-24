@@ -8,6 +8,10 @@ from model import CRF
 
 
 class BertLSTMCRF(nn.Module):
+    """
+    https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html#bi-lstm-conditional-random-field-discussion
+    """
+
     def __init__(self, args, num_labels):
         super().__init__()
         self.USE_CUDA = (args.device != '-1')
@@ -35,23 +39,23 @@ class BertLSTMCRF(nn.Module):
         self.dropout = nn.Dropout(args.lstm_dropout)
 
         # linear layer
+        # Maps the output of the LSTM into tag space.
         if self.bidirectional:
             self.hidden2tag = nn.Linear(self.hidden_dim * 2, self.output_size)
         else:
             self.hidden2tag = nn.Linear(self.hidden_dim, self.output_size)
 
         # crf layer
-        self.crf = CRF(self.output_size)
+        self.crf = CRF(num_tags=self.output_size, batch_first=True)
 
     def init_hidden(self, batch_size):
         number = 2 if self.bidirectional else 1
         if self.USE_CUDA:
-            hidden = (torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim).cuda(),
-                      torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim).cuda())
+            return (torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim).cuda(),
+                    torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim).cuda())
         else:
-            hidden = (torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim),
-                      torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim))
-        return hidden
+            return (torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim),
+                    torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim))
 
     def _get_lstm_features(self, sentence):
         batch_size = sentence.size(0)
@@ -70,7 +74,14 @@ class BertLSTMCRF(nn.Module):
                                   attention_mask=attention_mask,
                                   token_type_ids=token_type_ids)
         sentence = emdeds[0]  # shape=(Batch Size, Input len, Hidden size)
+        # Get the emission scores from the BiLSTM
         lstm_feats = self._get_lstm_features(sentence)
+        # print(lstm_feats.shape) => (batch_size, seq_length, num_tags)
 
-        # todo: use crf decode to get score
-        # https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html#bi-lstm-conditional-random-field-discussion
+        # use crf to get loss
+        outputs = (lstm_feats,)
+        if labels is not None:
+            # Compute the conditional log likelihood of a sequence of tags given emission scores
+            loss = self.crf(emissions=lstm_feats, tags=labels, mask=attention_mask)
+            outputs = (-1 * loss,) + outputs
+        return outputs  # (loss, emission scores)
