@@ -4,6 +4,7 @@ import torch
 from torch.utils.data import SequentialSampler, DataLoader, TensorDataset
 from transformers import BertTokenizer
 
+from model import BertLSTMCRF
 from model.bert_crf_model import BertCRF
 from config import get_argparse
 from data_process import collate_fn, CnerProcessor, convert_examples_to_features
@@ -49,10 +50,13 @@ def load_and_cache_examples(args, tokenizer, processor, data_type='train'):
     return dataset
 
 
-def load_model(num_labels, epoch_num=0):
+def load_model(args, num_labels, model_path):
     try:
-        model = BertCRF(args, num_labels)
-        model.load_state_dict(torch.load(f'./save_model/ckpt_epoch_{epoch_num}.bin', map_location='cpu'))
+        if args.use_lstm:
+            model = BertLSTMCRF(args, num_labels)
+        else:
+            model = BertCRF(args, num_labels)
+        model.load_state_dict(torch.load(model_path, map_location='cpu'))
     except FileNotFoundError as e:
         print(e)
         print("Load Model Failed, No Such File")
@@ -110,7 +114,7 @@ if __name__ == "__main__":
     args.id2label = {i: label for i, label in enumerate(label_list)}
     args.label2id = {label: i for i, label in enumerate(label_list)}
 
-    model = load_model(num_labels=num_labels, epoch_num=9)
+    model = load_model(args=args, num_labels=num_labels, model_path='./save_model/ckpt_epoch_9.bin')
     tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
 
     evaluate(args, model, tokenizer, processor=processor, data_type="test")

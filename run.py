@@ -6,11 +6,10 @@ import torch
 from torch.utils.data import RandomSampler, DataLoader
 from transformers import BertTokenizer, AdamW, get_linear_schedule_with_warmup
 
-from model import BertLSTMCRF
-from model.bert_crf_model import BertCRF
+from model import BertLSTMCRF, BertCRF
 from config import get_argparse
 from data_process import CnerProcessor, collate_fn
-from inference import evaluate, load_and_cache_examples
+from evaluate import evaluate, load_and_cache_examples
 
 if __name__ == "__main__":
     args = get_argparse().parse_args()

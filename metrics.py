@@ -5,6 +5,23 @@ import numpy as np
 from seqeval.metrics.sequence_labeling import get_entities, precision_recall_fscore_support
 
 
+def get_entity_from_labels(tokens, labels, id2label=None):
+    """
+    extract entity from labels
+    :param tokens: 输入序列
+    :param labels: 输入标签
+    :param id2label: 标签id转化
+    :return: tokens中抽取的str序列
+    """
+    res = []
+    if id2label:
+        label_id_to_label(labels, id2label)
+    chunks = split_entity(labels)
+    for chunk in chunks:
+        res.append(''.join(tokens[chunk[1]:chunk[2]]))
+    return res
+
+
 def split_entity(label_sequence):
     """
     从标签序列中抽取实体

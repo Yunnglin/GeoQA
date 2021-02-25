@@ -3,7 +3,7 @@ import os
 from torch import nn
 from transformers import BertConfig, BertModel
 
-from model.crf import CRF
+from model import CRF
 
 
 class BertCRF(nn.Module):
