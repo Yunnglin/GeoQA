@@ -18,7 +18,7 @@ def get_entity_from_labels(tokens, labels, id2label=None):
         label_id_to_label(labels, id2label)
     chunks = split_entity(labels)
     for chunk in chunks:
-        res.append(''.join(tokens[chunk[1]:chunk[2]]))
+        res.append(''.join(tokens[chunk[1]:chunk[2]+1]))
     return res
 
 

@@ -75,65 +75,65 @@ def process_raw_sentence(sentence: str) -> [str]:
     return list(preprocess(sentence))
 
 
-def predict(args, question, background, model, tokenizer):
-    question_l = process_raw_sentence(question)
-    background_l = process_raw_sentence(background)
-    # print(question_l)
-    # print(background_l)
+class Predict:
 
-    # tokens, input_ids, input_mask, segment_ids, input_len
-    data_tuple = convert_raw_sentence_to_features(question=question_l,
-                                                  background=background_l,
-                                                  tokenizer=tokenizer)
-    with torch.no_grad():
-        input_ids = torch.LongTensor([data_tuple[1]])
-        input_mask = torch.LongTensor([data_tuple[2]])
-        segment_ids = torch.LongTensor([data_tuple[3]])
-        input_len = torch.LongTensor([data_tuple[4]])
-        inputs = {'input_ids': input_ids, 'attention_mask': input_mask, 'token_type_ids': segment_ids,
-                  'input_lens': input_len}
-        outputs = model(**inputs)
-        emissions = outputs[0]
+    def __init__(self, args):
+        import warnings
 
-        tags = model.crf.decode(emissions, inputs['attention_mask'])
-        # print(tags.size()) [1,1,max_seq_len]
-        tags = tags.squeeze(0).cpu().numpy().tolist()
+        warnings.filterwarnings("ignore")
+        args.device = '-1'
 
-        res = {}
-        res['extract_entity'] = get_entity_from_labels(tokens=data_tuple[0], labels=tags, id2label=args.id2label)
-        res['tag_seq'] = tags
-        return res
+        processor = CnerProcessor()
+        label_list = processor.get_labels()
+        num_labels = len(label_list)
 
+        args.id2label = {i: label for i, label in enumerate(label_list)}
+        args.label2id = {label: i for i, label in enumerate(label_list)}
 
-def run_predict(question, background):
-    # 将标签进行id映射
-    args = get_argparse().parse_args()
-    args.device = '-1'
+        self.args = args
+        self.tokenizer = BertTokenizer.from_pretrained('./bert/vocab.txt')
+        self.model = load_model(args=args, num_labels=num_labels, model_path='./save_model/ckpt_lstm_epoch_9.bin')
 
-    processor = CnerProcessor()
-    label_list = processor.get_labels()
-    num_labels = len(label_list)
+    def predict(self, question, background):
+        question_l = process_raw_sentence(question)
+        background_l = process_raw_sentence(background)
+        # print(question_l)
+        # print(background_l)
 
-    args.id2label = {i: label for i, label in enumerate(label_list)}
-    args.label2id = {label: i for i, label in enumerate(label_list)}
+        # tokens, input_ids, input_mask, segment_ids, input_len
+        data_tuple = convert_raw_sentence_to_features(question=question_l,
+                                                      background=background_l,
+                                                      tokenizer=self.tokenizer)
+        with torch.no_grad():
+            input_ids = torch.LongTensor([data_tuple[1]])
+            input_mask = torch.LongTensor([data_tuple[2]])
+            segment_ids = torch.LongTensor([data_tuple[3]])
+            input_len = torch.LongTensor([data_tuple[4]])
+            inputs = {'input_ids': input_ids, 'attention_mask': input_mask, 'token_type_ids': segment_ids,
+                      'input_lens': input_len}
+            outputs = self.model(**inputs)
+            emissions = outputs[0]
 
-    tokenizer = BertTokenizer.from_pretrained('./bert/vocab.txt')
-    model = load_model(args=args, num_labels=num_labels, model_path='./save_model/ckpt_lstm_epoch_9.bin')
+            tags = self.model.crf.decode(emissions, inputs['attention_mask'])
+            # print(tags.size()) [1,1,max_seq_len]
+            tags = tags.squeeze(0).cpu().numpy().tolist()
 
-    res = predict(args=args,
-                  question=question,
-                  background=background,
-                  model=model,
-                  tokenizer=tokenizer)
+            res = {'predict_entity': get_entity_from_labels(tokens=data_tuple[0], labels=tags,
+                                                            id2label=self.args.id2label),
+                   'tag_seq': tags}
+            return res
 
-    print(res)
+    def __call__(self, question, background):
+        print(self.predict(question, background))
 
 
 if __name__ == '__main__':
-    import warnings
-
-    warnings.filterwarnings("ignore")
-
     question = "我国下列地区中，资源条件最适宜建太阳能光热电站的是"
     background = "考点二太阳对地球的影响\n太阳能光热电站（下图）通过数以十万计的反光板聚焦太阳 能，给高塔顶端的锅炉加热，产生蒸汽，驱动发电机发电。据此 完成下题。"
-    run_predict(question, background)
+
+    predict = Predict(args=get_argparse().parse_args())
+    predict(question, background)
+
+    question = "欧盟进口的玩具80%来自我国，主要是由于我国玩具"
+    scenario_text = "2013年7月 20 日起《欧盟新玩具安全指令》正式实施，在物理、化学、电子、卫生、辐射等诸多领域里做出了“世界上最严格的规定”。读下图，完成下列各题。"
+    predict(question, scenario_text)

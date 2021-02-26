@@ -45,7 +45,7 @@ def get_same_word(s1: str, s2: str, word_len=1):
     :param word_len: 标注的连续词语长度
     :param s1: 句子1
     :param s2: 句子2
-    :return:
+    :return: word, word_index
     """
     index = 0
     str_len = len(s1)
@@ -182,8 +182,10 @@ def prepare_data(processed_data, data_split_dict):
 
 if __name__ == '__main__':
     STOPWORDS.extend(get_stopwords('./data/stopwords.txt'))
-    file_paths = ['./data/raw/data_all/53_data.json', './data/raw/data_all/websoft_data.json']
+    file_paths = ['./data/raw/data_all/53_data.json', ]
     processed_data = tagging(file_paths, cut=False)
-    prepare_data(processed_data, {'train': 0.7, 'dev': 0.2, 'test': 0.1})
+    # prepare_data(processed_data, {'train': 0.7, 'dev': 0.2, 'test': 0.1})
+
+
     # print(sorted(SINGAL_DICT.items(), key=lambda kv: (kv[1], kv[0]), reverse=True))
     # print(type(read_json_data('data/raw/data_all/53_data.json')))
