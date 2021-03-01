@@ -3,7 +3,10 @@ code about my undergraduate thesis
 
 
 
-
+## bert
+https://huggingface.co/voidful/albert_chinese_large
+https://huggingface.co/hfl/chinese-bert-wwm-ext
+https://huggingface.co/hfl/chinese-roberta-wwm-ext-large
 
 
 

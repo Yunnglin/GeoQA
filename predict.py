@@ -6,6 +6,7 @@ from data_process import CnerProcessor
 from evaluate import load_model
 from metrics import get_entity_from_labels
 from raw_data_process import preprocess
+import os
 
 
 def convert_raw_sentence_to_features(question,
@@ -91,8 +92,9 @@ class Predict:
         args.label2id = {label: i for i, label in enumerate(label_list)}
 
         self.args = args
-        self.tokenizer = BertTokenizer.from_pretrained('./bert/vocab.txt')
-        self.model = load_model(args=args, num_labels=num_labels, model_path='./save_model/ckpt_lstm_epoch_9.bin')
+        self.tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
+        self.model = load_model(args=args, num_labels=num_labels,
+                                model_path=os.path.join(args.checkpoint_path, 'ckpt_lstm_epoch_9.bin'))
 
     def predict(self, question, background):
         question_l = process_raw_sentence(question)

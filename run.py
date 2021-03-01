@@ -1,6 +1,5 @@
 import os
 import time
-from os.path import join
 
 import torch
 from torch.utils.data import RandomSampler, DataLoader
@@ -12,6 +11,9 @@ from data_process import CnerProcessor, collate_fn
 from evaluate import evaluate, load_and_cache_examples
 
 if __name__ == "__main__":
+    import warnings
+
+    warnings.filterwarnings("ignore")
     args = get_argparse().parse_args()
     device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() and args.device != '-1' else 'cpu')
     # device = 'cpu'
@@ -26,7 +28,7 @@ if __name__ == "__main__":
     args.label2id = {label: i for i, label in enumerate(label_list)}
     num_labels = len(label_list)
 
-    tokenizer = BertTokenizer.from_pretrained(join(args.bert_path, 'vocab.txt'))
+    tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
 
     # 实例化模型
     if args.use_lstm:
@@ -108,9 +110,12 @@ if __name__ == "__main__":
 
                 global_step += 1
 
+            # evaluate效果
             evaluate(args, model, tokenizer, processor=processor, data_type="dev")
-
-            model_to_save = model.module if hasattr(model, 'module') else model
-            model_path = join(args.checkpoint_path, f"{store_name}_epoch_{epoch}.bin")
-            torch.save(model_to_save.state_dict(), model_path)
-            print("Saved model at" + model_path)
+            # 每训练5轮保存一次
+            if (epoch + 1) % 5 == 0:
+                model_to_save = model.module if hasattr(model, 'module') else model
+                model_path = os.path.join(args.checkpoint_path, f"{store_name}_epoch_{epoch}.bin")
+                # 保存参数
+                torch.save(model_to_save.state_dict(), model_path)
+                print("Saved model at" + model_path)
