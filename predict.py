@@ -6,7 +6,6 @@ from data_process import CnerProcessor
 from evaluate import load_model
 from metrics import get_entity_from_labels
 from raw_data_process import preprocess
-import os
 
 
 def convert_raw_sentence_to_features(question,

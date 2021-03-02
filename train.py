@@ -1,3 +1,4 @@
+import logging
 import os
 import time
 
@@ -9,6 +10,7 @@ from model import BertLSTMCRF, BertCRF
 from config import get_argparse
 from data_process import CnerProcessor, collate_fn
 from evaluate import evaluate, load_and_cache_examples
+from utils.logger import setup_logging
 
 
 def train(args):
@@ -74,11 +76,12 @@ def train(args):
         scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=warmup_steps,
                                                     num_training_steps=t_total)
 
-        print("***** Running training *****")
-        print("  Num examples = %d" % len(train_dataset))
-        print("  Num Epochs = %d" % args.epochs)
-        print("  Gradient Accumulation steps = %d" % args.gradient_accumulation_steps)
-        print("  Total optimization steps = %d" % t_total)
+        logging.info("***** Running training *****")
+        logging.info("  Num examples = %d" % len(train_dataset))
+        logging.info("  Num Epochs = %d" % args.epochs)
+        logging.info("  Gradient Accumulation steps = %d" % args.gradient_accumulation_steps)
+        logging.info("  Total optimization steps = %d" % t_total)
+        logging.info("  model type %s" % store_name)
         global_step = 0
         tr_loss, logging_loss = 0.0, 0.0
         model.zero_grad()
@@ -113,13 +116,11 @@ def train(args):
                 model_path = os.path.join(args.checkpoint_path, f"{store_name}-epoch_{epoch}.bin")
                 # 保存参数
                 torch.save(model_to_save.state_dict(), model_path)
-                print("Saved model at" + model_path)
+                logging.info("Saved model at" + model_path)
 
 
 if __name__ == "__main__":
-    import warnings
-
-    warnings.filterwarnings("ignore")
+    setup_logging(default_path='./utils/logger_config.json')
     args = get_argparse().parse_args()
 
     if not os.path.exists(args.checkpoint_path):  # 模型保存路径

@@ -1,3 +1,4 @@
+import logging
 import os
 
 import torch
@@ -75,9 +76,9 @@ def evaluate(args, model, tokenizer, processor, data_type):
     eval_dataloader = DataLoader(eval_dataset, sampler=eval_sampler, batch_size=batch_size,
                                  collate_fn=collate_fn)
 
-    print("***** Running %s *****" % data_type)
-    print("  Num examples = %d" % len(eval_dataset))
-    print("  Batch size = %d" % args.eval_batch_size)
+    logging.info("***** Running %s *****" % data_type)
+    logging.info("  Num examples = %d" % len(eval_dataset))
+    logging.info("  Batch size = %d" % args.eval_batch_size)
     eval_loss = 0.0
     nb_eval_steps = 0
 
@@ -99,10 +100,10 @@ def evaluate(args, model, tokenizer, processor, data_type):
         performance.update_performance(real_label=out_label_ids, predict_label=tags)
 
     # 输出指标
-    print("\n ***** %s results ***** " % data_type)
+    logging.info("\n ***** %s results ***** " % data_type)
     eval_loss = eval_loss / nb_eval_steps
     performance.res_dict['eval_loss'] = eval_loss
-    print(performance)
+    logging.info(performance)
 
 
 if __name__ == "__main__":
