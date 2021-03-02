@@ -30,13 +30,15 @@ if __name__ == "__main__":
 
     tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
 
+    # 模型名称
+    store_name = args.bert_path.split('/')[-1]
     # 实例化模型
     if args.use_lstm:
         model = BertLSTMCRF(args=args, num_labels=num_labels)
-        store_name = 'ckpt_lstm'
+        store_name += '_lstm_crf'
     else:
         model = BertCRF(args=args, num_labels=num_labels)
-        store_name = 'ckpt'
+        store_name += '_crf'
     model.to(device)
 
     # Training

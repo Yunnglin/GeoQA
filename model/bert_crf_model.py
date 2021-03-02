@@ -1,7 +1,7 @@
 import os
 
 from torch import nn
-from transformers import BertConfig, BertModel
+from transformers import BertConfig, BertModel, AutoConfig, AutoModel
 
 from model import CRF
 
@@ -10,8 +10,8 @@ class BertCRF(nn.Module):
     def __init__(self, args, num_labels):
         super(BertCRF, self).__init__()
         # bert模型
-        self.bert_config = BertConfig.from_pretrained(os.path.join(args.bert_path, 'bert_config.json'))
-        self.bert = BertModel.from_pretrained(os.path.join(args.bert_path, 'pytorch_model.bin'),
+        self.bert_config = AutoConfig.from_pretrained(os.path.join(args.bert_path, 'config.json'))
+        self.bert = AutoModel.from_pretrained(os.path.join(args.bert_path, 'pytorch_model.bin'),
                                               config=self.bert_config)
 
         # 每个token进行分类

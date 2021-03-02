@@ -10,8 +10,8 @@ def get_argparse():
     parser.add_argument("--checkpoint_path", type=str, default='./save_model', help="path to save the model")
     parser.add_argument("--pred_output_dir", type=str, default='./output_predict',
                         help="path to store the prediction result")
-    parser.add_argument("--bert_path", type=str, default="./bert/bert-base-chinese",
-                        help="path that stores bert-base-chinese model")
+    parser.add_argument("--bert_path", type=str, default="./bert/bert_base_chinese",
+                        help="path that stores bert_base_chinese model")
 
     parser.add_argument("--max_seq_length", type=int, default=128, help='the length of sequence')
     parser.add_argument("--do_train", type=bool, default=True, help="For distant debugging.")

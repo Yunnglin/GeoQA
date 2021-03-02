@@ -2,7 +2,7 @@ import os
 
 import torch
 from torch import nn
-from transformers import BertConfig, BertModel
+from transformers import BertConfig, BertModel, AutoConfig, AutoModel
 
 from model import CRF
 
@@ -21,8 +21,8 @@ class BertLSTMCRF(nn.Module):
         self.bidirectional = args.lstm_bidirectional
 
         # bert模型，作为词嵌入
-        self.bert_config = BertConfig.from_pretrained(os.path.join(args.bert_path, 'bert_config.json'))
-        self.word_embeds = BertModel.from_pretrained(os.path.join(args.bert_path, 'pytorch_model.bin'),
+        self.bert_config = AutoConfig.from_pretrained(os.path.join(args.bert_path, 'config.json'))
+        self.word_embeds = AutoModel.from_pretrained(os.path.join(args.bert_path, 'pytorch_model.bin'),
                                                      config=self.bert_config)
 
         # lstm layers
