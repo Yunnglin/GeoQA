@@ -10,16 +10,9 @@ from config import get_argparse
 from data_process import CnerProcessor, collate_fn
 from evaluate import evaluate, load_and_cache_examples
 
-if __name__ == "__main__":
-    import warnings
 
-    warnings.filterwarnings("ignore")
-    args = get_argparse().parse_args()
+def train(args):
     device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() and args.device != '-1' else 'cpu')
-    # device = 'cpu'
-
-    if not os.path.exists(args.output_dir):  # 输出文件
-        os.mkdir(args.output_dir)
 
     processor = CnerProcessor()
     label_list = processor.get_labels()
@@ -28,17 +21,17 @@ if __name__ == "__main__":
     args.label2id = {label: i for i, label in enumerate(label_list)}
     num_labels = len(label_list)
 
-    tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
+    tokenizer = BertTokenizer.from_pretrained(args.bert_path)
 
     # 模型名称
     store_name = args.bert_path.split('/')[-1]
     # 实例化模型
     if args.use_lstm:
         model = BertLSTMCRF(args=args, num_labels=num_labels)
-        store_name += '_lstm_crf'
+        store_name += '-lstm-crf'
     else:
         model = BertCRF(args=args, num_labels=num_labels)
-        store_name += '_crf'
+        store_name += '-crf'
     model.to(device)
 
     # Training
@@ -115,9 +108,21 @@ if __name__ == "__main__":
             # evaluate效果
             evaluate(args, model, tokenizer, processor=processor, data_type="dev")
             # 每训练5轮保存一次
-            if (epoch + 1) % 5 == 0:
+            if epoch == 0 or (epoch + 1) % 5 == 0:
                 model_to_save = model.module if hasattr(model, 'module') else model
-                model_path = os.path.join(args.checkpoint_path, f"{store_name}_epoch_{epoch}.bin")
+                model_path = os.path.join(args.checkpoint_path, f"{store_name}-epoch_{epoch}.bin")
                 # 保存参数
                 torch.save(model_to_save.state_dict(), model_path)
                 print("Saved model at" + model_path)
+
+
+if __name__ == "__main__":
+    import warnings
+
+    warnings.filterwarnings("ignore")
+    args = get_argparse().parse_args()
+
+    if not os.path.exists(args.checkpoint_path):  # 模型保存路径
+        os.mkdir(args.checkpoint_path)
+
+    train(args=args)

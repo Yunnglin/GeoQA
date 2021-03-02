@@ -78,7 +78,7 @@ def process_raw_sentence(sentence: str) -> [str]:
 
 class Predict:
 
-    def __init__(self, args):
+    def __init__(self, args, model_path):
         import warnings
 
         warnings.filterwarnings("ignore")
@@ -92,9 +92,9 @@ class Predict:
         args.label2id = {label: i for i, label in enumerate(label_list)}
 
         self.args = args
-        self.tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
+        self.tokenizer = BertTokenizer.from_pretrained(args.bert_path)
         self.model = load_model(args=args, num_labels=num_labels,
-                                model_path=os.path.join(args.checkpoint_path, 'ckpt_lstm_epoch_9.bin'))
+                                model_path=model_path)
 
     def predict(self, question, background):
         question_l = process_raw_sentence(question)
@@ -133,7 +133,8 @@ if __name__ == '__main__':
     question = "我国下列地区中，资源条件最适宜建太阳能光热电站的是"
     background = "考点二太阳对地球的影响\n太阳能光热电站（下图）通过数以十万计的反光板聚焦太阳 能，给高塔顶端的锅炉加热，产生蒸汽，驱动发电机发电。据此 完成下题。"
 
-    predict = Predict(args=get_argparse().parse_args())
+    predict = Predict(args=get_argparse().parse_args(),
+                      model_path='./save_model/albert_chinese_large_lstm_crf_epoch_0.bin')
     predict(question, background)
 
     question = "欧盟进口的玩具80%来自我国，主要是由于我国玩具"

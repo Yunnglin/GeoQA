@@ -6,11 +6,8 @@ def get_argparse():
     # paths
     parser.add_argument("--device", type=str, default="0", help="which device to use, if -1 use cpu, else use gpu")
     parser.add_argument("--data_dir", type=str, default='./data', help="this is dataset path")
-    parser.add_argument("--output_dir", default='./outputs', type=str, required=False, help='this output directory')
     parser.add_argument("--checkpoint_path", type=str, default='./save_model', help="path to save the model")
-    parser.add_argument("--pred_output_dir", type=str, default='./output_predict',
-                        help="path to store the prediction result")
-    parser.add_argument("--bert_path", type=str, default="./bert/bert_base_chinese",
+    parser.add_argument("--bert_path", type=str, default="./bert/albert_chinese_large",
                         help="path that stores bert_base_chinese model")
 
     parser.add_argument("--max_seq_length", type=int, default=128, help='the length of sequence')

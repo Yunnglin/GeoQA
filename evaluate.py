@@ -52,7 +52,7 @@ def load_and_cache_examples(args, tokenizer, processor, data_type='train'):
 
 def load_model(args, num_labels, model_path):
     try:
-        if args.use_lstm:
+        if 'lstm' in model_path:
             model = BertLSTMCRF(args, num_labels)
         else:
             model = BertCRF(args, num_labels)
