@@ -16,7 +16,7 @@ def load_and_cache_examples(args, tokenizer, processor, data_type='train'):
     # 加载数据
     save_processed_data = './data/{}_processed_data'.format(data_type)
     if os.path.exists(save_processed_data):
-        print('加载数据')
+        print('加载 %s 数据' % data_type)
         features = torch.load(save_processed_data)
     else:
         label_list = processor.get_labels()
@@ -100,7 +100,7 @@ def evaluate(args, model, tokenizer, processor, data_type):
         performance.update_performance(real_label=out_label_ids, predict_label=tags)
 
     # 输出指标
-    logging.info("\n ***** %s results ***** " % data_type)
+    logging.info("***** %s results ***** " % data_type)
     eval_loss = eval_loss / nb_eval_steps
     performance.res_dict['eval_loss'] = eval_loss
     logging.info(performance)

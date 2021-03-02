@@ -14,7 +14,8 @@ class BertLSTMCRF(nn.Module):
 
     def __init__(self, args, num_labels):
         super().__init__()
-        self.USE_CUDA = (args.device != '-1')
+        self.device = torch.device(
+            'cuda:{}'.format(args.device) if torch.cuda.is_available() and args.device != '-1' else 'cpu')
         self.output_size = num_labels
         self.rnn_layers = args.lstm_rnn_layers
         self.hidden_dim = args.lstm_hidden_dim
@@ -50,12 +51,9 @@ class BertLSTMCRF(nn.Module):
 
     def init_hidden(self, batch_size):
         number = 2 if self.bidirectional else 1
-        if self.USE_CUDA:
-            return (torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim).cuda(),
-                    torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim).cuda())
-        else:
-            return (torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim),
-                    torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim))
+
+        return (torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim).to(self.device),
+                torch.randn(self.rnn_layers * number, batch_size, self.hidden_dim).to(self.device))
 
     def _get_lstm_features(self, sentence):
         batch_size = sentence.size(0)

@@ -109,9 +109,10 @@ def train(args):
                 global_step += 1
 
             # evaluate效果
+            logging.info(f'train epoch: {epoch}')
             evaluate(args, model, tokenizer, processor=processor, data_type="dev")
             # 每训练5轮保存一次
-            if epoch == 0 or (epoch + 1) % 5 == 0:
+            if (epoch + 1) % 5 == 0:
                 model_to_save = model.module if hasattr(model, 'module') else model
                 model_path = os.path.join(args.checkpoint_path, f"{store_name}-epoch_{epoch}.bin")
                 # 保存参数
@@ -126,4 +127,9 @@ if __name__ == "__main__":
     if not os.path.exists(args.checkpoint_path):  # 模型保存路径
         os.mkdir(args.checkpoint_path)
 
-    train(args=args)
+    bert_names = ['bert_base_chinese', 'albert_chinese_large', 'chinese_bert_wwm_ext', 'chinese_roberta_wwm_ext_large']
+    for name in bert_names:
+        args.bert_path = './bert/' + name
+        train(args=args)
+    # args.bert_path = './bert/' + bert_names[3]
+    # train(args=args)
