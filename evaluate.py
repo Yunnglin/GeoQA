@@ -76,9 +76,9 @@ def evaluate(args, model, tokenizer, processor, data_type):
     eval_dataloader = DataLoader(eval_dataset, sampler=eval_sampler, batch_size=batch_size,
                                  collate_fn=collate_fn)
 
-    logging.info("***** Running %s *****" % data_type)
-    logging.info("  Num examples = %d" % len(eval_dataset))
-    logging.info("  Batch size = %d" % args.eval_batch_size)
+    print("***** Running %s *****" % data_type)
+    print("  Num examples = %d" % len(eval_dataset))
+    print("  Batch size = %d" % args.eval_batch_size)
     eval_loss = 0.0
     nb_eval_steps = 0
 
@@ -100,10 +100,10 @@ def evaluate(args, model, tokenizer, processor, data_type):
         performance.update_performance(real_label=out_label_ids, predict_label=tags)
 
     # 输出指标
-    logging.info("***** %s results ***** " % data_type)
+    print("***** %s results ***** " % data_type)
     eval_loss = eval_loss / nb_eval_steps
     performance.res_dict['eval_loss'] = eval_loss
-    logging.info(performance)
+    return performance
 
 
 if __name__ == "__main__":

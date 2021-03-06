@@ -13,7 +13,6 @@ def setup_logging(default_path="./logger_config.json", default_level=logging.INF
     if os.path.exists(path):
         with open(path, "r") as f:
             config = json.load(f)
-            # TODO : can't configure handler 'info_file_handler'
             logging.config.dictConfig(config)
     else:
         logging.basicConfig(level=default_level)

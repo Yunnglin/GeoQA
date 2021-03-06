@@ -113,7 +113,7 @@ class Performance:
 
     def __str__(self):
         self._cal_performance()
-        info = " | ".join([f'{key}: {value:.4f}' for key, value in self.res_dict.items()])
+        info = " | ".join([f'{key}:{value:.4f}' for key, value in self.res_dict.items()])
         return info
 
 

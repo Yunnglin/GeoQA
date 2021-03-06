@@ -1,8 +1,4 @@
 data/
-result/
-test/
-
-train.txt
 
 *.zip
 *.bin

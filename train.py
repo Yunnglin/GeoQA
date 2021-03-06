@@ -76,14 +76,13 @@ def train(args):
         scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=warmup_steps,
                                                     num_training_steps=t_total)
 
-        logging.info("***** Running training *****")
-        logging.info("  Num examples = %d" % len(train_dataset))
-        logging.info("  Num Epochs = %d" % args.epochs)
-        logging.info("  Gradient Accumulation steps = %d" % args.gradient_accumulation_steps)
-        logging.info("  Total optimization steps = %d" % t_total)
-        logging.info("  model type %s" % store_name)
+        logging.info("\tRunning training")
+        logging.info("\tNum examples = %d" % len(train_dataset))
+        logging.info("\tNum Epochs = %d" % args.epochs)
+        logging.info("\tGradient Accumulation steps = %d" % args.gradient_accumulation_steps)
+        logging.info("\tTotal optimization steps = %d" % t_total)
+        logging.info("\tModel type %s" % store_name)
         global_step = 0
-        tr_loss, logging_loss = 0.0, 0.0
         model.zero_grad()
         for epoch in range(int(args.epochs)):
             model.train()
@@ -109,15 +108,44 @@ def train(args):
                 global_step += 1
 
             # evaluate效果
-            logging.info(f'train epoch: {epoch}')
-            evaluate(args, model, tokenizer, processor=processor, data_type="dev")
+            logging.info(f'train_epoch: {epoch}')
+            performance = evaluate(args, model, tokenizer, processor=processor, data_type="dev")
+            logging.info("eval_performance:\t" + str(performance))
+
             # 每训练5轮保存一次
-            if (epoch + 1) % 5 == 0:
-                model_to_save = model.module if hasattr(model, 'module') else model
+            if epoch > 5 and (epoch + 1) % 5 == 0:
                 model_path = os.path.join(args.checkpoint_path, f"{store_name}-epoch_{epoch}.bin")
-                # 保存参数
-                torch.save(model_to_save.state_dict(), model_path)
-                logging.info("Saved model at" + model_path)
+                save_model(model=model, model_path=model_path)
+
+
+def save_model(model, model_path):
+    model_to_save = model.module if hasattr(model, 'module') else model
+    # 保存参数
+    torch.save(model_to_save.state_dict(), model_path)
+    logging.info("Saved model at" + model_path)
+
+
+def save_checkpoint(epoch, model, optimizer, loss, checkpoint_path):
+    """
+    model = TheModelClass(*args, **kwargs)
+optimizer = TheOptimizerClass(*args, **kwargs)
+
+checkpoint = torch.load(PATH)
+model.load_state_dict(checkpoint['model_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+epoch = checkpoint['epoch']
+loss = checkpoint['loss']
+
+model.eval()
+# - or -
+model.train()
+    """
+    torch.save({
+        'epoch': epoch,
+        'model_state_dict': model.state_dict(),
+        'optimizer_state_dict': optimizer.state_dict(),
+        'loss': loss,
+    }, checkpoint_path)
 
 
 if __name__ == "__main__":
@@ -128,8 +156,16 @@ if __name__ == "__main__":
         os.mkdir(args.checkpoint_path)
 
     bert_names = ['bert_base_chinese', 'albert_chinese_large', 'chinese_bert_wwm_ext', 'chinese_roberta_wwm_ext_large']
+    args.epochs = 20
+
     for name in bert_names:
         args.bert_path = './bert/' + name
+        # bert_crf
+        args.use_lstm = False
         train(args=args)
+        # bert_lstm_crf
+        args.use_lstm = True
+        train(args=args)
+
     # args.bert_path = './bert/' + bert_names[3]
     # train(args=args)
