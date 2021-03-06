@@ -64,7 +64,7 @@ def plot_data(label_data, metric):
     plt.ylabel(metric)
     plt.title(metric + " figure")
 
-    plt.savefig(f"{metric}.png")
+    plt.savefig(f"../result/figures/{metric}.png")
     plt.show()
 
 
