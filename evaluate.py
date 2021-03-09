@@ -14,7 +14,7 @@ from metrics import Performance
 
 def load_and_cache_examples(args, tokenizer, processor, data_type='train'):
     # 加载数据
-    save_processed_data = './data/{}_processed_data'.format(data_type)
+    save_processed_data = os.path.join(args.data_dir, f'{data_type}_processed_data')
     if os.path.exists(save_processed_data):
         print('加载 %s 数据' % data_type)
         features = torch.load(save_processed_data)

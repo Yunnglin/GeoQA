@@ -149,7 +149,7 @@ model.train()
 
 
 if __name__ == "__main__":
-    setup_logging(default_path='./utils/logger_config.json')
+    setup_logging(default_path='./utils/logger_config.yaml')
     args = get_argparse().parse_args()
 
     if not os.path.exists(args.checkpoint_path):  # 模型保存路径

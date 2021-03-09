@@ -4,11 +4,11 @@ import numpy as np
 
 
 def process_info():
-    # process info.log
+    # process ach_info_8model.log
 
     res = []
     single = {'model_type': '', 'data': []}
-    with open("../logs/info.log", 'r', encoding='utf8') as info:
+    with open("../logs/ach_info_8model.log", 'r', encoding='utf8') as info:
         for line in info:
             if 'Num Epochs' in line:
                 num_epochs = line.split('=')[-1].strip()
