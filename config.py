@@ -5,7 +5,7 @@ def get_argparse():
     parser = argparse.ArgumentParser()
     # paths
     parser.add_argument("--device", type=str, default="2", help="which device to use, if -1 use cpu, else use gpu")
-    parser.add_argument("--data_dir", type=str, default='./data/processed/data_all', help="this is dataset path")
+    parser.add_argument("--data_dir", type=str, default='./data/processed/data_no_graph', help="this is dataset path")
     parser.add_argument("--checkpoint_path", type=str, default='./save_model', help="path to save the model")
     parser.add_argument("--bert_path", type=str, default="./bert/albert_chinese_large",
                         help="path that stores bert_base_chinese model")

@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def process_info():
+def process_info(path):
     # process ach_info_8model.log
 
     res = []
     single = {'model_type': '', 'data': []}
-    with open("../logs/ach_info_8model.log", 'r', encoding='utf8') as info:
+    with open(path, 'r', encoding='utf8') as info:
         for line in info:
             if 'Num Epochs' in line:
                 num_epochs = line.split('=')[-1].strip()
@@ -70,7 +70,8 @@ def plot_data(label_data, metric):
 
 if __name__ == '__main__':
     label_data = []
-    for r in process_info():
+    path = "../logs/ach_info_8model.log"
+    for r in process_info(path):
         data = Data(r['model_type'])
         for d in r['data']:
             data.data["precision"].append(d[0])
