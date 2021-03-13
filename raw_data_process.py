@@ -10,10 +10,7 @@ import jieba
 from utils.json_io import write_json, read_json
 from utils.logger import setup_logging
 
-EN_SYMBOLS = ',.!?[]()<>\'\'\"\"'
-ZH_SYMBOLS = '，。！？【】（）《》‘’“”'
-
-STOPWORDS = ['图示', '我国', '图中', '国家']  # 停用词
+ZH_SYMBOLS = set('，。！？【】（）《》‘’“”、；：')
 
 
 def preprocess(sentence: str) -> str:
@@ -23,22 +20,24 @@ def preprocess(sentence: str) -> str:
     :return: 处理以后的新句子（str是不可变的，只能返回新对象）
     """
     # 英文符号转中文
-    trans = str.maketrans(EN_SYMBOLS, ZH_SYMBOLS)
+    en_symbols = ',.!?[]()<>\'\'\"\"'
+    zh_symbols = '，。！？【】（）《》‘’“”'
+    trans = str.maketrans(en_symbols, zh_symbols)
     sentence = sentence.translate(trans)
     # 使用正则去掉停止符号
     return re.sub(r'[\s]', "", sentence)
 
 
-def get_stopwords(file_path) -> list:
+def get_stopwords(file_path) -> set:
     """
     从停用词文件中读取停用词
     :param file_path: 停用词文件路径
     :return: 停用词列表
     """
-    stopwords = []
+    stopwords = set()
     with open(file_path, 'r', encoding='utf8') as f:
         for line in f:
-            stopwords.append(line.strip())
+            stopwords.add(line.strip())
     return stopwords
 
 
@@ -56,26 +55,36 @@ class Word:
         self.start = start
         self.end = end
 
+    # 实现__hash__ and __eq__ 方便之后的set去重
+    def __hash__(self):
+        return hash(self.text)
+
     def __eq__(self, other):
         return type(self) == type(other) and self.text == other.text
 
 
 class RawProcessor:
-    def __init__(self, file_paths: [str], store_path: str, least_word_len: int = 2, use_cut: bool = False):
+    def __init__(self, file_paths: [str], store_path: str, least_word_len: int = 2, use_cut: bool = False,
+                 redundant: bool = True):
+        """
+        处理原始数据
+        :param file_paths: 要处理的文件集合的路径
+        :param store_path: 处理完成的数据存放路径
+        :param least_word_len: 抽取的最小词长
+        :param use_cut: 是否使用分词
+        :param redundant: 是否保留每个句子中的重复词
+        """
+        self.file_paths = file_paths
+        self.store_path = store_path
+        self.use_cut = use_cut
+        self.least_word_len = least_word_len
+        self.redundant = redundant
         # 处理过程中的词频统计 {word : freq}
         self.words_counter = defaultdict(int)
         # 统计总长度，设置合适max_len {len : freq}
         self.length_counter = defaultdict(int)
-        # 要处理的文件集合的路径
-        self.file_paths = file_paths
-        # 处理完成的数据存放路径
-        self.store_path = store_path
         # 处理完的word集合
         self.processed_data: [ProcessedData] = []
-        # 是否使用分词
-        self.use_cut = use_cut
-        # 抽取的最小词长
-        self.least_word_len = least_word_len
 
     def _get_same_word(self, source: str, target: str):
         """
@@ -102,8 +111,6 @@ class RawProcessor:
                 if len(word) >= self.least_word_len and word not in STOPWORDS:
                     # 加入该词
                     res_words.append(Word(text=word, start=index, end=index + word_len))
-                    # 统计词频
-                    self.words_counter[word] += 1
                 index += word_len
             else:
                 index += 1
@@ -114,11 +121,28 @@ class RawProcessor:
         使用结巴分词来抽取相同词
         """
         res_words: [Word] = []
-        s1_list = list(jieba.tokenize(source))
-        s2_list = list(jieba.tokenize(target))
-        print(' '.join(s1_list))
-        print(' '.join(s2_list))
-        return [word for word in s1_list if word in s2_list and word not in ZH_SYMBOLS]
+        source_cut = [Word(*word) for word in jieba.tokenize(source)]
+        target_cut = [Word(*word) for word in jieba.tokenize(target)]
+        for word in source_cut:
+            if word in target_cut and word.text not in STOPWORDS and len(word.text) >= self.least_word_len:
+                res_words.append(word)
+        return res_words
+
+    def _filter_words(self, words: [Word]):
+        """
+        根据一定条件去除抽取重合词中的一些词
+        """
+        _words = words if self.redundant else list(set(words))
+
+        counter_path = os.path.join(self.store_path, 'word_count.json')
+        if not os.path.exists(counter_path):
+            return _words
+        else:
+            counter_dict = read_json(counter_path)
+            # 倒序遍历，在遍历时删除
+            for i in range(len(_words) - 1, -1, -1):
+                pass
+            return _words
 
     @staticmethod
     def generate_tags(sequence_len: int, words: [Word]):
@@ -169,12 +193,19 @@ class RawProcessor:
                 else:
                     words_background = self._get_same_word(background, explain)
                     words_question = self._get_same_word(question, explain)
+
+                # 过滤噪声
+                words_question = self._filter_words(words_question)
+                words_background = self._filter_words(words_background)
+                # 统计词频信息
+                for word in words_question+words_background:
+                    self.words_counter[word.text] += 1
                 # 生成标签
                 tags_back = self.generate_tags(len(background), words_background)
                 tags_question = self.generate_tags(len(question), words_question)
                 # 统计长度
                 self.length_counter[len(question) + len(background)] += 1
-                # 添加处理好的数据
+                # 添加处理好的数据/
                 self.processed_data.append(ProcessedData(question=question,
                                                          question_label=tags_question,
                                                          background=background,
@@ -221,7 +252,7 @@ class RawProcessor:
         logger.info(f"Prepared: total size = {total_size} | train size = {train_size} | dev size = {dev_size}")
 
 
-def write_counter(counter: dict, path, key, reverse=False):
+def write_counter(counter: dict, path, key=None, reverse=False):
     """
     将词频统计排序然后写入json文件
     """
@@ -237,23 +268,36 @@ if __name__ == '__main__':
     setup_logging(default_path='./utils/logger_config.yaml')
     logger = logging.getLogger("data_logger")
 
-    STOPWORDS.extend(get_stopwords('./data/stopwords.txt'))
+    STOPWORDS = get_stopwords('./data/stopwords.txt')
     # 数据存储路径
-    data_process_type = 'data_no_graph'
-    data_path = f'./data/raw/{data_process_type}'
-    store_data_path = f'./data/processed/{data_process_type}'
-    # 待处理文件集合
-    files = ['53_data.json', 'spider_data.json', 'websoft_data.json']
-    file_paths = []
-    for file in files:
-        file_paths.append(os.path.join(data_path, file))
+    data_process_types = ['data_no_graph']
+    cuts = ['cut', 'no_cut']
+    redundants = ['no_redundant','no_redundant']
 
-    processor = RawProcessor(file_paths=file_paths, store_path=store_data_path)
-    # 处理数据
-    processor.process_raw_data()
-    # 写入数据
-    processor.prepare_data(data_split_dict={'train': 0.7, 'dev': 0.2, 'test': 0.1})
-    # 写入统计词频
-    write_counter(processor.words_counter, os.path.join(store_data_path, 'word_count.json'),
-                  key=lambda kv: (kv[1], kv[0]), reverse=True)
-    write_counter(processor.length_counter, os.path.join(store_data_path, 'length_count.json'), key=None)
+    for data_process_type in data_process_types:
+        data_path = os.path.join('./data/raw', data_process_type)
+        # 待处理文件集合
+        files = ['53_data.json', 'spider_data.json', 'websoft_data.json']
+        file_paths = []
+        for file in files:
+            file_paths.append(os.path.join(data_path, file))
+        # 是否分词
+        for cut in cuts:
+            use_cut = (cut == 'cut')
+            # 是否允许重复
+            for redundant in redundants:
+                use_redundant = (redundant == 'redundant')
+                store_data_path = os.path.join('./data/processed', data_process_type, cut, redundant)
+                if not os.path.exists(store_data_path):
+                    os.makedirs(store_data_path)
+
+                processor = RawProcessor(file_paths=file_paths, store_path=store_data_path, use_cut=use_cut,
+                                         redundant=use_redundant)
+                # 处理数据
+                processor.process_raw_data()
+                # 写入数据
+                processor.prepare_data(data_split_dict={'train': 0.7, 'dev': 0.2, 'test': 0.1})
+                # 写入统计词频
+                write_counter(processor.words_counter, os.path.join(store_data_path, 'word_count.json'),
+                              key=lambda kv: (kv[1], kv[0]), reverse=True)
+                write_counter(processor.length_counter, os.path.join(store_data_path, 'length_count.json'))

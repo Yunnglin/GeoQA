@@ -8,6 +8,6 @@ def read_json(file_path):
 
 
 def write_json(file_path, data, indent=2):
-    with open(file_path, 'r', encoding='utf8') as f:
+    with open(file_path, 'w', encoding='utf8') as f:
         json_str = json.dumps(data, ensure_ascii=False, indent=indent)
         f.write(json_str)
