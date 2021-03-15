@@ -9,6 +9,7 @@ import jieba
 
 from utils.json_io import write_json, read_json
 from utils.logger import setup_logging
+import subprocess
 
 ZH_SYMBOLS = set('，。！？【】（）《》‘’“”、；：')
 
@@ -50,7 +51,7 @@ class ProcessedData:
 
 
 class Word:
-    def __init__(self, text, start, end):
+    def __init__(self, text: str, start: int, end: int):
         self.text = text
         self.start = start
         self.end = end
@@ -61,6 +62,17 @@ class Word:
 
     def __eq__(self, other):
         return type(self) == type(other) and self.text == other.text
+
+    def __str__(self):
+        return {'text': self.text, 'start': self.start, 'end': self.end}.__str__()
+
+    def strip(self, s):
+        if self.text.startswith(s):
+            self.text = self.text[len(s):]
+            self.start += len(s)
+        if self.text.endswith(s):
+            self.text = self.text[:-len(s)]
+            self.end -= len(s)
 
 
 class RawProcessor:
@@ -141,7 +153,14 @@ class RawProcessor:
             counter_dict = read_json(counter_path)
             # 倒序遍历，在遍历时删除
             for i in range(len(_words) - 1, -1, -1):
-                pass
+                word = _words[i]
+                word.strip('的')
+                word.strip('在')
+                word.strip('原因')
+                # 长度不符合或只包含数字和字母
+                if len(word.text) < self.least_word_len or word.text.isnumeric():
+                    _words.remove(word)
+                    continue
             return _words
 
     @staticmethod
@@ -198,7 +217,7 @@ class RawProcessor:
                 words_question = self._filter_words(words_question)
                 words_background = self._filter_words(words_background)
                 # 统计词频信息
-                for word in words_question+words_background:
+                for word in words_question + words_background:
                     self.words_counter[word.text] += 1
                 # 生成标签
                 tags_back = self.generate_tags(len(background), words_background)
@@ -261,18 +280,11 @@ def write_counter(counter: dict, path, key=None, reverse=False):
     write_json(path, ordered_words_counter)
 
 
-if __name__ == '__main__':
-    if os.path.exists('./logs/data_info.log'):
-        os.remove('./logs/data_info.log')
-
-    setup_logging(default_path='./utils/logger_config.yaml')
-    logger = logging.getLogger("data_logger")
-
-    STOPWORDS = get_stopwords('./data/stopwords.txt')
+def start():
     # 数据存储路径
     data_process_types = ['data_no_graph']
     cuts = ['cut', 'no_cut']
-    redundants = ['no_redundant','no_redundant']
+    redundants = ['redundant', 'no_redundant']
 
     for data_process_type in data_process_types:
         data_path = os.path.join('./data/raw', data_process_type)
@@ -301,3 +313,15 @@ if __name__ == '__main__':
                 write_counter(processor.words_counter, os.path.join(store_data_path, 'word_count.json'),
                               key=lambda kv: (kv[1], kv[0]), reverse=True)
                 write_counter(processor.length_counter, os.path.join(store_data_path, 'length_count.json'))
+
+
+if __name__ == '__main__':
+    STOPWORDS = get_stopwords('./data/stopwords.txt')
+    if os.path.exists('./logs/data_info.log'):
+        os.remove('./logs/data_info.log')
+
+    setup_logging(default_path='./utils/logger_config.yaml')
+    logger = logging.getLogger("data_logger")
+
+    subprocess.call(r'find . -name *_data -type f -print -exec rm {} \;', shell=True)
+    # start()

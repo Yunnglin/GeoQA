@@ -1,3 +1,5 @@
+import os
+
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -41,7 +43,7 @@ class Data:
 
 
 # plot precision
-def plot_data(label_data, metric):
+def plot_data(label_data, metric, save_path):
     for d in label_data:
         x = np.arange(1, len(d.data[metric]) + 1, 1)
         y = np.array(d.data[metric], dtype=float)
@@ -55,8 +57,8 @@ def plot_data(label_data, metric):
         my_y_ticks = np.arange(0, 1, 0.1)
         plt.yticks(my_y_ticks)
     # x轴范围
-    plt.xlim(1, 20)
-    my_x_ticks = np.arange(1, 20, 1)
+    plt.xlim(1, 15)
+    my_x_ticks = np.arange(1, 15, 1)
     plt.xticks(my_x_ticks)
 
     # 设置坐标轴名称和标题
@@ -64,13 +66,13 @@ def plot_data(label_data, metric):
     plt.ylabel(metric)
     plt.title(metric + " figure")
 
-    plt.savefig(f"../result/figures/{metric}.png")
+    plt.savefig(save_path)
     plt.show()
 
 
 if __name__ == '__main__':
     label_data = []
-    path = "../logs/ach_info_8model.log"
+    path = "../logs/ach_info_cut_redandunt.log"
     for r in process_info(path):
         data = Data(r['model_type'])
         for d in r['data']:
@@ -79,7 +81,7 @@ if __name__ == '__main__':
             data.data["f1"].append(d[2])
             data.data["eval_loss"].append(d[3])
         label_data.append(data)
-    # plot_data(label_data, 'precision')
-    # plot_data(label_data, "recall")
-    # plot_data(label_data, "f1")
-    plot_data(label_data, "eval_loss")
+    metrics = ['precision', 'recall', 'f1', 'eval_loss']
+    for m in metrics:
+        plot_data(label_data, m, os.path.join('../result/figures', 'cut_redundant_' + m))
+

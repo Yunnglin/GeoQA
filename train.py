@@ -10,6 +10,7 @@ from model import BertLSTMCRF, BertCRF
 from config import get_argparse
 from data_process import CnerProcessor, collate_fn
 from evaluate import evaluate, load_and_cache_examples
+from raw_data_process import start
 from utils.logger import setup_logging
 
 
@@ -30,10 +31,8 @@ def train(args):
     # 实例化模型
     if args.use_lstm:
         model = BertLSTMCRF(args=args, num_labels=num_labels)
-        store_name += '-lstm-crf'
     else:
         model = BertCRF(args=args, num_labels=num_labels)
-        store_name += '-crf'
     model.to(device)
 
     # Training
@@ -48,9 +47,11 @@ def train(args):
         if not args.use_lstm:
             bert_param_optimizer = list(model.bert.named_parameters())
             linear_param_optimizer = list(model.classifier.named_parameters())
+            lstm_param_optimizer = None
         else:
             bert_param_optimizer = list(model.word_embeds.named_parameters())
             linear_param_optimizer = list(model.hidden2tag.named_parameters())
+            lstm_param_optimizer = list(model.lstm.named_parameters())
         crf_param_optimizer = list(model.crf.named_parameters())
 
         optimizer_grouped_parameters = [
@@ -69,6 +70,13 @@ def train(args):
             {'params': [p for n, p in linear_param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0,
              'lr': args.crf_learning_rate}
         ]
+
+        if lstm_param_optimizer:
+            optimizer_grouped_parameters += [
+                {'params': [p for n, p in lstm_param_optimizer if not any(nd in n for nd in no_decay)],
+                 'weight_decay': args.weight_decay, 'lr': args.lstm_learning_rate},
+                {'params': [p for n, p in lstm_param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0,
+                 'lr': args.lstm_learning_rate}]
 
         # 定义优化器
         warmup_steps = int(t_total * args.warmup_proportion)
@@ -114,7 +122,7 @@ def train(args):
 
             # 每训练5轮保存一次
             if epoch > 5 and (epoch + 1) % 5 == 0:
-                model_path = os.path.join(args.checkpoint_path, f"{store_name}-epoch_{epoch}.bin")
+                model_path = os.path.join(args.checkpoint_path, f"{args.store_name}-epoch_{epoch}.bin")
                 save_model(model=model, model_path=model_path)
 
 
@@ -149,23 +157,33 @@ model.train()
 
 
 if __name__ == "__main__":
+    if os.path.exists('./logs/info.log'):
+        os.remove('./logs/info.log')
     setup_logging(default_path='./utils/logger_config.yaml')
+    # start()
     args = get_argparse().parse_args()
 
     if not os.path.exists(args.checkpoint_path):  # 模型保存路径
         os.mkdir(args.checkpoint_path)
 
-    bert_names = ['bert_base_chinese', 'albert_chinese_large', 'chinese_bert_wwm_ext', 'chinese_roberta_wwm_ext_large']
-    args.epochs = 20
+    # bert_names = ['bert_base_chinese', 'albert_chinese_large', 'chinese_bert_wwm_ext', 'chinese_roberta_wwm_ext_large']
+    bert_names = ['chinese_roberta_wwm_ext_large']
+    data_process_types = ['data_no_graph']
+    cuts = ['cut', 'no_cut']
+    redundants = ['redundant', 'no_redundant']
 
+    args.use_lstm = True
     for name in bert_names:
         args.bert_path = './bert/' + name
-        # bert_crf
-        args.use_lstm = False
-        train(args=args)
-        # bert_lstm_crf
-        args.use_lstm = True
-        train(args=args)
+        for data_process_type in data_process_types:
+            # 是否分词
+            for cut in cuts:
+                # 是否允许重复
+                for redundant in redundants:
+                    args.store_name = f'{name}-lstm-crf-{cut}-{redundant}'
+                    args.data_dir = os.path.join('./data/processed', data_process_type, cut, redundant)
+                    logging.info('data_dir: ' + args.data_dir)
+                    train(args=args)
 
     # args.bert_path = './bert/' + bert_names[3]
     # train(args=args)

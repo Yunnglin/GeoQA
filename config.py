@@ -9,8 +9,9 @@ def get_argparse():
     parser.add_argument("--checkpoint_path", type=str, default='./save_model', help="path to save the model")
     parser.add_argument("--bert_path", type=str, default="./bert/albert_chinese_large",
                         help="path that stores bert_base_chinese model")
+    parser.add_argument("--store_name", type=str, default="model", help="saved model name")
 
-    parser.add_argument("--max_seq_length", type=int, default=256, help='the length of sequence')
+    parser.add_argument("--max_seq_length", type=int, default=170, help='the length of sequence')
     parser.add_argument("--do_train", type=bool, default=True, help="For distant debugging.")
     parser.add_argument("--train_batch_size", type=int, default=16, help="For distant debugging.")
     parser.add_argument("--predict_batch_size", type=int, default=16, help="For distant debugging.")
@@ -18,9 +19,10 @@ def get_argparse():
 
     parser.add_argument("--epochs", type=int, default=10, help="For distant debugging.")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1, help="For distant debugging.")
-    parser.add_argument("--learning_rate", default=5e-5, type=float, help='the initial learning rate for Adam')
-    parser.add_argument("--crf_learning_rate", default=5e-5, type=float, help='the initial learning rate for '
+    parser.add_argument("--learning_rate", default=1e-5, type=float, help='the initial learning rate for Adam')
+    parser.add_argument("--crf_learning_rate", default=1e-3, type=float, help='the initial learning rate for '
                                                                               'crf and linear layer')
+    parser.add_argument("--lstm_learning_rate", default=1e-3, type=float, help="the initial learning rate for lstm")
 
     parser.add_argument("--use_lstm", default=True, type=bool, help="whether to use lstm")
     parser.add_argument("--lstm_hidden_dim", default=384, type=int, help='the hidden size of lSTM')
