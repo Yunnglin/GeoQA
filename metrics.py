@@ -5,7 +5,7 @@ import numpy as np
 from seqeval.metrics.sequence_labeling import get_entities, precision_recall_fscore_support
 
 
-def get_entity_from_labels(tokens, labels, id2label=None):
+def get_entity_from_labels(tokens: [str], labels: [str], id2label=None) -> list:
     """
     extract entity from labels
     :param tokens: 输入序列
@@ -18,7 +18,7 @@ def get_entity_from_labels(tokens, labels, id2label=None):
         label_id_to_label(labels, id2label)
     chunks = split_entity(labels)
     for chunk in chunks:
-        res.append(''.join(tokens[chunk[1]:chunk[2]+1]))
+        res.append(''.join(tokens[chunk[1]:chunk[2] + 1]))
     return res
 
 
@@ -34,6 +34,9 @@ def split_entity(label_sequence):
 
 
 def label_id_to_label(label_ids: List[List[int]], id2label: dict):
+    """
+    label_ids 转 label
+    """
     for label_id in label_ids:
         for i, idx in enumerate(label_id):
             label_id[i] = id2label[idx]
@@ -75,6 +78,20 @@ def extract_tp_actual_correct(real_label, predict_label):
     return tp_sum, pred_sum, true_sum
 
 
+def corrected_extract_metrics(tokens: List[List[str]], real_labels: List[List[str]], predict_labels: List[List[str]]):
+    # 去掉位置信息，只需要抽取的实体
+    tp_sum = np.array([], dtype=np.int32)
+    pred_sum = np.array([], dtype=np.int32)
+    true_sum = np.array([], dtype=np.int32)
+    for token, real_label, predict_label in zip(tokens, real_labels, predict_labels):
+        entities_true = set(get_entity_from_labels(token, real_label))
+        entities_pred = set(get_entity_from_labels(token, predict_label))
+        tp_sum = np.append(tp_sum, len(entities_true & entities_pred))
+        pred_sum = np.append(pred_sum, len(entities_pred))
+        true_sum = np.append(true_sum, len(entities_true))
+    return tp_sum.sum(), pred_sum.sum(), true_sum.sum()
+
+
 class Performance:
     def __init__(self, id2label=None):
         self.performance = {
@@ -89,13 +106,13 @@ class Performance:
             'f1_score': 0.0
         }
 
-    def update_performance(self, real_label, predict_label):
+    def update_performance(self, tokens: List[List[str]], real_labels, predict_labels):
         if self.id2label:
-            label_id_to_label(real_label, self.id2label)
-            label_id_to_label(predict_label, self.id2label)
+            label_id_to_label(real_labels, self.id2label)
+            label_id_to_label(predict_labels, self.id2label)
         # performance_measure获取的是label级别的performance不正确，需要自行获取
         # 更新
-        new_performance = extract_tp_actual_correct(real_label, predict_label)
+        new_performance = corrected_extract_metrics(tokens, real_labels, predict_labels)
         self.performance['tp_sum'] += new_performance[0].item()
         self.performance['pred_sum'] += new_performance[1].item()
         self.performance['true_sum'] += new_performance[2].item()
@@ -109,7 +126,7 @@ class Performance:
             for key in self.res_dict:
                 self.res_dict[key] = self.res_dict[key]
         except ZeroDivisionError as e:
-            print(e)
+            pass
 
     def __str__(self):
         self._cal_performance()

@@ -26,8 +26,6 @@ def train(args):
 
     tokenizer = BertTokenizer.from_pretrained(args.bert_path)
 
-    # 模型名称
-    store_name = args.bert_path.split('/')[-1]
     # 实例化模型
     if args.use_lstm:
         model = BertLSTMCRF(args=args, num_labels=num_labels)
@@ -89,7 +87,7 @@ def train(args):
         logging.info("\tNum Epochs = %d" % args.epochs)
         logging.info("\tGradient Accumulation steps = %d" % args.gradient_accumulation_steps)
         logging.info("\tTotal optimization steps = %d" % t_total)
-        logging.info("\tModel type %s" % store_name)
+        logging.info("\tModel type %s" % args.store_name)
         global_step = 0
         model.zero_grad()
         for epoch in range(int(args.epochs)):
@@ -157,8 +155,8 @@ model.train()
 
 
 if __name__ == "__main__":
-    if os.path.exists('./logs/info.log'):
-        os.remove('./logs/info.log')
+    if os.path.exists('logs/ach_info_bert_large.log'):
+        os.remove('logs/ach_info_bert_large.log')
     setup_logging(default_path='./utils/logger_config.yaml')
     # start()
     args = get_argparse().parse_args()
@@ -167,10 +165,10 @@ if __name__ == "__main__":
         os.mkdir(args.checkpoint_path)
 
     # bert_names = ['bert_base_chinese', 'albert_chinese_large', 'chinese_bert_wwm_ext', 'chinese_roberta_wwm_ext_large']
-    bert_names = ['chinese_roberta_wwm_ext_large']
+    bert_names = ['chinese_bert_wwm_ext']
     data_process_types = ['data_no_graph']
     cuts = ['cut', 'no_cut']
-    redundants = ['redundant', 'no_redundant']
+    redundants = ['redundant']
 
     args.use_lstm = True
     for name in bert_names:

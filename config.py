@@ -19,15 +19,15 @@ def get_argparse():
 
     parser.add_argument("--epochs", type=int, default=10, help="For distant debugging.")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1, help="For distant debugging.")
-    parser.add_argument("--learning_rate", default=1e-5, type=float, help='the initial learning rate for Adam')
-    parser.add_argument("--crf_learning_rate", default=1e-3, type=float, help='the initial learning rate for '
+    parser.add_argument("--learning_rate", default=5e-5, type=float, help='the initial learning rate for Adam')
+    parser.add_argument("--crf_learning_rate", default=1e-4, type=float, help='the initial learning rate for '
                                                                               'crf and linear layer')
-    parser.add_argument("--lstm_learning_rate", default=1e-3, type=float, help="the initial learning rate for lstm")
+    parser.add_argument("--lstm_learning_rate", default=1e-4, type=float, help="the initial learning rate for lstm")
 
     parser.add_argument("--use_lstm", default=True, type=bool, help="whether to use lstm")
-    parser.add_argument("--lstm_hidden_dim", default=384, type=int, help='the hidden size of lSTM')
+    parser.add_argument("--lstm_hidden_dim", default=256, type=int, help='the hidden size of lSTM')
     parser.add_argument("--lstm_rnn_layers", default=1, type=int, help="layers of rnn")
-    parser.add_argument("--lstm_dropout", default=0.2, type=float, help="probability of dropout")
+    parser.add_argument("--lstm_dropout", default=0.5, type=float, help="probability of dropout")
     parser.add_argument("--lstm_bidirectional", default=True, type=bool, help="whether to use bidirectional")
 
     parser.add_argument("--warmup_proportion", default=0.05, type=float, help='the initial learning rate for Adam')

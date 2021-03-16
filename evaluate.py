@@ -82,6 +82,7 @@ def evaluate(args, model, tokenizer, processor, data_type):
     eval_loss = 0.0
     nb_eval_steps = 0
 
+    model.to(device)
     model.eval()
     for step, batch in enumerate(eval_dataloader):
         batch = tuple(t.to(device) for t in batch)
@@ -94,10 +95,12 @@ def evaluate(args, model, tokenizer, processor, data_type):
 
         eval_loss += tmp_eval_loss.item()
         nb_eval_steps += 1
+
+        tokens = [tokenizer.convert_ids_to_tokens(ids) for ids in inputs['input_ids'].cpu().numpy().tolist()]  # 输入文本
         out_label_ids = inputs['labels'].cpu().numpy().tolist()  # 真实标签id
         tags = tags.squeeze(0).cpu().numpy().tolist()  # 预测标签id
         # 每个batch更新三项指标
-        performance.update_performance(real_label=out_label_ids, predict_label=tags)
+        performance.update_performance(tokens=tokens, real_labels=out_label_ids, predict_labels=tags)
 
     # 输出指标
     print("***** %s results ***** " % data_type)
@@ -115,7 +118,26 @@ if __name__ == "__main__":
     args.id2label = {i: label for i, label in enumerate(label_list)}
     args.label2id = {label: i for i, label in enumerate(label_list)}
 
-    model = load_model(args=args, num_labels=num_labels, model_path='./save_model/ckpt_epoch_9.bin')
-    tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
+    bert_names = ['bert_base_chinese', 'chinese_bert_wwm_ext', 'chinese_roberta_wwm_ext_large']
+    data_process_types = ['data_no_graph']
+    cuts = ['cut', 'no_cut']
+    redundants = ['redundant', 'no_redundant']
 
-    evaluate(args, model, tokenizer, processor=processor, data_type="test")
+    args.use_lstm = True
+    args.max_seq_length = 256
+    for name in bert_names:
+        args.bert_path = './bert/' + name
+        for data_process_type in data_process_types:
+            # 是否分词
+            for cut in cuts:
+                # 是否允许重复
+                for redundant in redundants:
+                    args.store_name = f'{name}-lstm-crf-{cut}-{redundant}'
+                    args.data_dir = os.path.join('./data/processed', data_process_type, cut, redundant)
+                    print('data_dir: ' + args.data_dir)
+                    model_path = os.path.join(args.checkpoint_path, args.store_name + '-epoch_9.bin')
+                    model = load_model(args=args, num_labels=num_labels,
+                                       model_path=model_path)
+                    tokenizer = BertTokenizer.from_pretrained(os.path.join(args.bert_path, 'vocab.txt'))
+                    perform = evaluate(args, model, tokenizer, processor=processor, data_type="dev")
+                    print(f'model:{model_path} \n performance:{perform}')
