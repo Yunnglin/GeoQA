@@ -1,0 +1,6721 @@
+[
+  {
+    "id": -6943376012003136193,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "地区",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "资源",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "最适宜建太",
+          "start": 12,
+          "end": 17
+        },
+        {
+          "text": "阳能",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "电站",
+          "start": 23,
+          "end": 25
+        }
+      ],
+      "in_background": [
+        {
+          "text": "太阳",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "太阳能",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "text": "电站",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "太阳",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "发电",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "发电",
+          "start": 62,
+          "end": 64
+        }
+      ]
+    }
+  },
+  {
+    "id": 8021507331067425484,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "太阳",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "in_background": [
+        {
+          "text": "太阳对地球的影响",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "text": "太阳",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "太阳",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "蒸汽",
+          "start": 54,
+          "end": 56
+        }
+      ]
+    }
+  },
+  {
+    "id": 3877724450243977801,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "工业",
+          "start": 7,
+          "end": 9
+        }
+      ],
+      "in_background": [
+        {
+          "text": "发展",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "阶段",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "工业",
+          "start": 12,
+          "end": 14
+        }
+      ]
+    }
+  },
+  {
+    "id": -5239777002142615138,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "业",
+          "start": 10,
+          "end": 11
+        },
+        {
+          "text": "钢铁技术服务企业仍选址在该城市附近",
+          "start": 20,
+          "end": 37
+        }
+      ],
+      "in_background": [
+        {
+          "text": "城市",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "发展",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "工业结构",
+          "start": 12,
+          "end": 16
+        }
+      ]
+    }
+  },
+  {
+    "id": -4883606686038480835,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "县城相比",
+          "start": 1,
+          "end": 5
+        },
+        {
+          "text": "中心集镇以当地优势资源",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "text": "为基础的加工企业活力较强",
+          "start": 18,
+          "end": 30
+        }
+      ],
+      "in_background": [
+        {
+          "text": "城市",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "种植",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "务工",
+          "start": 63,
+          "end": 65
+        },
+        {
+          "text": "以当地优势资源为基础的加工企业",
+          "start": 73,
+          "end": 88
+        },
+        {
+          "text": "县城",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "力较弱",
+          "start": 93,
+          "end": 96
+        },
+        {
+          "text": "中心集镇活力较强",
+          "start": 99,
+          "end": 107
+        }
+      ]
+    }
+  },
+  {
+    "id": -4459289050256350161,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "农民",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "需求",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "村一中心集镇",
+          "start": 23,
+          "end": 29
+        },
+        {
+          "text": "居住模式",
+          "start": 32,
+          "end": 36
+        },
+        {
+          "text": "模式",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "方便",
+          "start": 43,
+          "end": 45
+        },
+        {
+          "text": "类型农民",
+          "start": 46,
+          "end": 50
+        }
+      ],
+      "in_background": [
+        {
+          "text": "工业",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "农民",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "跨村种田大户",
+          "start": 29,
+          "end": 35
+        },
+        {
+          "text": "农民",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "种植自家承包地农民",
+          "start": 38,
+          "end": 47
+        },
+        {
+          "text": "农民",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "农民",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "类型",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "该县",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "资源",
+          "start": 78,
+          "end": 80
+        },
+        {
+          "text": "中心集镇",
+          "start": 99,
+          "end": 103
+        },
+        {
+          "text": "居民",
+          "start": 114,
+          "end": 116
+        }
+      ]
+    }
+  },
+  {
+    "id": -6638454199523070792,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "为了实施乡村振兴战略",
+          "start": 0,
+          "end": 10
+        },
+        {
+          "text": "带领农民脱贫",
+          "start": 11,
+          "end": 17
+        },
+        {
+          "text": "致富",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "国家级贫困县",
+          "start": 22,
+          "end": 28
+        },
+        {
+          "text": "措施",
+          "start": 34,
+          "end": 36
+        }
+      ],
+      "in_background": [
+        {
+          "text": "工业化",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "text": "国家级贫困县",
+          "start": 18,
+          "end": 24
+        },
+        {
+          "text": "农民",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "农民",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "种植",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "农民",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "text": "农民",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "农民",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "资源",
+          "start": 78,
+          "end": 80
+        }
+      ]
+    }
+  },
+  {
+    "id": 8628633081394949868,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "2000年到2012年",
+          "start": 0,
+          "end": 11
+        },
+        {
+          "text": "崇明县城镇化",
+          "start": 12,
+          "end": 18
+        },
+        {
+          "text": "水平不断提高的主要原因是",
+          "start": 19,
+          "end": 31
+        }
+      ],
+      "in_background": [
+        {
+          "text": "发展",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "城镇",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "产业",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "崇明县",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "产业",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "城镇化",
+          "start": 41,
+          "end": 44
+        }
+      ]
+    }
+  },
+  {
+    "id": 8348358436972993122,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "崇明县",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "调整第三产业",
+          "start": 17,
+          "end": 23
+        },
+        {
+          "text": "推进城镇化建设",
+          "start": 24,
+          "end": 31
+        },
+        {
+          "text": "优先发展",
+          "start": 35,
+          "end": 39
+        },
+        {
+          "text": "行业",
+          "start": 40,
+          "end": 42
+        }
+      ],
+      "in_background": [
+        {
+          "text": "发展",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "城镇化",
+          "start": 9,
+          "end": 12
+        },
+        {
+          "text": "产业",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "崇明县",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "产业",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "城镇化",
+          "start": 41,
+          "end": 44
+        }
+      ]
+    }
+  },
+  {
+    "id": 1838550116150689932,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "流域型城市",
+          "start": 2,
+          "end": 7
+        },
+        {
+          "text": "游",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "text": "城市",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "in_background": [
+        {
+          "text": "流域型城市",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "城市",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "河流",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "主流",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "市场",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "河流",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "通达性较差",
+          "start": 65,
+          "end": 70
+        },
+        {
+          "text": "上游",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "城市",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "通达性较好",
+          "start": 77,
+          "end": 82
+        },
+        {
+          "text": "联系程度较强",
+          "start": 83,
+          "end": 89
+        },
+        {
+          "text": "中游",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "城市",
+          "start": 92,
+          "end": 94
+        },
+        {
+          "text": "汇入通达性",
+          "start": 99,
+          "end": 104
+        },
+        {
+          "text": "下游",
+          "start": 107,
+          "end": 109
+        },
+        {
+          "text": "城市",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "流域型",
+          "start": 121,
+          "end": 124
+        },
+        {
+          "text": "城市",
+          "start": 124,
+          "end": 126
+        }
+      ]
+    }
+  },
+  {
+    "id": -1490673725283431827,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "城市",
+          "start": 3,
+          "end": 5
+        }
+      ],
+      "in_background": [
+        {
+          "text": "流域型城市",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "城市",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "河流",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "入",
+          "start": 41,
+          "end": 42
+        },
+        {
+          "text": "河流",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "通达性较差",
+          "start": 65,
+          "end": 70
+        },
+        {
+          "text": "上游",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "城市",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "通达性较好",
+          "start": 77,
+          "end": 82
+        },
+        {
+          "text": "联系程度较强的中游城市",
+          "start": 83,
+          "end": 94
+        },
+        {
+          "text": "汇入通达性更强的下游城市",
+          "start": 99,
+          "end": 111
+        },
+        {
+          "text": "流域型城市",
+          "start": 121,
+          "end": 126
+        }
+      ]
+    }
+  },
+  {
+    "id": -528140434567423702,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "夏季",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "暗渠",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "水量",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": -1675735224019124058,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "涝坝",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "重",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "text": "作用",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": 4728937579754899714,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "公司",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "关闭自有生产厂",
+          "start": 9,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "公司",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "温州",
+          "start": 20,
+          "end": 22
+        }
+      ]
+    }
+  },
+  {
+    "id": 1039216587038391608,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "M公司",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "研发中心",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "text": "上海",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "上海",
+          "start": 23,
+          "end": 25
+        }
+      ],
+      "in_background": [
+        {
+          "text": "M公司",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "text": "服装",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "温州",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "发",
+          "start": 25,
+          "end": 26
+        }
+      ]
+    }
+  },
+  {
+    "id": 8137432083442686842,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "发展",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "M公司一直致力于",
+          "start": 7,
+          "end": 15
+        }
+      ],
+      "in_background": [
+        {
+          "text": "M公司",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "text": "发展",
+          "start": 25,
+          "end": 27
+        }
+      ]
+    }
+  },
+  {
+    "id": 3853665609651184728,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "家电",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "转移",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "因素",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "家电",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "组装工厂",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "text": "转移",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "家电",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "转移",
+          "start": 42,
+          "end": 44
+        }
+      ]
+    }
+  },
+  {
+    "id": 5739932997864524529,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "越南",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "对日资家电组 装工厂的投资吸引力",
+          "start": 12,
+          "end": 28
+        },
+        {
+          "text": "中国",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "但其日资家电组装工厂数量却远少于中国",
+          "start": 34,
+          "end": 52
+        },
+        {
+          "text": "主要原",
+          "start": 53,
+          "end": 56
+        },
+        {
+          "text": "中国",
+          "start": 58,
+          "end": 60
+        }
+      ],
+      "in_background": [
+        {
+          "text": "日本",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "家电",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "组装工厂",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "text": "日资家电组装工厂",
+          "start": 34,
+          "end": 42
+        }
+      ]
+    }
+  },
+  {
+    "id": 9192142181581906706,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "家电",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "越南",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "背景下",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "text": "中国家电产业的发展战略",
+          "start": 23,
+          "end": 34
+        }
+      ],
+      "in_background": [
+        {
+          "text": "家电",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "转移",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "家电",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "转移",
+          "start": 42,
+          "end": 44
+        }
+      ]
+    }
+  },
+  {
+    "id": -4371710749024030313,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "2003年",
+          "start": 1,
+          "end": 6
+        },
+        {
+          "text": "2013年",
+          "start": 9,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "华北",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "2003年",
+          "start": 8,
+          "end": 13
+        },
+        {
+          "text": "2013年",
+          "start": 14,
+          "end": 19
+        }
+      ]
+    }
+  },
+  {
+    "id": 332851894659953317,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "南水北调",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "影响",
+          "start": 8,
+          "end": 10
+        }
+      ],
+      "in_background": [
+        {
+          "text": "用水",
+          "start": 22,
+          "end": 24
+        }
+      ]
+    }
+  },
+  {
+    "id": 969687737312654097,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "导致",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "气荒",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "缓解",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "天然气",
+          "start": 44,
+          "end": 47
+        },
+        {
+          "text": "气荒",
+          "start": 48,
+          "end": 50
+        }
+      ],
+      "in_background": [
+        {
+          "text": "能源",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "能源",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "能源",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "中缅油气管道",
+          "start": 50,
+          "end": 56
+        },
+        {
+          "text": "输油",
+          "start": 66,
+          "end": 68
+        }
+      ]
+    }
+  },
+  {
+    "id": -8839760416270727203,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "中缅油气管道建设中可能遇到",
+          "start": 0,
+          "end": 13
+        },
+        {
+          "text": "最大自然障碍是",
+          "start": 15,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "能源",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "能源",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "能源",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "中缅油气管道",
+          "start": 50,
+          "end": 56
+        },
+        {
+          "text": "输油",
+          "start": 66,
+          "end": 68
+        }
+      ]
+    }
+  },
+  {
+    "id": 6558884772581823259,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "工业化",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "text": "发达国家",
+          "start": 5,
+          "end": 9
+        }
+      ],
+      "in_background": [
+        {
+          "text": "发达国",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "经济",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "发达国家",
+          "start": 42,
+          "end": 46
+        },
+        {
+          "text": "工业化",
+          "start": 52,
+          "end": 55
+        },
+        {
+          "text": "工业化",
+          "start": 63,
+          "end": 66
+        },
+        {
+          "text": "工业化",
+          "start": 75,
+          "end": 78
+        },
+        {
+          "text": "动力机",
+          "start": 79,
+          "end": 82
+        }
+      ]
+    }
+  },
+  {
+    "id": 2801876832284482750,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "发达国家",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "工业化",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "text": "影响",
+          "start": 12,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "发达国家",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "金融",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "膨胀",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "经济",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "发达国家",
+          "start": 42,
+          "end": 46
+        },
+        {
+          "text": "再工业化",
+          "start": 51,
+          "end": 55
+        },
+        {
+          "text": "再",
+          "start": 62,
+          "end": 63
+        },
+        {
+          "text": "工业化",
+          "start": 63,
+          "end": 66
+        },
+        {
+          "text": "再",
+          "start": 74,
+          "end": 75
+        },
+        {
+          "text": "工业化",
+          "start": 75,
+          "end": 78
+        }
+      ]
+    }
+  },
+  {
+    "id": 5903518413553439914,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "运输",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "成本",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "国家",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "M国中资企业的产品首先应销往",
+          "start": 15,
+          "end": 29
+        }
+      ],
+      "in_background": [
+        {
+          "text": "M国",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "企业",
+          "start": 40,
+          "end": 42
+        },
+        {
+          "text": "M国",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "产品",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "产品",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "M国",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "其他国家",
+          "start": 81,
+          "end": 85
+        },
+        {
+          "text": "M国",
+          "start": 90,
+          "end": 92
+        }
+      ]
+    }
+  },
+  {
+    "id": -4422502554779118787,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "甲国位于",
+          "start": 0,
+          "end": 4
+        }
+      ],
+      "in_background": [
+        {
+          "text": "于",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "text": "徐州",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "甲国",
+          "start": 28,
+          "end": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": 6533383194110007450,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "运往甲国",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "海上",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "航线",
+          "start": 15,
+          "end": 17
+        }
+      ],
+      "in_background": [
+        {
+          "text": "徐州",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "甲国",
+          "start": 28,
+          "end": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": -6745458288351286253,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "该湖泊",
+          "start": 8,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "湖泊",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "该湖",
+          "start": 22,
+          "end": 24
+        }
+      ]
+    }
+  },
+  {
+    "id": 8662400995049209494,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "适合",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "淡水鱼生长",
+          "start": 3,
+          "end": 8
+        }
+      ],
+      "in_background": [
+        {
+          "text": "湖",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "text": "位置",
+          "start": 7,
+          "end": 9
+        }
+      ]
+    }
+  },
+  {
+    "id": -6075841156123822532,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "该湖水位下降加剧",
+          "start": 12,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "湖泊",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "该湖",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "大规模开垦",
+          "start": 26,
+          "end": 31
+        }
+      ]
+    }
+  },
+  {
+    "id": 2301578998856741017,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "影响",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "曲线",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "因素是",
+          "start": 11,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "雪线高度",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "年积雪",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "text": "海拔",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "气温",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "降水量",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "雪线高度",
+          "start": 37,
+          "end": 41
+        }
+      ]
+    }
+  },
+  {
+    "id": -9136667371850343802,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "曲线",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "数值明显小于南半球同纬度",
+          "start": 15,
+          "end": 27
+        }
+      ],
+      "in_background": [
+        {
+          "text": "雪线高度",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "海拔",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "全球",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "纬度",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "气温",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "雪线高度",
+          "start": 37,
+          "end": 41
+        }
+      ]
+    }
+  },
+  {
+    "id": 6448580033546878537,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "曲线",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "数值较大",
+          "start": 12,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "雪线高度",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "海拔",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "气温",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "降水量",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "雪线高度",
+          "start": 37,
+          "end": 41
+        }
+      ]
+    }
+  },
+  {
+    "id": -2509227012485606922,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "吉布提",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "text": "非\n洲",
+          "start": 13,
+          "end": 16
+        },
+        {
+          "text": "新加坡",
+          "start": 16,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "地区",
+          "start": 7,
+          "end": 9
+        }
+      ]
+    }
+  },
+  {
+    "id": -5804765159621083432,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "吉布",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "沸腾的蒸锅",
+          "start": 5,
+          "end": 10
+        },
+        {
+          "text": "因素",
+          "start": 25,
+          "end": 27
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": 9046883714503697512,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "轮胎测试",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "轮胎测试",
+          "start": 10,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "轮胎",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "测试",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "路面上",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "text": "行",
+          "start": 16,
+          "end": 17
+        },
+        {
+          "text": "轮胎",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "轮胎测试",
+          "start": 44,
+          "end": 48
+        },
+        {
+          "text": "测试",
+          "start": 52,
+          "end": 54
+        }
+      ]
+    }
+  },
+  {
+    "id": -5642229649490330174,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "极地科学考察",
+          "start": 2,
+          "end": 8
+        },
+        {
+          "text": "恩克斯堡岛",
+          "start": 11,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "恩克斯堡岛",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "南极冰盖",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "text": "陆",
+          "start": 19,
+          "end": 20
+        },
+        {
+          "text": "海冰的",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "text": "恩克斯堡岛",
+          "start": 46,
+          "end": 51
+        },
+        {
+          "text": "南极",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "科学考察",
+          "start": 64,
+          "end": 68
+        }
+      ]
+    }
+  },
+  {
+    "id": 1388989871184165206,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "芬兰",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": 4854634478737657333,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "燕麦种植北界呈图示走向",
+          "start": 0,
+          "end": 11
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": -854765555484868999,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "贝加尔湖",
+          "start": 0,
+          "end": 4
+        }
+      ],
+      "in_background": [
+        {
+          "text": "贝加尔湖",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "5月",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "贝加尔湖",
+          "start": 28,
+          "end": 32
+        },
+        {
+          "text": "等高",
+          "start": 34,
+          "end": 36
+        }
+      ]
+    }
+  },
+  {
+    "id": -7694450605055880506,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "贝加尔湖",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "湖区",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "影响",
+          "start": 10,
+          "end": 12
+        }
+      ],
+      "in_background": [
+        {
+          "text": "贝加尔湖湖面",
+          "start": 0,
+          "end": 6
+        },
+        {
+          "text": "贝加尔湖",
+          "start": 28,
+          "end": 32
+        }
+      ]
+    }
+  },
+  {
+    "id": 3651898470958887012,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "东北航线",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "西北航线",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "汇合处",
+          "start": 8,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "全球",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "变暖",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "北极",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "航线",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "北极航线",
+          "start": 37,
+          "end": 41
+        },
+        {
+          "text": "东北航线",
+          "start": 44,
+          "end": 48
+        },
+        {
+          "text": "西北航线",
+          "start": 49,
+          "end": 53
+        }
+      ]
+    }
+  },
+  {
+    "id": -9084024938053836328,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "北极航线开通",
+          "start": 1,
+          "end": 7
+        },
+        {
+          "text": "航线",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "全球",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "变暖",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "北极",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "航线",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "开通",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "北极航线",
+          "start": 37,
+          "end": 41
+        },
+        {
+          "text": "航线",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "航线",
+          "start": 51,
+          "end": 53
+        }
+      ]
+    }
+  },
+  {
+    "id": 2617981144006663745,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "北极航线开通",
+          "start": 1,
+          "end": 7
+        },
+        {
+          "text": "海上",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "航运",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "受益",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "全球变暖",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "北极",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "海洋运输",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "text": "航线的开通",
+          "start": 17,
+          "end": 22
+        },
+        {
+          "text": "北极航线",
+          "start": 37,
+          "end": 41
+        },
+        {
+          "text": "航线",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "航线",
+          "start": 51,
+          "end": 53
+        }
+      ]
+    }
+  },
+  {
+    "id": -5795441683558015984,
+    "keywords": {
+      "in_question": [],
+      "in_background": [
+        {
+          "text": "美国",
+          "start": 3,
+          "end": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": 2898087124945475002,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "N地",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "in_background": [
+        {
+          "text": "时间",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "空间",
+          "start": 22,
+          "end": 24
+        }
+      ]
+    }
+  },
+  {
+    "id": 2432447904313231290,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "该地可能位于",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "in_background": [
+        {
+          "text": "气温",
+          "start": 74,
+          "end": 76
+        },
+        {
+          "text": "温度",
+          "start": 91,
+          "end": 93
+        }
+      ]
+    }
+  },
+  {
+    "id": -7997374752800551620,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "河床",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "断面形态",
+          "start": 2,
+          "end": 6
+        }
+      ],
+      "in_background": [
+        {
+          "text": "河流",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "东部",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "河床",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "径流",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "影响",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "水期",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "潮流",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "泥沙淤积",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "text": "径流",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "冲刷",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "河床",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "河床断面形态",
+          "start": 78,
+          "end": 84
+        },
+        {
+          "text": "河床",
+          "start": 91,
+          "end": 93
+        },
+        {
+          "text": "断面",
+          "start": 98,
+          "end": 100
+        },
+        {
+          "text": "建成",
+          "start": 128,
+          "end": 130
+        }
+      ]
+    }
+  },
+  {
+    "id": -3209778097901956896,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "水库竣工后",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "水库",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "下游",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "河流",
+          "start": 10,
+          "end": 12
+        }
+      ],
+      "in_background": [
+        {
+          "text": "河流",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "下游河床",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "text": "径流",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "影响",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "水期",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "潮流带来的泥沙淤积",
+          "start": 31,
+          "end": 40
+        },
+        {
+          "text": "径流",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "冲刷",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "河床",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "下游",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "河床",
+          "start": 78,
+          "end": 80
+        },
+        {
+          "text": "河床",
+          "start": 91,
+          "end": 93
+        },
+        {
+          "text": "建成",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "水库",
+          "start": 113,
+          "end": 115
+        },
+        {
+          "text": "建成",
+          "start": 128,
+          "end": 130
+        }
+      ]
+    }
+  },
+  {
+    "id": -1590717605721597310,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "河口",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "修建",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "水闸",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "河流",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "下游",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "径流",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "影响",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "期",
+          "start": 28,
+          "end": 29
+        },
+        {
+          "text": "潮流带来的泥沙淤积",
+          "start": 31,
+          "end": 40
+        },
+        {
+          "text": "汛期",
+          "start": 43,
+          "end": 45
+        },
+        {
+          "text": "下泄",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "径流",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "下游",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "河口",
+          "start": 126,
+          "end": 128
+        },
+        {
+          "text": "水闸",
+          "start": 132,
+          "end": 134
+        }
+      ]
+    }
+  },
+  {
+    "id": -7327020965966195000,
+    "keywords": {
+      "in_question": [],
+      "in_background": [
+        {
+          "text": "冷空气向",
+          "start": 21,
+          "end": 25
+        },
+        {
+          "text": "谷底注泻",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "text": "谷底沉积继续辐射冷却",
+          "start": 33,
+          "end": 43
+        },
+        {
+          "text": "气温",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "气温",
+          "start": 95,
+          "end": 97
+        },
+        {
+          "text": "气温",
+          "start": 102,
+          "end": 104
+        },
+        {
+          "text": "气温",
+          "start": 128,
+          "end": 130
+        }
+      ]
+    }
+  },
+  {
+    "id": 6634704608396889374,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "西北坡向1月份",
+          "start": 5,
+          "end": 12
+        },
+        {
+          "text": "平均最低气温",
+          "start": 12,
+          "end": 18
+        },
+        {
+          "text": "曲线",
+          "start": 19,
+          "end": 21
+        }
+      ],
+      "in_background": [
+        {
+          "text": "山坡",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "空气向",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "text": "气温",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "山地",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "月份",
+          "start": 85,
+          "end": 87
+        },
+        {
+          "text": "坡向",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "最低气温",
+          "start": 93,
+          "end": 97
+        },
+        {
+          "text": "平均最低气温",
+          "start": 98,
+          "end": 104
+        },
+        {
+          "text": "平均最低气温",
+          "start": 124,
+          "end": 130
+        }
+      ]
+    }
+  },
+  {
+    "id": 4870345997120890966,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "冷湖",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "暖带",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "in_background": [
+        {
+          "text": "周围山",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "text": "上的冷空气向",
+          "start": 19,
+          "end": 25
+        },
+        {
+          "text": "谷底",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "谷底沉积",
+          "start": 33,
+          "end": 37
+        },
+        {
+          "text": "冷湖",
+          "start": 49,
+          "end": 51
+        },
+        {
+          "text": "气温",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "暖带",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "山地",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "气温",
+          "start": 95,
+          "end": 97
+        },
+        {
+          "text": "气温",
+          "start": 102,
+          "end": 104
+        },
+        {
+          "text": "气温",
+          "start": 128,
+          "end": 130
+        }
+      ]
+    }
+  },
+  {
+    "id": 8171902148623838137,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "洪泽湖以东地区",
+          "start": 4,
+          "end": 11
+        },
+        {
+          "text": "秦岭一淮河线",
+          "start": 12,
+          "end": 18
+        }
+      ],
+      "in_background": [
+        {
+          "text": "淮河",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "洪泽湖",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "text": "入海",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "黄河",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "夺淮",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "入海",
+          "start": 37,
+          "end": 39
+        }
+      ]
+    }
+  },
+  {
+    "id": 3270713057257357447,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "苏南",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "苏北",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "划分",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "长江对两岸",
+          "start": 16,
+          "end": 21
+        }
+      ],
+      "in_background": [
+        {
+          "text": "长江",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "长江",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "长江",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "长江",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "苏南",
+          "start": 95,
+          "end": 97
+        },
+        {
+          "text": "苏北两部",
+          "start": 98,
+          "end": 102
+        }
+      ]
+    }
+  },
+  {
+    "id": 7009621673618090317,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "经济合作",
+          "start": 14,
+          "end": 18
+        },
+        {
+          "text": "因素",
+          "start": 25,
+          "end": 27
+        }
+      ],
+      "in_background": [
+        {
+          "text": "长江",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "长江大桥",
+          "start": 48,
+          "end": 52
+        },
+        {
+          "text": "建成",
+          "start": 52,
+          "end": 54
+        },
+        {
+          "text": "1999年",
+          "start": 59,
+          "end": 64
+        },
+        {
+          "text": "江苏境内又陆续建成了多座长江大桥",
+          "start": 65,
+          "end": 81
+        },
+        {
+          "text": "江苏",
+          "start": 82,
+          "end": 84
+        },
+        {
+          "text": "长江",
+          "start": 89,
+          "end": 91
+        }
+      ]
+    }
+  },
+  {
+    "id": 62729378253551300,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "该省位于我国",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": -9043526798915250850,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "因素",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "该省",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "雾日数空间分布",
+          "start": 14,
+          "end": 21
+        },
+        {
+          "text": "影响",
+          "start": 21,
+          "end": 23
+        }
+      ],
+      "in_background": [
+        {
+          "text": "雾日数分布",
+          "start": 48,
+          "end": 53
+        }
+      ]
+    }
+  },
+  {
+    "id": -5660776110914394375,
+    "keywords": {
+      "in_question": [],
+      "in_background": [
+        {
+          "text": "川藏铁路",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "text": "成都至雅安段",
+          "start": 12,
+          "end": 18
+        }
+      ]
+    }
+  },
+  {
+    "id": 660906093110058398,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "李家峡水库蓄水量最多的时段是",
+          "start": 0,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "黄河上游",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "李家峡水库",
+          "start": 8,
+          "end": 13
+        },
+        {
+          "text": "蓄水量",
+          "start": 19,
+          "end": 22
+        }
+      ]
+    }
+  },
+  {
+    "id": 8274983084276252929,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "5月",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "李家峡水库",
+          "start": 4,
+          "end": 9
+        },
+        {
+          "text": "蓄水量变化",
+          "start": 9,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "黄河",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "李家峡水库",
+          "start": 8,
+          "end": 13
+        },
+        {
+          "text": "蓄水量",
+          "start": 19,
+          "end": 22
+        }
+      ]
+    }
+  },
+  {
+    "id": -2467498032881648286,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "李家峡水库",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "夏季入库泥沙",
+          "start": 5,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "黄河上游",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "李家峡水库",
+          "start": 8,
+          "end": 13
+        }
+      ]
+    }
+  },
+  {
+    "id": -8056183216814745075,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "亏水量",
+          "start": 2,
+          "end": 5
+        }
+      ],
+      "in_background": [
+        {
+          "text": "地区",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "耕地",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "状态",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "作物",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "水量",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "亏水量",
+          "start": 21,
+          "end": 24
+        }
+      ]
+    }
+  },
+  {
+    "id": -1191553427067511093,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "地区",
+          "start": 1,
+          "end": 3
+        }
+      ],
+      "in_background": [
+        {
+          "text": "天然",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "作物",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "水量",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "水量",
+          "start": 22,
+          "end": 24
+        }
+      ]
+    }
+  },
+  {
+    "id": -3606462413617269060,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "澳门",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "自行车",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "text": "街道",
+          "start": 20,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "交通",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "澳门半岛以低矮的丘陵为主",
+          "start": 24,
+          "end": 36
+        },
+        {
+          "text": "澳门半岛",
+          "start": 57,
+          "end": 61
+        },
+        {
+          "text": "街道",
+          "start": 66,
+          "end": 68
+        },
+        {
+          "text": "街道",
+          "start": 73,
+          "end": 75
+        }
+      ]
+    }
+  },
+  {
+    "id": 4650523456635616538,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "甘德国际机场成为世界上",
+          "start": 2,
+          "end": 13
+        },
+        {
+          "text": "最繁忙机场",
+          "start": 14,
+          "end": 19
+        },
+        {
+          "text": "因素",
+          "start": 22,
+          "end": 24
+        }
+      ],
+      "in_background": [
+        {
+          "text": "交通运输",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "text": "甘德国际机场",
+          "start": 24,
+          "end": 30
+        },
+        {
+          "text": "世界上最繁忙",
+          "start": 36,
+          "end": 42
+        },
+        {
+          "text": "横跨北大西洋",
+          "start": 57,
+          "end": 63
+        },
+        {
+          "text": "机场补充",
+          "start": 71,
+          "end": 75
+        },
+        {
+          "text": "跨北大西洋",
+          "start": 83,
+          "end": 88
+        }
+      ]
+    }
+  },
+  {
+    "id": 1757386719296985296,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "甘德国际机场",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "in_background": [
+        {
+          "text": "交通运输",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "text": "甘德国际机场",
+          "start": 24,
+          "end": 30
+        },
+        {
+          "text": "横跨北大西洋",
+          "start": 57,
+          "end": 63
+        },
+        {
+          "text": "航班",
+          "start": 64,
+          "end": 66
+        },
+        {
+          "text": "经停",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "机场",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "补充燃料",
+          "start": 73,
+          "end": 77
+        },
+        {
+          "text": "跨北大西洋",
+          "start": 83,
+          "end": 88
+        },
+        {
+          "text": "航班",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "需要经停",
+          "start": 93,
+          "end": 97
+        }
+      ]
+    }
+  },
+  {
+    "id": -7736793177526553001,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "陆路",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "运输",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "海运",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "方式",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "运量",
+          "start": 47,
+          "end": 49
+        },
+        {
+          "text": "货物",
+          "start": 55,
+          "end": 57
+        }
+      ],
+      "in_background": [
+        {
+          "text": "交通运输方式",
+          "start": 3,
+          "end": 9
+        }
+      ]
+    }
+  },
+  {
+    "id": 832650123944665376,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "安平桥",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "睡木沉基",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "text": "方法",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "最适宜",
+          "start": 19,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "安平桥",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "修建",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "福建",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "淤",
+          "start": 34,
+          "end": 35
+        },
+        {
+          "text": "睡木沉基",
+          "start": 48,
+          "end": 52
+        },
+        {
+          "text": "河床",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "沉入",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "淤泥",
+          "start": 83,
+          "end": 85
+        },
+        {
+          "text": "采用",
+          "start": 120,
+          "end": 122
+        },
+        {
+          "text": "采用",
+          "start": 138,
+          "end": 140
+        },
+        {
+          "text": "安平桥",
+          "start": 150,
+          "end": 153
+        },
+        {
+          "text": "安",
+          "start": 158,
+          "end": 159
+        },
+        {
+          "text": "东西两岸",
+          "start": 161,
+          "end": 165
+        },
+        {
+          "text": "交通",
+          "start": 166,
+          "end": 168
+        },
+        {
+          "text": "促进",
+          "start": 180,
+          "end": 182
+        },
+        {
+          "text": "当地",
+          "start": 183,
+          "end": 185
+        },
+        {
+          "text": "发展",
+          "start": 188,
+          "end": 190
+        },
+        {
+          "text": "安平桥",
+          "start": 198,
+          "end": 201
+        },
+        {
+          "text": "安平桥",
+          "start": 209,
+          "end": 212
+        }
+      ]
+    }
+  },
+  {
+    "id": 4219537932690193128,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "安平桥",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "水流急的航道处",
+          "start": 4,
+          "end": 11
+        },
+        {
+          "text": "采用船型桥墩",
+          "start": 11,
+          "end": 17
+        }
+      ],
+      "in_background": [
+        {
+          "text": "安平桥",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "福建",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "淤泥",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "桥墩",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "水流",
+          "start": 112,
+          "end": 114
+        },
+        {
+          "text": "急的航道采用单边或双边船形桥墩",
+          "start": 116,
+          "end": 131
+        },
+        {
+          "text": "水流缓的浅滩",
+          "start": 132,
+          "end": 138
+        },
+        {
+          "text": "采用方形",
+          "start": 138,
+          "end": 142
+        },
+        {
+          "text": "安平桥不仅沟通了",
+          "start": 150,
+          "end": 158
+        },
+        {
+          "text": "安海湾东西两岸的交通",
+          "start": 158,
+          "end": 168
+        },
+        {
+          "text": "安平桥",
+          "start": 198,
+          "end": 201
+        },
+        {
+          "text": "安平桥",
+          "start": 209,
+          "end": 212
+        }
+      ]
+    }
+  },
+  {
+    "id": -3086225421840761265,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "海岸",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "码头",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "相比",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "南宋时期",
+          "start": 16,
+          "end": 20
+        },
+        {
+          "text": "利用安平桥",
+          "start": 20,
+          "end": 25
+        },
+        {
+          "text": "桥面",
+          "start": 25,
+          "end": 27
+        },
+        {
+          "text": "码头",
+          "start": 29,
+          "end": 31
+        }
+      ],
+      "in_background": [
+        {
+          "text": "安平桥",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "修建",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "南宋时期",
+          "start": 7,
+          "end": 11
+        },
+        {
+          "text": "福建",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "安平桥",
+          "start": 150,
+          "end": 153
+        },
+        {
+          "text": "两岸",
+          "start": 163,
+          "end": 165
+        },
+        {
+          "text": "交通",
+          "start": 166,
+          "end": 168
+        },
+        {
+          "text": "桥面",
+          "start": 169,
+          "end": 171
+        },
+        {
+          "text": "码头",
+          "start": 177,
+          "end": 179
+        },
+        {
+          "text": "南宋时期",
+          "start": 194,
+          "end": 198
+        },
+        {
+          "text": "安平桥位",
+          "start": 198,
+          "end": 202
+        },
+        {
+          "text": "安平桥",
+          "start": 209,
+          "end": 212
+        }
+      ]
+    }
+  },
+  {
+    "id": 4409034656434611754,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "赤潮",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "赤潮",
+          "start": 25,
+          "end": 27
+        },
+        {
+          "text": "南",
+          "start": 34,
+          "end": 35
+        },
+        {
+          "text": "岸",
+          "start": 44,
+          "end": 45
+        }
+      ],
+      "in_background": [
+        {
+          "text": "赤潮",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "海水富营养化造成",
+          "start": 31,
+          "end": 39
+        },
+        {
+          "text": "污染类型",
+          "start": 42,
+          "end": 46
+        },
+        {
+          "text": "赤潮",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "温度",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "赤潮",
+          "start": 67,
+          "end": 69
+        }
+      ]
+    }
+  },
+  {
+    "id": 8536500775458415539,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "我国沿海",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "赤潮",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "发生",
+          "start": 8,
+          "end": 10
+        }
+      ],
+      "in_background": [
+        {
+          "text": "赤潮",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "海水富营养",
+          "start": 31,
+          "end": 36
+        },
+        {
+          "text": "造成",
+          "start": 37,
+          "end": 39
+        },
+        {
+          "text": "赤潮",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "赤潮",
+          "start": 67,
+          "end": 69
+        }
+      ]
+    }
+  },
+  {
+    "id": -5476095420140561222,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "赤潮",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "寒冷",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "赤潮",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "污染",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "污染程度",
+          "start": 40,
+          "end": 44
+        },
+        {
+          "text": "污染程度",
+          "start": 55,
+          "end": 59
+        }
+      ],
+      "in_background": [
+        {
+          "text": "赤潮",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "海水",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "污染",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "赤潮",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "赤潮",
+          "start": 67,
+          "end": 69
+        }
+      ]
+    }
+  },
+  {
+    "id": 8656982691737526353,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "交通碳排放量",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "text": "程度",
+          "start": 23,
+          "end": 25
+        }
+      ],
+      "in_background": [
+        {
+          "text": "交通碳排放量",
+          "start": 8,
+          "end": 14
+        }
+      ]
+    }
+  },
+  {
+    "id": -256213506327709866,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "减少",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "交通碳排放",
+          "start": 7,
+          "end": 12
+        }
+      ],
+      "in_background": [
+        {
+          "text": "交通碳排放量",
+          "start": 8,
+          "end": 14
+        }
+      ]
+    }
+  },
+  {
+    "id": -781355858525631394,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "蔬菜种植示",
+          "start": 2,
+          "end": 7
+        },
+        {
+          "text": "种植旺季",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "text": "该蔬菜",
+          "start": 16,
+          "end": 19
+        },
+        {
+          "text": "生长",
+          "start": 20,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "蔬菜",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "尾菜",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "蔬菜",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "环境安全",
+          "start": 38,
+          "end": 42
+        },
+        {
+          "text": "青藏高原",
+          "start": 51,
+          "end": 55
+        },
+        {
+          "text": "反季节蔬菜",
+          "start": 59,
+          "end": 64
+        },
+        {
+          "text": "尾菜",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "反季节蔬菜",
+          "start": 84,
+          "end": 89
+        }
+      ]
+    }
+  },
+  {
+    "id": 3968598022705278412,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "生态",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "意义为",
+          "start": 9,
+          "end": 12
+        }
+      ],
+      "in_background": [
+        {
+          "text": "蔬菜",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "环境",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "季节蔬菜",
+          "start": 60,
+          "end": 64
+        },
+        {
+          "text": "蔬菜",
+          "start": 87,
+          "end": 89
+        }
+      ]
+    }
+  },
+  {
+    "id": 5337088150312148339,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "灰水足迹",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "text": "灰水足迹",
+          "start": 39,
+          "end": 43
+        },
+        {
+          "text": "业企业转移",
+          "start": 47,
+          "end": 52
+        },
+        {
+          "text": "东部",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "污水处理费",
+          "start": 124,
+          "end": 129
+        }
+      ],
+      "in_background": [
+        {
+          "text": "灰水足迹",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "污染",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "灰水足迹",
+          "start": 57,
+          "end": 61
+        }
+      ]
+    }
+  },
+  {
+    "id": 1972055227950137477,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "\n度",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "冬季",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "CO2",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "text": "浓度",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "浓度",
+          "start": 80,
+          "end": 82
+        }
+      ]
+    }
+  },
+  {
+    "id": 2643762553453285107,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "一天中",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "text": "最低值",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "text": "不正确",
+          "start": 30,
+          "end": 33
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": 2214413175738631784,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "GIS",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "text": "黄河流域",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "text": "地理",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "黄河流域",
+          "start": 25,
+          "end": 29
+        },
+        {
+          "text": "GIS",
+          "start": 40,
+          "end": 43
+        }
+      ],
+      "in_background": [
+        {
+          "text": "地理信息",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "技术",
+          "start": 8,
+          "end": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": 1832570781373797034,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "人口密度",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "技术",
+          "start": 16,
+          "end": 18
+        }
+      ],
+      "in_background": [
+        {
+          "text": "地理",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "信息",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "技术",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "人口",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "手机",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "信息",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "分析",
+          "start": 43,
+          "end": 45
+        },
+        {
+          "text": "人口密度",
+          "start": 48,
+          "end": 52
+        }
+      ]
+    }
+  },
+  {
+    "id": 7157248441904999326,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "化石",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "地坑院",
+          "start": 12,
+          "end": 15
+        }
+      ],
+      "in_background": [
+        {
+          "text": "发展",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "地坑院",
+          "start": 18,
+          "end": 21
+        },
+        {
+          "text": "民居",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "民居",
+          "start": 70,
+          "end": 72
+        },
+        {
+          "text": "化石",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "地坑院",
+          "start": 87,
+          "end": 90
+        }
+      ]
+    }
+  },
+  {
+    "id": -1223947838230245009,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "遥感技术",
+          "start": 8,
+          "end": 12
+        }
+      ],
+      "in_background": [
+        {
+          "text": "信息",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "技术",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "遥感",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "text": "利用",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "遥感技术",
+          "start": 67,
+          "end": 71
+        },
+        {
+          "text": "影像",
+          "start": 139,
+          "end": 141
+        }
+      ]
+    }
+  },
+  {
+    "id": -7178439430027551798,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "突尼斯中南部",
+          "start": 0,
+          "end": 6
+        },
+        {
+          "text": "利于",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "遥感",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "技术",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "突尼斯",
+          "start": 33,
+          "end": 36
+        },
+        {
+          "text": "遥感",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "text": "利用遥感技术",
+          "start": 65,
+          "end": 71
+        },
+        {
+          "text": "突尼斯中南部",
+          "start": 72,
+          "end": 78
+        },
+        {
+          "text": "突尼斯",
+          "start": 124,
+          "end": 127
+        }
+      ]
+    }
+  },
+  {
+    "id": 3295777621275800115,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "遥感",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "技术",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "获取",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "信息",
+          "start": 19,
+          "end": 21
+        }
+      ],
+      "in_background": [
+        {
+          "text": "信息",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "技术",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "信息",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "数据",
+          "start": 34,
+          "end": 36
+        }
+      ]
+    }
+  },
+  {
+    "id": 7534958327484570156,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "农业适宜性评价",
+          "start": 2,
+          "end": 9
+        }
+      ],
+      "in_background": [
+        {
+          "text": "地理信息",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "text": "技术",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "地理信息",
+          "start": 28,
+          "end": 32
+        },
+        {
+          "text": "数据",
+          "start": 34,
+          "end": 36
+        }
+      ]
+    }
+  },
+  {
+    "id": -424889063986648338,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "地理信息技术得到甲",
+          "start": 2,
+          "end": 11
+        },
+        {
+          "text": "丙三幅云杉主要分布区图",
+          "start": 14,
+          "end": 25
+        },
+        {
+          "text": "实验分析并建立云杉主要分布区地理信息数据库",
+          "start": 35,
+          "end": 56
+        },
+        {
+          "text": "GPS",
+          "start": 61,
+          "end": 64
+        },
+        {
+          "text": "野外",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "行空间定位",
+          "start": 71,
+          "end": 76
+        },
+        {
+          "text": "运用GIS分析和输出云杉主要分布区地理信息数据",
+          "start": 79,
+          "end": 102
+        }
+      ],
+      "in_background": [
+        {
+          "text": "云杉",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "分布",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "分布",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "云杉",
+          "start": 87,
+          "end": 89
+        },
+        {
+          "text": "主要分布区图",
+          "start": 89,
+          "end": 95
+        }
+      ]
+    }
+  },
+  {
+    "id": 805147428706691551,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "京津地区",
+          "start": 2,
+          "end": 6
+        },
+        {
+          "text": "饮食",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "层次性",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "text": "饮食",
+          "start": 17,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "多样",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "文化",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "饮食",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "京津地区",
+          "start": 52,
+          "end": 56
+        },
+        {
+          "text": "饮食",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "兼容八方",
+          "start": 67,
+          "end": 71
+        },
+        {
+          "text": "层次性",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "text": "饮食",
+          "start": 100,
+          "end": 102
+        },
+        {
+          "text": "脂肪",
+          "start": 153,
+          "end": 155
+        },
+        {
+          "text": "饮食",
+          "start": 163,
+          "end": 165
+        }
+      ]
+    }
+  },
+  {
+    "id": -3747093410392749808,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "体现",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "饮食文化",
+          "start": 13,
+          "end": 17
+        },
+        {
+          "text": "特色",
+          "start": 17,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "文化",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "饮食文化",
+          "start": 22,
+          "end": 26
+        },
+        {
+          "text": "饮食文化",
+          "start": 56,
+          "end": 60
+        },
+        {
+          "text": "饮食文化",
+          "start": 100,
+          "end": 104
+        },
+        {
+          "text": "饮食文化",
+          "start": 163,
+          "end": 167
+        }
+      ]
+    }
+  },
+  {
+    "id": 9004386850389775260,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "形成",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "东北人",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "text": "饮食习惯的根本原因是",
+          "start": 12,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "饮食",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "饮食",
+          "start": 57,
+          "end": 59
+        },
+        {
+          "text": "兼",
+          "start": 68,
+          "end": 69
+        },
+        {
+          "text": "饮食",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "东北人",
+          "start": 112,
+          "end": 115
+        },
+        {
+          "text": "食物",
+          "start": 137,
+          "end": 139
+        },
+        {
+          "text": "冬季",
+          "start": 140,
+          "end": 142
+        },
+        {
+          "text": "脂肪",
+          "start": 154,
+          "end": 156
+        },
+        {
+          "text": "饮食",
+          "start": 164,
+          "end": 166
+        }
+      ]
+    }
+  },
+  {
+    "id": -7640016077425912163,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "石头",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "正确",
+          "start": 12,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "福建",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "石头",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "石头",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "石头",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "海岛",
+          "start": 91,
+          "end": 93
+        }
+      ]
+    }
+  },
+  {
+    "id": 9066320402648980614,
+    "keywords": {
+      "in_question": [],
+      "in_background": [
+        {
+          "text": "潭",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "text": "花岗岩",
+          "start": 55,
+          "end": 58
+        },
+        {
+          "text": "海岛",
+          "start": 91,
+          "end": 93
+        }
+      ]
+    }
+  },
+  {
+    "id": -7423604915393036679,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "汾川河流域",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "植被覆盖率大",
+          "start": 5,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "汾川河流域",
+          "start": 24,
+          "end": 29
+        },
+        {
+          "text": "植被覆盖率",
+          "start": 32,
+          "end": 37
+        },
+        {
+          "text": "汾川河流域",
+          "start": 52,
+          "end": 57
+        },
+        {
+          "text": "汾川河",
+          "start": 84,
+          "end": 87
+        },
+        {
+          "text": "含沙",
+          "start": 118,
+          "end": 120
+        }
+      ]
+    }
+  },
+  {
+    "id": -6365102619993248374,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "降水",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "洪峰",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "降水",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "植被",
+          "start": 34,
+          "end": 36
+        }
+      ],
+      "in_background": [
+        {
+          "text": "植被",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "降水",
+          "start": 57,
+          "end": 59
+        },
+        {
+          "text": "降水",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "降水",
+          "start": 95,
+          "end": 97
+        },
+        {
+          "text": "降水",
+          "start": 111,
+          "end": 113
+        }
+      ]
+    }
+  },
+  {
+    "id": 2362350587131635736,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "降水",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "洪水含沙量极高",
+          "start": 8,
+          "end": 15
+        },
+        {
+          "text": "泥沙主要源于",
+          "start": 17,
+          "end": 23
+        }
+      ],
+      "in_background": [
+        {
+          "text": "黄",
+          "start": 19,
+          "end": 20
+        },
+        {
+          "text": "流域",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "降水",
+          "start": 57,
+          "end": 59
+        },
+        {
+          "text": "降水",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "降水",
+          "start": 95,
+          "end": 97
+        },
+        {
+          "text": "洪水含沙量",
+          "start": 101,
+          "end": 106
+        },
+        {
+          "text": "降水",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "洪水含沙量极高",
+          "start": 116,
+          "end": 123
+        }
+      ]
+    }
+  },
+  {
+    "id": -299894300039696945,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "植被",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "生物量",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "text": "生物量",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "text": "植株密度",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "text": "变",
+          "start": 31,
+          "end": 32
+        },
+        {
+          "text": "植被",
+          "start": 34,
+          "end": 36
+        }
+      ],
+      "in_background": [
+        {
+          "text": "导致",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "大气",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "大气",
+          "start": 82,
+          "end": 84
+        },
+        {
+          "text": "植被",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "植被",
+          "start": 100,
+          "end": 102
+        },
+        {
+          "text": "灌木植物",
+          "start": 103,
+          "end": 107
+        },
+        {
+          "text": "草本",
+          "start": 115,
+          "end": 117
+        },
+        {
+          "text": "植物",
+          "start": 117,
+          "end": 119
+        },
+        {
+          "text": "植被",
+          "start": 152,
+          "end": 154
+        }
+      ]
+    }
+  },
+  {
+    "id": -3145166732972178833,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "大气氮沉降",
+          "start": 4,
+          "end": 9
+        },
+        {
+          "text": "导致",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "灌木",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "草本两类植物出现此消彼长",
+          "start": 14,
+          "end": 26
+        }
+      ],
+      "in_background": [
+        {
+          "text": "导致",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "大气",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "沉降",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "大气氮沉降",
+          "start": 82,
+          "end": 87
+        },
+        {
+          "text": "植被",
+          "start": 100,
+          "end": 102
+        },
+        {
+          "text": "灌木",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "植物",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "草本植物",
+          "start": 115,
+          "end": 119
+        }
+      ]
+    }
+  },
+  {
+    "id": 3717350388842996000,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "大气氮沉降",
+          "start": 11,
+          "end": 16
+        },
+        {
+          "text": "植被",
+          "start": 21,
+          "end": 23
+        }
+      ],
+      "in_background": [
+        {
+          "text": "导致",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "大气",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "沉降",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "大气氮沉降",
+          "start": 82,
+          "end": 87
+        },
+        {
+          "text": "植被",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "植被",
+          "start": 100,
+          "end": 102
+        },
+        {
+          "text": "植物",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "草本",
+          "start": 115,
+          "end": 117
+        },
+        {
+          "text": "植物",
+          "start": 117,
+          "end": 119
+        },
+        {
+          "text": "植被",
+          "start": 152,
+          "end": 154
+        }
+      ]
+    }
+  },
+  {
+    "id": 8966435452889791018,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "6-8月",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "沙丘",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "土壤含水量",
+          "start": 10,
+          "end": 15
+        },
+        {
+          "text": "蒸腾",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "气温",
+          "start": 44,
+          "end": 46
+        },
+        {
+          "text": "降水",
+          "start": 49,
+          "end": 51
+        }
+      ],
+      "in_background": [
+        {
+          "text": "水土",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "沙丘",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "5-9月",
+          "start": 28,
+          "end": 32
+        },
+        {
+          "text": "土壤水分含量",
+          "start": 32,
+          "end": 38
+        },
+        {
+          "text": "沙丘",
+          "start": 46,
+          "end": 48
+        }
+      ]
+    }
+  },
+  {
+    "id": 1001438321757478185,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "为维护生态安全",
+          "start": 0,
+          "end": 7
+        }
+      ],
+      "in_background": [
+        {
+          "text": "沙丘",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "沙丘",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "无人为扰动",
+          "start": 59,
+          "end": 64
+        },
+        {
+          "text": "多年保持稳定",
+          "start": 65,
+          "end": 71
+        }
+      ]
+    }
+  },
+  {
+    "id": -6175070174618913841,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "生态裂谷",
+          "start": 1,
+          "end": 5
+        },
+        {
+          "text": "交错带",
+          "start": 15,
+          "end": 18
+        }
+      ],
+      "in_background": [
+        {
+          "text": "绿洲和",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "text": "交错带",
+          "start": 21,
+          "end": 24
+        },
+        {
+          "text": "生态环境脆弱",
+          "start": 24,
+          "end": 30
+        },
+        {
+          "text": "绿洲区过量开采地下水会使",
+          "start": 36,
+          "end": 48
+        },
+        {
+          "text": "交错带生态环境退化",
+          "start": 48,
+          "end": 57
+        },
+        {
+          "text": "生态裂谷",
+          "start": 61,
+          "end": 65
+        },
+        {
+          "text": "生态裂谷",
+          "start": 71,
+          "end": 75
+        }
+      ]
+    }
+  },
+  {
+    "id": -8553647021149351565,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "生态裂谷",
+          "start": 1,
+          "end": 5
+        },
+        {
+          "text": "为了绿洲",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "text": "可持续发展",
+          "start": 16,
+          "end": 21
+        }
+      ],
+      "in_background": [
+        {
+          "text": "绿洲",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "生态",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "绿洲",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "地下水",
+          "start": 43,
+          "end": 46
+        },
+        {
+          "text": "生态",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "生态裂谷",
+          "start": 61,
+          "end": 65
+        },
+        {
+          "text": "生态裂谷",
+          "start": 71,
+          "end": 75
+        }
+      ]
+    }
+  },
+  {
+    "id": -6237294508994099494,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "国家级",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "text": "重点生态功能区",
+          "start": 8,
+          "end": 15
+        }
+      ],
+      "in_background": [
+        {
+          "text": "国家级",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "text": "重点生态功能区",
+          "start": 13,
+          "end": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": -4727997436437028278,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "开发",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "经济",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "发展",
+          "start": 34,
+          "end": 36
+        }
+      ],
+      "in_background": [
+        {
+          "text": "开发",
+          "start": 7,
+          "end": 9
+        }
+      ]
+    }
+  },
+  {
+    "id": 5398095436408923940,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "黄河三角洲",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "湿地",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "土地面积",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "text": "增长",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "黄河三角洲是",
+          "start": 0,
+          "end": 6
+        },
+        {
+          "text": "河口",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "三角洲之一",
+          "start": 12,
+          "end": 17
+        },
+        {
+          "text": "湿地",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "土地面积",
+          "start": 43,
+          "end": 47
+        },
+        {
+          "text": "增长",
+          "start": 49,
+          "end": 51
+        },
+        {
+          "text": "黄河三角洲",
+          "start": 64,
+          "end": 69
+        },
+        {
+          "text": "湿地",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "黄河三角洲",
+          "start": 98,
+          "end": 103
+        },
+        {
+          "text": "湿地",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "黄河三角洲",
+          "start": 120,
+          "end": 125
+        }
+      ]
+    }
+  },
+  {
+    "id": 5430073094026804392,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "湿地",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "盐分",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "河道",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "入海口附近",
+          "start": 64,
+          "end": 69
+        },
+        {
+          "text": "盐分",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "新生湿地",
+          "start": 96,
+          "end": 100
+        },
+        {
+          "text": "湿地",
+          "start": 113,
+          "end": 115
+        }
+      ],
+      "in_background": [
+        {
+          "text": "湿地",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "新生湿地",
+          "start": 69,
+          "end": 73
+        },
+        {
+          "text": "地下水",
+          "start": 79,
+          "end": 82
+        },
+        {
+          "text": "雨水",
+          "start": 83,
+          "end": 85
+        },
+        {
+          "text": "海水",
+          "start": 86,
+          "end": 88
+        },
+        {
+          "text": "作用",
+          "start": 93,
+          "end": 95
+        },
+        {
+          "text": "湿地",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "盐分",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "湿地",
+          "start": 127,
+          "end": 129
+        }
+      ]
+    }
+  },
+  {
+    "id": -123320478188507989,
+    "keywords": {
+      "in_question": [],
+      "in_background": [
+        {
+          "text": "相互作用",
+          "start": 91,
+          "end": 95
+        },
+        {
+          "text": "盐分",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "磷主要是陆源磷",
+          "start": 132,
+          "end": 139
+        },
+        {
+          "text": "氮主要来自植物的分解输入",
+          "start": 140,
+          "end": 152
+        }
+      ]
+    }
+  },
+  {
+    "id": 6763714856268873601,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "南海风功率密度等级冬季高",
+          "start": 2,
+          "end": 14
+        },
+        {
+          "text": "夏季",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "风能资源",
+          "start": 25,
+          "end": 29
+        }
+      ],
+      "in_background": [
+        {
+          "text": "资源",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "风功率密度等级",
+          "start": 21,
+          "end": 28
+        },
+        {
+          "text": "风能资源丰富",
+          "start": 32,
+          "end": 38
+        },
+        {
+          "text": "等级数",
+          "start": 41,
+          "end": 44
+        },
+        {
+          "text": "风能资源越丰富",
+          "start": 47,
+          "end": 54
+        },
+        {
+          "text": "南海",
+          "start": 58,
+          "end": 60
+        },
+        {
+          "text": "风功率密度等级",
+          "start": 62,
+          "end": 69
+        }
+      ]
+    }
+  },
+  {
+    "id": 2545613922981422534,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "三峡水库",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "消落",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "面积",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "水库",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "消落带",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "text": "水库周边被淹没的土地",
+          "start": 8,
+          "end": 18
+        },
+        {
+          "text": "周期",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "水面",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "干湿",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "消落",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "泥沙淤积",
+          "start": 58,
+          "end": 62
+        },
+        {
+          "text": "三峡水库",
+          "start": 81,
+          "end": 85
+        },
+        {
+          "text": "水位",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "水位",
+          "start": 94,
+          "end": 96
+        },
+        {
+          "text": "消落",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "面积",
+          "start": 106,
+          "end": 108
+        },
+        {
+          "text": "水库",
+          "start": 127,
+          "end": 129
+        },
+        {
+          "text": "三峡水库",
+          "start": 138,
+          "end": 142
+        },
+        {
+          "text": "消落",
+          "start": 142,
+          "end": 144
+        }
+      ]
+    }
+  },
+  {
+    "id": -3569776243370877401,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "三峡水库消落带水土流失",
+          "start": 3,
+          "end": 14
+        },
+        {
+          "text": "不合理",
+          "start": 20,
+          "end": 23
+        }
+      ],
+      "in_background": [
+        {
+          "text": "水库",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "消落带",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "text": "水库周边被淹没的土地周期性地出露于",
+          "start": 8,
+          "end": 25
+        },
+        {
+          "text": "区域",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "消落带",
+          "start": 42,
+          "end": 45
+        },
+        {
+          "text": "水土流失",
+          "start": 45,
+          "end": 49
+        },
+        {
+          "text": "泥沙淤积",
+          "start": 58,
+          "end": 62
+        },
+        {
+          "text": "三峡水库",
+          "start": 81,
+          "end": 85
+        },
+        {
+          "text": "水位",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "水位",
+          "start": 94,
+          "end": 96
+        },
+        {
+          "text": "消落带",
+          "start": 103,
+          "end": 106
+        },
+        {
+          "text": "水库",
+          "start": 127,
+          "end": 129
+        },
+        {
+          "text": "三峡水库",
+          "start": 138,
+          "end": 142
+        },
+        {
+          "text": "消落带",
+          "start": 142,
+          "end": 145
+        }
+      ]
+    }
+  },
+  {
+    "id": -1672690241836280104,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "补给",
+          "start": 7,
+          "end": 9
+        }
+      ],
+      "in_background": [
+        {
+          "text": "喜马拉雅山北麓最大的内陆湖泊",
+          "start": 23,
+          "end": 37
+        }
+      ]
+    }
+  },
+  {
+    "id": 1096056445302819805,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "电站",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "发电",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "季节",
+          "start": 10,
+          "end": 12
+        }
+      ],
+      "in_background": [
+        {
+          "text": "为调节拉萨居民用电季节差异",
+          "start": 38,
+          "end": 51
+        },
+        {
+          "text": "保障高峰季节用电",
+          "start": 52,
+          "end": 60
+        },
+        {
+          "text": "建设",
+          "start": 85,
+          "end": 87
+        },
+        {
+          "text": "电站",
+          "start": 94,
+          "end": 96
+        },
+        {
+          "text": "发电",
+          "start": 97,
+          "end": 99
+        },
+        {
+          "text": "发电",
+          "start": 110,
+          "end": 112
+        },
+        {
+          "text": "电站",
+          "start": 157,
+          "end": 159
+        }
+      ]
+    }
+  },
+  {
+    "id": -2980474045618020568,
+    "keywords": {
+      "in_question": [],
+      "in_background": [
+        {
+          "text": "喜马拉雅山北麓最大的内陆湖泊",
+          "start": 23,
+          "end": 37
+        },
+        {
+          "text": "发电",
+          "start": 97,
+          "end": 99
+        },
+        {
+          "text": "发电",
+          "start": 110,
+          "end": 112
+        },
+        {
+          "text": "江水",
+          "start": 133,
+          "end": 135
+        }
+      ]
+    }
+  },
+  {
+    "id": 6743035044874078571,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "新能源",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "text": "开发",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "能源",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "能耗",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "能量",
+          "start": 34,
+          "end": 36
+        }
+      ]
+    }
+  },
+  {
+    "id": -5502737356605703592,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "可能降低单位GDP能耗",
+          "start": 5,
+          "end": 16
+        },
+        {
+          "text": "促进社会经济",
+          "start": 17,
+          "end": 23
+        },
+        {
+          "text": "发展",
+          "start": 25,
+          "end": 27
+        }
+      ],
+      "in_background": [
+        {
+          "text": "能源",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "利用",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "单位GDP能耗是指单位GDP",
+          "start": 16,
+          "end": 30
+        },
+        {
+          "text": "消耗",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "能量",
+          "start": 34,
+          "end": 36
+        }
+      ]
+    }
+  },
+  {
+    "id": 10998742224047110,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "青海省发展",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "区位",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "件",
+          "start": 13,
+          "end": 14
+        },
+        {
+          "text": "冰川积雪",
+          "start": 28,
+          "end": 32
+        },
+        {
+          "text": "补给",
+          "start": 38,
+          "end": 40
+        }
+      ],
+      "in_background": [
+        {
+          "text": "青海省",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "text": "水能",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "青海省",
+          "start": 98,
+          "end": 101
+        },
+        {
+          "text": "电力",
+          "start": 101,
+          "end": 103
+        }
+      ]
+    }
+  },
+  {
+    "id": -724512052009602379,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "青海省相比",
+          "start": 1,
+          "end": 6
+        },
+        {
+          "text": "沿海",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "发达省区",
+          "start": 11,
+          "end": 15
+        },
+        {
+          "text": "清洁能源供电",
+          "start": 20,
+          "end": 26
+        }
+      ],
+      "in_background": [
+        {
+          "text": "青海省",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "text": "清洁能源供电",
+          "start": 37,
+          "end": 43
+        },
+        {
+          "text": "清洁电力",
+          "start": 63,
+          "end": 67
+        },
+        {
+          "text": "能源",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "青海省",
+          "start": 98,
+          "end": 101
+        },
+        {
+          "text": "电力",
+          "start": 101,
+          "end": 103
+        }
+      ]
+    }
+  },
+  {
+    "id": 4215754643885662204,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "支流",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "修建水闸",
+          "start": 7,
+          "end": 11
+        },
+        {
+          "text": "目的是",
+          "start": 15,
+          "end": 18
+        }
+      ],
+      "in_background": [
+        {
+          "text": "支流",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "修建",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "水闸",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "水闸",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "游水位",
+          "start": 56,
+          "end": 59
+        }
+      ]
+    }
+  },
+  {
+    "id": 813041080824961445,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "为有效防御洪涝",
+          "start": 0,
+          "end": 7
+        },
+        {
+          "text": "支流河口附近地区可以",
+          "start": 9,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "洪涝",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "灾害",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "支流",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "河口",
+          "start": 24,
+          "end": 26
+        }
+      ]
+    }
+  },
+  {
+    "id": -3986112619762025046,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "科隆群岛",
+          "start": 0,
+          "end": 4
+        }
+      ],
+      "in_background": [
+        {
+          "text": "科隆群岛",
+          "start": 4,
+          "end": 8
+        }
+      ]
+    }
+  },
+  {
+    "id": 5411688393550486637,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "科隆群岛",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "暖",
+          "start": 12,
+          "end": 13
+        },
+        {
+          "text": "鬣蜥",
+          "start": 14,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "科隆群岛",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "群岛",
+          "start": 14,
+          "end": 16
+        }
+      ]
+    }
+  },
+  {
+    "id": -1150168917135470076,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "植被",
+          "start": 5,
+          "end": 7
+        }
+      ],
+      "in_background": [
+        {
+          "text": "地区",
+          "start": 7,
+          "end": 9
+        }
+      ]
+    }
+  },
+  {
+    "id": -7020311942726062798,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "常绿灌木",
+          "start": 2,
+          "end": 6
+        },
+        {
+          "text": "制约",
+          "start": 20,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "城",
+          "start": 10,
+          "end": 11
+        },
+        {
+          "text": "景观",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "栽种",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "常绿灌木",
+          "start": 75,
+          "end": 79
+        },
+        {
+          "text": "灌木",
+          "start": 88,
+          "end": 90
+        },
+        {
+          "text": "灌木",
+          "start": 108,
+          "end": 110
+        }
+      ]
+    }
+  },
+  {
+    "id": -3269359269842948873,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "磷高",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "累积",
+          "start": 2,
+          "end": 4
+        }
+      ],
+      "in_background": [
+        {
+          "text": "磷是",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "土壤",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "有机质",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "text": "土壤",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "磷累积",
+          "start": 37,
+          "end": 40
+        },
+        {
+          "text": "侵蚀",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "减少",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "土壊",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "磷累积量",
+          "start": 57,
+          "end": 61
+        },
+        {
+          "text": "土壤",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "累积量",
+          "start": 82,
+          "end": 85
+        }
+      ]
+    }
+  },
+  {
+    "id": -1693554340197439576,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "磷高累积",
+          "start": 1,
+          "end": 5
+        }
+      ],
+      "in_background": [
+        {
+          "text": "土壤",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "元素",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "土壤",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "磷累积",
+          "start": 37,
+          "end": 40
+        },
+        {
+          "text": "侵蚀",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "减少",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "土壊",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "磷累积量",
+          "start": 57,
+          "end": 61
+        },
+        {
+          "text": "土壤",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "累积量",
+          "start": 82,
+          "end": 85
+        }
+      ]
+    }
+  },
+  {
+    "id": 3540064359799712695,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "地区1936-2015年期间",
+          "start": 5,
+          "end": 19
+        },
+        {
+          "text": "地表环境",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "text": "变化",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "相符",
+          "start": 34,
+          "end": 36
+        }
+      ],
+      "in_background": [
+        {
+          "text": "全球",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "变暖",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "冰川融化",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "text": "全球变暖",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "text": "低碳",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "冰川",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "消融",
+          "start": 75,
+          "end": 77
+        }
+      ]
+    }
+  },
+  {
+    "id": 5448861398694508487,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "海平面上升所淹没的陆地范围",
+          "start": 7,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "全球",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "变暖",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "冰川",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "海平面上升",
+          "start": 11,
+          "end": 16
+        },
+        {
+          "text": "全球",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "变暖",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "美国西北部",
+          "start": 65,
+          "end": 70
+        },
+        {
+          "text": "冰川",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "消融",
+          "start": 75,
+          "end": 77
+        }
+      ]
+    }
+  },
+  {
+    "id": 8949657508959077814,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "全球气候变暖",
+          "start": 0,
+          "end": 6
+        },
+        {
+          "text": "影响",
+          "start": 15,
+          "end": 17
+        }
+      ],
+      "in_background": [
+        {
+          "text": "地球变暖",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "text": "地球",
+          "start": 37,
+          "end": 39
+        },
+        {
+          "text": "温度",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "地球",
+          "start": 51,
+          "end": 53
+        },
+        {
+          "text": "空气温度升高",
+          "start": 61,
+          "end": 67
+        },
+        {
+          "text": "全球",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "乞力",
+          "start": 110,
+          "end": 112
+        }
+      ]
+    }
+  },
+  {
+    "id": 7127903511952286244,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "巴伦西亚",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "地中海",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "text": "明珠",
+          "start": 12,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "巴伦西亚",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "地中海",
+          "start": 21,
+          "end": 24
+        },
+        {
+          "text": "明珠",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "巴伦西亚",
+          "start": 78,
+          "end": 82
+        },
+        {
+          "text": "巴伦西亚",
+          "start": 91,
+          "end": 95
+        },
+        {
+          "text": "地中海",
+          "start": 98,
+          "end": 101
+        },
+        {
+          "text": "西班牙",
+          "start": 118,
+          "end": 121
+        },
+        {
+          "text": "巴伦西亚",
+          "start": 134,
+          "end": 138
+        }
+      ]
+    }
+  },
+  {
+    "id": 6890339070664398751,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "绿化",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "街道",
+          "start": 22,
+          "end": 24
+        }
+      ],
+      "in_background": [
+        {
+          "text": "街道",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "机动车道与两侧非机动车道",
+          "start": 14,
+          "end": 26
+        },
+        {
+          "text": "绿化隔离",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "text": "景观",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "绿化",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "常",
+          "start": 75,
+          "end": 76
+        },
+        {
+          "text": "灌木",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "灌木",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "灌木",
+          "start": 109,
+          "end": 111
+        }
+      ]
+    }
+  }
+]

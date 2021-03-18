@@ -99,15 +99,18 @@ class Predict:
 
     def predict(self, question, background):
         # 预处理
-        # question = process_raw_sentence(question)
-        # background = process_raw_sentence(background)
+        # question_l = process_raw_sentence(question)
+        # background_l = process_raw_sentence(background)
+
+        question_l = list(question)
+        background_l = list(background)
 
         # print(question_l)
         # print(background_l)
 
         # tokens, input_ids, input_mask, segment_ids, input_len
-        data_tuple = convert_raw_sentence_to_features(question=question,
-                                                      background=background,
+        data_tuple = convert_raw_sentence_to_features(question=question_l,
+                                                      background=background_l,
                                                       max_seq_length=self.args.max_seq_length,
                                                       tokenizer=self.tokenizer)
         with torch.no_grad():

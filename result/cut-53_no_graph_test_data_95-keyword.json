@@ -1,0 +1,7795 @@
+[
+  {
+    "id": 6555062890541817858,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "区域",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "农业",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "持续",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "发展",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "基础",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "in_background": [
+        {
+          "text": "区域",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "农业",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "发展",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "地区",
+          "start": 60,
+          "end": 62
+        }
+      ]
+    }
+  },
+  {
+    "id": 939523068988696543,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "影响",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "林蛙",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "养殖业",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "text": "分布",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "因素",
+          "start": 14,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "林蛙",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "林蛙",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "林蛙",
+          "start": 73,
+          "end": 75
+        }
+      ]
+    }
+  },
+  {
+    "id": 6154795655829257911,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "林蛙",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "经济",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "措施",
+          "start": 16,
+          "end": 18
+        }
+      ],
+      "in_background": [
+        {
+          "text": "林蛙",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "林蛙",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "生产",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "油及",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "林蛙",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "系列产品",
+          "start": 75,
+          "end": 79
+        },
+        {
+          "text": "国内",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "市场",
+          "start": 84,
+          "end": 86
+        },
+        {
+          "text": "供不应求",
+          "start": 86,
+          "end": 90
+        }
+      ]
+    }
+  },
+  {
+    "id": 5695288247167318960,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "国产",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "造业",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "兴起",
+          "start": 21,
+          "end": 23
+        }
+      ],
+      "in_background": [
+        {
+          "text": "手机",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "企业",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "颁发",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "生产",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "牌照",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "国产手机",
+          "start": 34,
+          "end": 38
+        },
+        {
+          "text": "制造业",
+          "start": 38,
+          "end": 41
+        },
+        {
+          "text": "兴起",
+          "start": 43,
+          "end": 45
+        },
+        {
+          "text": "手机",
+          "start": 66,
+          "end": 68
+        },
+        {
+          "text": "生产",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "牌照",
+          "start": 70,
+          "end": 72
+        },
+        {
+          "text": "手机",
+          "start": 94,
+          "end": 96
+        },
+        {
+          "text": "企业",
+          "start": 98,
+          "end": 100
+        },
+        {
+          "text": "手机",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "制造业",
+          "start": 103,
+          "end": 106
+        },
+        {
+          "text": "生产",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "手机",
+          "start": 142,
+          "end": 144
+        },
+        {
+          "text": "手机",
+          "start": 157,
+          "end": 159
+        },
+        {
+          "text": "品牌",
+          "start": 159,
+          "end": 161
+        },
+        {
+          "text": "高端",
+          "start": 165,
+          "end": 167
+        }
+      ]
+    }
+  },
+  {
+    "id": 1753416591849436027,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "手机",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "壮大",
+          "start": 22,
+          "end": 24
+        }
+      ],
+      "in_background": [
+        {
+          "text": "手机",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "企业",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "生产",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "牌照",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "手机",
+          "start": 66,
+          "end": 68
+        },
+        {
+          "text": "生产",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "千家",
+          "start": 92,
+          "end": 94
+        },
+        {
+          "text": "手机",
+          "start": 94,
+          "end": 96
+        },
+        {
+          "text": "企业",
+          "start": 98,
+          "end": 100
+        },
+        {
+          "text": "手机",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "壮大",
+          "start": 108,
+          "end": 110
+        },
+        {
+          "text": "生产",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "全球",
+          "start": 127,
+          "end": 129
+        },
+        {
+          "text": "首款",
+          "start": 129,
+          "end": 131
+        },
+        {
+          "text": "手机",
+          "start": 142,
+          "end": 144
+        },
+        {
+          "text": "手机",
+          "start": 157,
+          "end": 159
+        },
+        {
+          "text": "品牌",
+          "start": 159,
+          "end": 161
+        },
+        {
+          "text": "高端",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "text": "市场",
+          "start": 167,
+          "end": 169
+        }
+      ]
+    }
+  },
+  {
+    "id": 2009381837796644635,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "全球",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "首款",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "搭载",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "人工智能",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "text": "芯片",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "智慧",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "手机",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "德国",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "慕尼黑",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "text": "发布",
+          "start": 25,
+          "end": 27
+        }
+      ],
+      "in_background": [
+        {
+          "text": "手机",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "生产",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "技术",
+          "start": 60,
+          "end": 62
+        },
+        {
+          "text": "手机",
+          "start": 66,
+          "end": 68
+        },
+        {
+          "text": "生产",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "手机",
+          "start": 94,
+          "end": 96
+        },
+        {
+          "text": "手机",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "生产",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "全球",
+          "start": 127,
+          "end": 129
+        },
+        {
+          "text": "首款",
+          "start": 129,
+          "end": 131
+        },
+        {
+          "text": "搭载",
+          "start": 131,
+          "end": 133
+        },
+        {
+          "text": "人工智能",
+          "start": 133,
+          "end": 137
+        },
+        {
+          "text": "芯片",
+          "start": 137,
+          "end": 139
+        },
+        {
+          "text": "智慧",
+          "start": 140,
+          "end": 142
+        },
+        {
+          "text": "手机",
+          "start": 142,
+          "end": 144
+        },
+        {
+          "text": "德国",
+          "start": 147,
+          "end": 149
+        },
+        {
+          "text": "慕尼黑",
+          "start": 149,
+          "end": 152
+        },
+        {
+          "text": "发布",
+          "start": 152,
+          "end": 154
+        },
+        {
+          "text": "手机",
+          "start": 157,
+          "end": 159
+        },
+        {
+          "text": "品牌",
+          "start": 159,
+          "end": 161
+        },
+        {
+          "text": "世界",
+          "start": 163,
+          "end": 165
+        },
+        {
+          "text": "高端",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "text": "市场",
+          "start": 167,
+          "end": 169
+        }
+      ]
+    }
+  },
+  {
+    "id": -3791214121104985704,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "发展",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "庄园",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "经济",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "前提条件",
+          "start": 7,
+          "end": 11
+        },
+        {
+          "text": "拥有",
+          "start": 14,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "农业",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "发展",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "庄园",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "经济",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "一种",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "农业",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "资源",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "生产",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "经营",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "管理",
+          "start": 40,
+          "end": 42
+        },
+        {
+          "text": "经营",
+          "start": 52,
+          "end": 54
+        },
+        {
+          "text": "模式",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "铁观音",
+          "start": 66,
+          "end": 69
+        },
+        {
+          "text": "中国",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "地理",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "庄园",
+          "start": 126,
+          "end": 128
+        }
+      ]
+    }
+  },
+  {
+    "id": 1636060867533779507,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "传统",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "茶园",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "相比",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "庄园",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "优势",
+          "start": 17,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "庄园",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "经济",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "一种",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "生产",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "规模化",
+          "start": 30,
+          "end": 33
+        },
+        {
+          "text": "经营",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "多元化",
+          "start": 36,
+          "end": 39
+        },
+        {
+          "text": "管理",
+          "start": 40,
+          "end": 42
+        },
+        {
+          "text": "经营",
+          "start": 52,
+          "end": 54
+        },
+        {
+          "text": "模式",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "生产",
+          "start": 61,
+          "end": 63
+        },
+        {
+          "text": "优质",
+          "start": 64,
+          "end": 66
+        },
+        {
+          "text": "铁观音",
+          "start": 66,
+          "end": 69
+        },
+        {
+          "text": "中国",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "地理",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "标志",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "认证",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "茶叶",
+          "start": 107,
+          "end": 109
+        },
+        {
+          "text": "庄园",
+          "start": 126,
+          "end": 128
+        }
+      ]
+    }
+  },
+  {
+    "id": 7086476509155070608,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "上海市",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "text": "外来",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "常住人口",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "text": "减少",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "上海市",
+          "start": 27,
+          "end": 30
+        }
+      ],
+      "in_background": [
+        {
+          "text": "上海市",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "text": "常住人口",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "text": "外来",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "常住人口",
+          "start": 35,
+          "end": 39
+        },
+        {
+          "text": "减少",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "text": "减少",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "外来",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "常住人口",
+          "start": 77,
+          "end": 81
+        },
+        {
+          "text": "流向",
+          "start": 83,
+          "end": 85
+        },
+        {
+          "text": "上海",
+          "start": 85,
+          "end": 87
+        },
+        {
+          "text": "周边",
+          "start": 87,
+          "end": 89
+        }
+      ]
+    }
+  },
+  {
+    "id": -8878453127023721721,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "上海市",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "减少",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "外来",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "常住人口",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "text": "流向",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "中小城市",
+          "start": 18,
+          "end": 22
+        },
+        {
+          "text": "中小城市",
+          "start": 30,
+          "end": 34
+        }
+      ],
+      "in_background": [
+        {
+          "text": "上海市",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "text": "常住人口",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "text": "减少",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "外来",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "常住人口",
+          "start": 35,
+          "end": 39
+        },
+        {
+          "text": "减少",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "text": "减少",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "外来",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "常住人口",
+          "start": 77,
+          "end": 81
+        },
+        {
+          "text": "流向",
+          "start": 83,
+          "end": 85
+        },
+        {
+          "text": "上海",
+          "start": 85,
+          "end": 87
+        },
+        {
+          "text": "周边",
+          "start": 87,
+          "end": 89
+        },
+        {
+          "text": "中小城市",
+          "start": 91,
+          "end": 95
+        },
+        {
+          "text": "上海市",
+          "start": 96,
+          "end": 99
+        }
+      ]
+    }
+  },
+  {
+    "id": -1018395644874017399,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "上海市",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "产业",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "从业人员",
+          "start": 11,
+          "end": 15
+        },
+        {
+          "text": "分布",
+          "start": 19,
+          "end": 21
+        }
+      ],
+      "in_background": [
+        {
+          "text": "上海市",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "text": "上海市",
+          "start": 96,
+          "end": 99
+        }
+      ]
+    }
+  },
+  {
+    "id": 742133375690314014,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "人均",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "耕地",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "增加",
+          "start": 17,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "耕地",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "总量",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "减少",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "人均",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "耕地",
+          "start": 44,
+          "end": 46
+        },
+        {
+          "text": "增加",
+          "start": 46,
+          "end": 48
+        }
+      ]
+    }
+  },
+  {
+    "id": -711990755547597654,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "柠檬",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "优势",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "自然",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "条件",
+          "start": 14,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "柠檬",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "性喜",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "温暖",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "耐阴",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "怕热",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "耐寒",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "适宜",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "柠檬",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "柠檬",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "柠檬",
+          "start": 107,
+          "end": 109
+        },
+        {
+          "text": "产业",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "柠檬",
+          "start": 139,
+          "end": 141
+        }
+      ]
+    }
+  },
+  {
+    "id": 157412907634447556,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "柠檬",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "滞销",
+          "start": 20,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "柠檬",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "地区",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "柠檬",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "产业",
+          "start": 55,
+          "end": 57
+        },
+        {
+          "text": "柠檬",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "发展",
+          "start": 76,
+          "end": 78
+        },
+        {
+          "text": "产业",
+          "start": 83,
+          "end": 85
+        },
+        {
+          "text": "地区",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "柠檬",
+          "start": 107,
+          "end": 109
+        },
+        {
+          "text": "产业",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "蓬勃发展",
+          "start": 111,
+          "end": 115
+        },
+        {
+          "text": "柠檬",
+          "start": 139,
+          "end": 141
+        },
+        {
+          "text": "滞销",
+          "start": 143,
+          "end": 145
+        }
+      ]
+    }
+  },
+  {
+    "id": 8926508250528306762,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "产业",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "持续",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "发展",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "措施",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "产业",
+          "start": 55,
+          "end": 57
+        },
+        {
+          "text": "规划",
+          "start": 66,
+          "end": 68
+        },
+        {
+          "text": "发展",
+          "start": 76,
+          "end": 78
+        },
+        {
+          "text": "产业",
+          "start": 83,
+          "end": 85
+        },
+        {
+          "text": "规模",
+          "start": 85,
+          "end": 87
+        },
+        {
+          "text": "不断扩大",
+          "start": 87,
+          "end": 91
+        },
+        {
+          "text": "柠檬",
+          "start": 107,
+          "end": 109
+        },
+        {
+          "text": "产业",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "蓬勃",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "柠檬",
+          "start": 139,
+          "end": 141
+        }
+      ]
+    }
+  },
+  {
+    "id": -4317055882341707783,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "寿光",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "一体化",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "text": "生产",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "模式",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "得以",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "断壮大",
+          "start": 24,
+          "end": 27
+        }
+      ],
+      "in_background": [
+        {
+          "text": "模式",
+          "start": 49,
+          "end": 51
+        }
+      ]
+    }
+  },
+  {
+    "id": -197494513650373178,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "蔬菜",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "布局",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "寿光",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "主导",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "因素",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "寿光",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "全国",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "蔬菜",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "集散地",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "text": "蔬菜",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "蔬菜",
+          "start": 29,
+          "end": 31
+        },
+        {
+          "text": "蔬菜",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "蔬菜",
+          "start": 66,
+          "end": 68
+        }
+      ]
+    }
+  },
+  {
+    "id": 5390942954617443494,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "成佳",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "发展",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "第六",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "产业",
+          "start": 7,
+          "end": 9
+        }
+      ],
+      "in_background": [
+        {
+          "text": "第六",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "产业",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "种植",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "销售",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "产业",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "text": "第六",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "产业",
+          "start": 74,
+          "end": 76
+        },
+        {
+          "text": "第六",
+          "start": 108,
+          "end": 110
+        },
+        {
+          "text": "产业",
+          "start": 110,
+          "end": 112
+        },
+        {
+          "text": "昔日",
+          "start": 114,
+          "end": 116
+        },
+        {
+          "text": "单一",
+          "start": 116,
+          "end": 118
+        },
+        {
+          "text": "茶叶",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "种植园",
+          "start": 122,
+          "end": 125
+        },
+        {
+          "text": "茶叶",
+          "start": 128,
+          "end": 130
+        },
+        {
+          "text": "新品种",
+          "start": 130,
+          "end": 133
+        },
+        {
+          "text": "培育",
+          "start": 133,
+          "end": 135
+        },
+        {
+          "text": "基地",
+          "start": 135,
+          "end": 137
+        },
+        {
+          "text": "高端",
+          "start": 138,
+          "end": 140
+        },
+        {
+          "text": "茶叶",
+          "start": 140,
+          "end": 142
+        },
+        {
+          "text": "产业园",
+          "start": 142,
+          "end": 145
+        },
+        {
+          "text": "乡村",
+          "start": 146,
+          "end": 148
+        },
+        {
+          "text": "旅游",
+          "start": 148,
+          "end": 150
+        },
+        {
+          "text": "观光",
+          "start": 152,
+          "end": 154
+        },
+        {
+          "text": "景点",
+          "start": 154,
+          "end": 156
+        },
+        {
+          "text": "提升",
+          "start": 164,
+          "end": 166
+        }
+      ]
+    }
+  },
+  {
+    "id": 7388345703248595066,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "成佳镇",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "第六",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "产业",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "持续",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "发展",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "关键",
+          "start": 15,
+          "end": 17
+        }
+      ],
+      "in_background": [
+        {
+          "text": "第六",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "产业",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "种植",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "销售",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "产业",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "text": "第六",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "产业",
+          "start": 74,
+          "end": 76
+        },
+        {
+          "text": "成佳镇",
+          "start": 84,
+          "end": 87
+        },
+        {
+          "text": "发展",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "第",
+          "start": 108,
+          "end": 109
+        },
+        {
+          "text": "产业",
+          "start": 110,
+          "end": 112
+        },
+        {
+          "text": "单一",
+          "start": 116,
+          "end": 118
+        },
+        {
+          "text": "茶叶",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "种植园",
+          "start": 122,
+          "end": 125
+        },
+        {
+          "text": "茶叶",
+          "start": 128,
+          "end": 130
+        },
+        {
+          "text": "茶叶",
+          "start": 140,
+          "end": 142
+        },
+        {
+          "text": "提升",
+          "start": 164,
+          "end": 166
+        }
+      ]
+    }
+  },
+  {
+    "id": -3578969806425897839,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "LGD",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "公司",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "中国",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "广州",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "建厂",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "主导",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "因素",
+          "start": 16,
+          "end": 18
+        }
+      ],
+      "in_background": [
+        {
+          "text": "高清",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "显示",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "韩国",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "广州",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "韩国",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "材料",
+          "start": 70,
+          "end": 72
+        },
+        {
+          "text": "设备",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "技术",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "技术",
+          "start": 93,
+          "end": 95
+        },
+        {
+          "text": "研发",
+          "start": 95,
+          "end": 97
+        },
+        {
+          "text": "环节",
+          "start": 97,
+          "end": 99
+        },
+        {
+          "text": "保留",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "韩国",
+          "start": 104,
+          "end": 106
+        },
+        {
+          "text": "本土",
+          "start": 106,
+          "end": 108
+        }
+      ]
+    }
+  },
+  {
+    "id": 101098941182835052,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "LGD",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "公司",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "中国",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "广州",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "建厂",
+          "start": 10,
+          "end": 12
+        }
+      ],
+      "in_background": [
+        {
+          "text": "韩国",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "LGD",
+          "start": 18,
+          "end": 21
+        },
+        {
+          "text": "公司",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "广州",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "LGD",
+          "start": 60,
+          "end": 63
+        },
+        {
+          "text": "公司",
+          "start": 63,
+          "end": 65
+        },
+        {
+          "text": "韩国",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "材料",
+          "start": 70,
+          "end": 72
+        },
+        {
+          "text": "技术",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "技术",
+          "start": 93,
+          "end": 95
+        },
+        {
+          "text": "研发",
+          "start": 95,
+          "end": 97
+        },
+        {
+          "text": "环节",
+          "start": 97,
+          "end": 99
+        },
+        {
+          "text": "保留",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "韩国",
+          "start": 104,
+          "end": 106
+        },
+        {
+          "text": "本土",
+          "start": 106,
+          "end": 108
+        }
+      ]
+    }
+  },
+  {
+    "id": -7994815672891398975,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "景德镇",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "text": "相比",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "世纪",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "年代",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "佛山",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "陶瓷",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "产业",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "发展",
+          "start": 23,
+          "end": 25
+        }
+      ],
+      "in_background": [
+        {
+          "text": "陶瓷",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "景德镇",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "text": "全国",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "世纪",
+          "start": 44,
+          "end": 46
+        },
+        {
+          "text": "年代",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "率先",
+          "start": 58,
+          "end": 60
+        },
+        {
+          "text": "引进",
+          "start": 60,
+          "end": 62
+        },
+        {
+          "text": "国外",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "现代化",
+          "start": 64,
+          "end": 67
+        },
+        {
+          "text": "陶瓷",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "生产线",
+          "start": 69,
+          "end": 72
+        },
+        {
+          "text": "发展",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "全国",
+          "start": 79,
+          "end": 81
+        },
+        {
+          "text": "世界",
+          "start": 83,
+          "end": 85
+        },
+        {
+          "text": "陶瓷",
+          "start": 88,
+          "end": 90
+        },
+        {
+          "text": "生产",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "佛山",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "陶瓷",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "陶瓷",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "产业",
+          "start": 120,
+          "end": 122
+        },
+        {
+          "text": "景德镇",
+          "start": 123,
+          "end": 126
+        },
+        {
+          "text": "陶瓷",
+          "start": 127,
+          "end": 129
+        }
+      ]
+    }
+  },
+  {
+    "id": -1021026828133233788,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "促使",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "佛山",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "陶瓷",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "产业",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "向外",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "转移",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "佛山",
+          "start": 19,
+          "end": 21
+        }
+      ],
+      "in_background": [
+        {
+          "text": "陶瓷",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "中心",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "陶瓷",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "陶瓷",
+          "start": 88,
+          "end": 90
+        },
+        {
+          "text": "佛山",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "陶瓷",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "主产区",
+          "start": 105,
+          "end": 108
+        },
+        {
+          "text": "划入",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "中心",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "城区",
+          "start": 113,
+          "end": 115
+        },
+        {
+          "text": "陶瓷",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "产业",
+          "start": 120,
+          "end": 122
+        },
+        {
+          "text": "陶瓷",
+          "start": 127,
+          "end": 129
+        },
+        {
+          "text": "转移",
+          "start": 131,
+          "end": 133
+        }
+      ]
+    }
+  },
+  {
+    "id": 6647993308648130528,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "景德镇",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "吸引",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "佛山",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "陶瓷",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "产业",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "优势",
+          "start": 16,
+          "end": 18
+        }
+      ],
+      "in_background": [
+        {
+          "text": "世界闻名",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "text": "陶瓷",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "古国",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "瓷都",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "景德镇",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "text": "全国",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "中心",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "陶瓷",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "陶瓷",
+          "start": 88,
+          "end": 90
+        },
+        {
+          "text": "佛山",
+          "start": 101,
+          "end": 103
+        },
+        {
+          "text": "陶瓷",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "中心",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "陶瓷",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "产业",
+          "start": 120,
+          "end": 122
+        },
+        {
+          "text": "景德镇",
+          "start": 123,
+          "end": 126
+        },
+        {
+          "text": "陶瓷",
+          "start": 127,
+          "end": 129
+        },
+        {
+          "text": "转移",
+          "start": 131,
+          "end": 133
+        }
+      ]
+    }
+  },
+  {
+    "id": 4989462467700375119,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "长春",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "基地",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "高档",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "车型",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "市场",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "定位",
+          "start": 13,
+          "end": 15
+        }
+      ],
+      "in_background": [
+        {
+          "text": "长春",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "基地",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "长春",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "基地",
+          "start": 55,
+          "end": 57
+        },
+        {
+          "text": "车型",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "高档",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "车型",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "车型",
+          "start": 86,
+          "end": 88
+        },
+        {
+          "text": "基地",
+          "start": 99,
+          "end": 101
+        }
+      ]
+    }
+  },
+  {
+    "id": 6031906075143409749,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "保留",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "生产",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "中低档",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "text": "车型",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "相比",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "长春",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "保留",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "生产",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "高档",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "车型",
+          "start": 24,
+          "end": 26
+        }
+      ],
+      "in_background": [
+        {
+          "text": "长春",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "生产",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "基地",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "长春",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "基地",
+          "start": 55,
+          "end": 57
+        },
+        {
+          "text": "生产",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "车型",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "保留",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "高档",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "车型",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "生产",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "中低档",
+          "start": 83,
+          "end": 86
+        },
+        {
+          "text": "车型",
+          "start": 86,
+          "end": 88
+        },
+        {
+          "text": "生产",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "转移",
+          "start": 94,
+          "end": 96
+        },
+        {
+          "text": "基地",
+          "start": 99,
+          "end": 101
+        }
+      ]
+    }
+  },
+  {
+    "id": 5160571735882141569,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "汽车",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "企业",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "成都",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "地建",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "生产",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "基地",
+          "start": 13,
+          "end": 15
+        }
+      ],
+      "in_background": [
+        {
+          "text": "汽车",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "企业",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "成都",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "佛山",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "青岛",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "text": "生产",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "基地",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "基地",
+          "start": 55,
+          "end": 57
+        },
+        {
+          "text": "生产",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "生产",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "生产",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "基地",
+          "start": 99,
+          "end": 101
+        }
+      ]
+    }
+  },
+  {
+    "id": 8291946024091618668,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "宁波",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "上海",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "服装",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "企业",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "加工",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "宁波",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "上海",
+          "start": 58,
+          "end": 60
+        },
+        {
+          "text": "服装",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "企业",
+          "start": 64,
+          "end": 66
+        },
+        {
+          "text": "宁波",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "上海",
+          "start": 88,
+          "end": 90
+        },
+        {
+          "text": "服装",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "企业",
+          "start": 92,
+          "end": 94
+        },
+        {
+          "text": "加工",
+          "start": 95,
+          "end": 97
+        }
+      ]
+    }
+  },
+  {
+    "id": -3900495963567863347,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "服装",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "企业",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "集聚",
+          "start": 6,
+          "end": 8
+        }
+      ],
+      "in_background": [
+        {
+          "text": "服装",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "宁波",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "服装",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "企业",
+          "start": 64,
+          "end": 66
+        },
+        {
+          "text": "宁波",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "服装",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "企业",
+          "start": 92,
+          "end": 94
+        }
+      ]
+    }
+  },
+  {
+    "id": -5270172317666725646,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "宁波",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "国内",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "in_background": [
+        {
+          "text": "宁波",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "上海",
+          "start": 58,
+          "end": 60
+        },
+        {
+          "text": "服装",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "宁波",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "承接",
+          "start": 86,
+          "end": 88
+        },
+        {
+          "text": "上海",
+          "start": 88,
+          "end": 90
+        }
+      ]
+    }
+  },
+  {
+    "id": -7822589263206310532,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "关注",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "中国",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "市场",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "形式",
+          "start": 20,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "关注",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "中国",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "体育用品",
+          "start": 31,
+          "end": 35
+        },
+        {
+          "text": "市场",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "中国",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "中国",
+          "start": 69,
+          "end": 71
+        },
+        {
+          "text": "建立",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "生产",
+          "start": 84,
+          "end": 86
+        },
+        {
+          "text": "中国",
+          "start": 108,
+          "end": 110
+        }
+      ]
+    }
+  },
+  {
+    "id": -3770379944339660257,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "adidas",
+          "start": 2,
+          "end": 8
+        },
+        {
+          "text": "代工厂",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "text": "中国",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "度尼西亚",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "text": "转移",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "印度尼西亚",
+          "start": 29,
+          "end": 34
+        }
+      ],
+      "in_background": [
+        {
+          "text": "adidas",
+          "start": 0,
+          "end": 6
+        },
+        {
+          "text": "中国",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "市场",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "中国",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "adidas",
+          "start": 62,
+          "end": 68
+        },
+        {
+          "text": "中国",
+          "start": 69,
+          "end": 71
+        },
+        {
+          "text": "建立",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "生产",
+          "start": 84,
+          "end": 86
+        },
+        {
+          "text": "印度尼西亚",
+          "start": 99,
+          "end": 104
+        },
+        {
+          "text": "中国",
+          "start": 108,
+          "end": 110
+        },
+        {
+          "text": "adidas",
+          "start": 113,
+          "end": 119
+        },
+        {
+          "text": "adidas",
+          "start": 138,
+          "end": 144
+        },
+        {
+          "text": "工厂",
+          "start": 165,
+          "end": 167
+        }
+      ]
+    }
+  },
+  {
+    "id": 3814996436279374331,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "印度尼西亚",
+          "start": 1,
+          "end": 6
+        },
+        {
+          "text": "生产线",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "text": "相比",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "德国",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "智能",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "机器人",
+          "start": 16,
+          "end": 19
+        },
+        {
+          "text": "生产",
+          "start": 19,
+          "end": 21
+        }
+      ],
+      "in_background": [
+        {
+          "text": "德国",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "生产线",
+          "start": 43,
+          "end": 46
+        },
+        {
+          "text": "生产",
+          "start": 84,
+          "end": 86
+        },
+        {
+          "text": "印度尼西亚",
+          "start": 99,
+          "end": 104
+        },
+        {
+          "text": "德国",
+          "start": 150,
+          "end": 152
+        },
+        {
+          "text": "智能",
+          "start": 154,
+          "end": 156
+        },
+        {
+          "text": "机器人",
+          "start": 156,
+          "end": 159
+        }
+      ]
+    }
+  },
+  {
+    "id": -7615949426158058647,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "钢骨",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "布面",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "相比",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "油纸伞",
+          "start": 11,
+          "end": 14
+        },
+        {
+          "text": "走俏",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "国际",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "市场",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "油纸伞",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "物质",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "文化遗产",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "text": "油纸伞",
+          "start": 27,
+          "end": 30
+        },
+        {
+          "text": "以竹",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "以纸",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "丝绸",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "为面",
+          "start": 40,
+          "end": 42
+        },
+        {
+          "text": "长期",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "置于",
+          "start": 58,
+          "end": 60
+        },
+        {
+          "text": "干燥",
+          "start": 60,
+          "end": 62
+        },
+        {
+          "text": "环境",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "易变",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "开裂",
+          "start": 69,
+          "end": 71
+        },
+        {
+          "text": "油纸伞",
+          "start": 76,
+          "end": 79
+        },
+        {
+          "text": "走俏",
+          "start": 79,
+          "end": 81
+        },
+        {
+          "text": "国际",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "市场",
+          "start": 83,
+          "end": 85
+        }
+      ]
+    }
+  },
+  {
+    "id": -6240701047710041534,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "油纸伞",
+          "start": 9,
+          "end": 12
+        },
+        {
+          "text": "重点",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "推销",
+          "start": 14,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "油纸伞",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "油纸伞",
+          "start": 27,
+          "end": 30
+        },
+        {
+          "text": "长期",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "干燥",
+          "start": 60,
+          "end": 62
+        },
+        {
+          "text": "环境",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "易变",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "开裂",
+          "start": 69,
+          "end": 71
+        },
+        {
+          "text": "油纸伞",
+          "start": 76,
+          "end": 79
+        }
+      ]
+    }
+  },
+  {
+    "id": 5759492862712257130,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "岐阜",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "大连",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "地下",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "施工",
+          "start": 17,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "地下",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "日本",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "岐阜",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "大连",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "地面",
+          "start": 72,
+          "end": 74
+        }
+      ]
+    }
+  },
+  {
+    "id": -4464425758470165977,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "耕种",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "方式",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "刀耕",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "刀耕火种",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "text": "方式",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "沉积物",
+          "start": 38,
+          "end": 41
+        },
+        {
+          "text": "耕种",
+          "start": 44,
+          "end": 46
+        },
+        {
+          "text": "是因为",
+          "start": 47,
+          "end": 50
+        },
+        {
+          "text": "尼罗河",
+          "start": 50,
+          "end": 53
+        },
+        {
+          "text": "泛滥",
+          "start": 53,
+          "end": 55
+        }
+      ],
+      "in_background": [
+        {
+          "text": "尼罗河",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "text": "尼罗河",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "text": "带来",
+          "start": 40,
+          "end": 42
+        },
+        {
+          "text": "肥沃",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "text": "沉积物",
+          "start": 50,
+          "end": 53
+        }
+      ]
+    }
+  },
+  {
+    "id": -3576722870612579286,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "尼罗河",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "下游",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "沉积物",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "text": "降水",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "热带",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "尼罗河",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "text": "尼罗河",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "text": "上游",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "沉积物",
+          "start": 50,
+          "end": 53
+        },
+        {
+          "text": "上游",
+          "start": 56,
+          "end": 58
+        }
+      ]
+    }
+  },
+  {
+    "id": -6207785483784716269,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "引入",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "植物",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "引入",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "植物",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "生长期",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "text": "尼罗河",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "泛滥",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "耕种",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "植物",
+          "start": 48,
+          "end": 50
+        }
+      ],
+      "in_background": [
+        {
+          "text": "尼罗河",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "text": "泛滥",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "尼罗河",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "text": "泛滥",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "沉积",
+          "start": 50,
+          "end": 52
+        }
+      ]
+    }
+  },
+  {
+    "id": 930080964527319952,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "亚热带",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "text": "以南",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "分布",
+          "start": 21,
+          "end": 23
+        }
+      ],
+      "in_background": [
+        {
+          "text": "亚热带",
+          "start": 13,
+          "end": 16
+        },
+        {
+          "text": "亚热带",
+          "start": 25,
+          "end": 28
+        }
+      ]
+    }
+  },
+  {
+    "id": -3861314291580880017,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "亚热带",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "分布",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "亚热带",
+          "start": 13,
+          "end": 16
+        },
+        {
+          "text": "亚热带",
+          "start": 25,
+          "end": 28
+        }
+      ]
+    }
+  },
+  {
+    "id": -8457820906376326644,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "上午",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "麦茬",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "下午",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "棉花",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "地区",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "谚语",
+          "start": 41,
+          "end": 43
+        }
+      ],
+      "in_background": [
+        {
+          "text": "农业",
+          "start": 11,
+          "end": 13
+        }
+      ]
+    }
+  },
+  {
+    "id": -2941514176295596474,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "城市群",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "text": "高铁",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "开通",
+          "start": 8,
+          "end": 10
+        }
+      ],
+      "in_background": [
+        {
+          "text": "变化",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "高铁",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "开通",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "高铁",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "发展",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "高铁",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "高铁",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "城市",
+          "start": 78,
+          "end": 80
+        },
+        {
+          "text": "发展",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "城市",
+          "start": 99,
+          "end": 101
+        },
+        {
+          "text": "发展",
+          "start": 101,
+          "end": 103
+        }
+      ]
+    }
+  },
+  {
+    "id": 6521126365422974741,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "高铁",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "沿线",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "中小城市",
+          "start": 11,
+          "end": 15
+        },
+        {
+          "text": "经济",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "增长",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "缓慢",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "解决",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "对策",
+          "start": 25,
+          "end": 27
+        }
+      ],
+      "in_background": [
+        {
+          "text": "高铁",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "高铁",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "高铁",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "高铁",
+          "start": 76,
+          "end": 78
+        }
+      ]
+    }
+  },
+  {
+    "id": 7182848168587163517,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "区域",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "差异",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "提供",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "条件",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "利于",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "厄勒",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "海峡",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "两岸",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "区域",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "经济",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "合作",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "条件",
+          "start": 31,
+          "end": 33
+        }
+      ],
+      "in_background": [
+        {
+          "text": "连接",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "厄勒",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "text": "海峡",
+          "start": 43,
+          "end": 45
+        }
+      ]
+    }
+  },
+  {
+    "id": 5418573963926612432,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "公转",
+          "start": 5,
+          "end": 7
+        }
+      ],
+      "in_background": [
+        {
+          "text": "增加",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "铁路",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "运量",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "公路",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "铁路运输",
+          "start": 61,
+          "end": 65
+        },
+        {
+          "text": "公转",
+          "start": 71,
+          "end": 73
+        }
+      ]
+    }
+  },
+  {
+    "id": 171467253450424302,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "公转",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "in_background": [
+        {
+          "text": "增加",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "铁路",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "运量",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "铁路运输",
+          "start": 61,
+          "end": 65
+        },
+        {
+          "text": "公转",
+          "start": 71,
+          "end": 73
+        }
+      ]
+    }
+  },
+  {
+    "id": 919587652975531862,
+    "keywords": {
+      "in_question": [],
+      "in_background": [
+        {
+          "text": "铁路",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "运量",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "铁路运输",
+          "start": 61,
+          "end": 65
+        }
+      ]
+    }
+  },
+  {
+    "id": -5930995413375562556,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "过度",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "猎狼",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "多样性",
+          "start": 16,
+          "end": 19
+        },
+        {
+          "text": "减少",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "环境",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "承载力",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "导致",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "不良",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "消费观念",
+          "start": 37,
+          "end": 41
+        },
+        {
+          "text": "破坏",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "text": "公平性",
+          "start": 53,
+          "end": 56
+        }
+      ],
+      "in_background": [
+        {
+          "text": "猎狼",
+          "start": 61,
+          "end": 63
+        }
+      ]
+    }
+  },
+  {
+    "id": 8679224654046170974,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "无人机",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "text": "遥感",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": 4605669194929870,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "滴滴",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "出行",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "采用",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "GIS",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "text": "GPS",
+          "start": 26,
+          "end": 29
+        }
+      ],
+      "in_background": [
+        {
+          "text": "   ",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "text": "滴滴",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "出行",
+          "start": 25,
+          "end": 27
+        },
+        {
+          "text": "软件",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "查找",
+          "start": 44,
+          "end": 46
+        },
+        {
+          "text": "可用",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "车辆",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "规划",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "出行",
+          "start": 57,
+          "end": 59
+        },
+        {
+          "text": "路线",
+          "start": 59,
+          "end": 61
+        }
+      ]
+    }
+  },
+  {
+    "id": 1309724266627063760,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "道路",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "影响",
+          "start": 5,
+          "end": 7
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": -1341928061845617338,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "红外",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "遥感",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "影像",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "亮度",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "地物",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "表面",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "温度",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "表面温度",
+          "start": 22,
+          "end": 26
+        },
+        {
+          "text": "晴天",
+          "start": 37,
+          "end": 39
+        },
+        {
+          "text": "正午",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "红外",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "像",
+          "start": 58,
+          "end": 59
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": -6564662059497292857,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "艾比湖",
+          "start": 9,
+          "end": 12
+        },
+        {
+          "text": "面积",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "缩小",
+          "start": 15,
+          "end": 17
+        }
+      ],
+      "in_background": [
+        {
+          "text": "艾比湖",
+          "start": 17,
+          "end": 20
+        },
+        {
+          "text": "咸水湖",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "湖水",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "芦苇",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "芦苇",
+          "start": 55,
+          "end": 57
+        },
+        {
+          "text": "湖水",
+          "start": 58,
+          "end": 60
+        },
+        {
+          "text": "净化",
+          "start": 61,
+          "end": 63
+        },
+        {
+          "text": "作用",
+          "start": 63,
+          "end": 65
+        },
+        {
+          "text": "艾比湖",
+          "start": 71,
+          "end": 74
+        },
+        {
+          "text": "湖面",
+          "start": 87,
+          "end": 89
+        },
+        {
+          "text": "缩小",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "芦苇",
+          "start": 97,
+          "end": 99
+        },
+        {
+          "text": "枯萎",
+          "start": 101,
+          "end": 103
+        }
+      ]
+    }
+  },
+  {
+    "id": 4634379081625817391,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "艾比湖",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "萎缩",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "流域",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "措施",
+          "start": 20,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "艾比湖",
+          "start": 17,
+          "end": 20
+        },
+        {
+          "text": "咸水湖",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "湖水",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "芦苇",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "芦苇",
+          "start": 55,
+          "end": 57
+        },
+        {
+          "text": "湖水",
+          "start": 58,
+          "end": 60
+        },
+        {
+          "text": "净化",
+          "start": 61,
+          "end": 63
+        },
+        {
+          "text": "作用",
+          "start": 63,
+          "end": 65
+        },
+        {
+          "text": "艾比湖",
+          "start": 71,
+          "end": 74
+        },
+        {
+          "text": "流域",
+          "start": 74,
+          "end": 76
+        },
+        {
+          "text": "芦苇",
+          "start": 97,
+          "end": 99
+        }
+      ]
+    }
+  },
+  {
+    "id": 3605651954692889113,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "火灾",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "林下",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "植被",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "增加",
+          "start": 27,
+          "end": 29
+        }
+      ],
+      "in_background": [
+        {
+          "text": "林下",
+          "start": 56,
+          "end": 58
+        },
+        {
+          "text": "灌木",
+          "start": 60,
+          "end": 62
+        },
+        {
+          "text": "林下",
+          "start": 87,
+          "end": 89
+        },
+        {
+          "text": "植被",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "森林",
+          "start": 136,
+          "end": 138
+        },
+        {
+          "text": "火灾",
+          "start": 138,
+          "end": 140
+        },
+        {
+          "text": "林下",
+          "start": 144,
+          "end": 146
+        },
+        {
+          "text": "植被",
+          "start": 146,
+          "end": 148
+        },
+        {
+          "text": "增加",
+          "start": 165,
+          "end": 167
+        }
+      ]
+    }
+  },
+  {
+    "id": 3545952390594953196,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "火灾",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "林下",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "植被",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "恢复",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "优势",
+          "start": 17,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "灌木",
+          "start": 60,
+          "end": 62
+        },
+        {
+          "text": "林下",
+          "start": 87,
+          "end": 89
+        },
+        {
+          "text": "植被",
+          "start": 89,
+          "end": 91
+        },
+        {
+          "text": "森林",
+          "start": 136,
+          "end": 138
+        },
+        {
+          "text": "火灾",
+          "start": 138,
+          "end": 140
+        },
+        {
+          "text": "林下",
+          "start": 144,
+          "end": 146
+        },
+        {
+          "text": "植被",
+          "start": 146,
+          "end": 148
+        },
+        {
+          "text": "增加",
+          "start": 165,
+          "end": 167
+        }
+      ]
+    }
+  },
+  {
+    "id": 7197801941094752311,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "西北地区",
+          "start": 1,
+          "end": 5
+        },
+        {
+          "text": "耗水",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "最佳",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "方式",
+          "start": 20,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "耗水",
+          "start": 70,
+          "end": 72
+        }
+      ]
+    }
+  },
+  {
+    "id": -1508600742262383831,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "发展",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "煤制油",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "text": "产业",
+          "start": 7,
+          "end": 9
+        }
+      ],
+      "in_background": [
+        {
+          "text": "煤炭",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "进口",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "text": "煤制油",
+          "start": 54,
+          "end": 57
+        },
+        {
+          "text": "煤制油",
+          "start": 63,
+          "end": 66
+        },
+        {
+          "text": "煤制油",
+          "start": 96,
+          "end": 99
+        }
+      ]
+    }
+  },
+  {
+    "id": 1874492006851325478,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "煤制油",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "text": "企业",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "布局",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "区位",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "指向",
+          "start": 12,
+          "end": 14
+        }
+      ],
+      "in_background": [
+        {
+          "text": "煤炭",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "煤炭",
+          "start": 52,
+          "end": 54
+        },
+        {
+          "text": "煤制油",
+          "start": 77,
+          "end": 80
+        },
+        {
+          "text": "煤制油",
+          "start": 91,
+          "end": 94
+        },
+        {
+          "text": "布局",
+          "start": 139,
+          "end": 141
+        },
+        {
+          "text": "煤制油",
+          "start": 145,
+          "end": 148
+        },
+        {
+          "text": "企业",
+          "start": 148,
+          "end": 150
+        }
+      ]
+    }
+  },
+  {
+    "id": -8855463971736708867,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "地表水",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "text": "匮乏",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "地区",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "长期",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "用水",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "方式",
+          "start": 22,
+          "end": 24
+        }
+      ],
+      "in_background": [
+        {
+          "text": "长期",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "耗水",
+          "start": 98,
+          "end": 100
+        }
+      ]
+    }
+  },
+  {
+    "id": 9064641013812668861,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "发展",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "煤制油",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "text": "产业",
+          "start": 5,
+          "end": 7
+        }
+      ],
+      "in_background": [
+        {
+          "text": "能源",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "资源",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "开发",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "煤炭",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "能源",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "生产",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "煤炭",
+          "start": 52,
+          "end": 54
+        },
+        {
+          "text": "石油",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "进口",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "煤制油",
+          "start": 77,
+          "end": 80
+        },
+        {
+          "text": "产业",
+          "start": 83,
+          "end": 85
+        },
+        {
+          "text": "煤制油",
+          "start": 91,
+          "end": 94
+        },
+        {
+          "text": "煤制油",
+          "start": 145,
+          "end": 148
+        },
+        {
+          "text": "企业",
+          "start": 148,
+          "end": 150
+        },
+        {
+          "text": "规划",
+          "start": 151,
+          "end": 153
+        },
+        {
+          "text": "吨",
+          "start": 168,
+          "end": 169
+        }
+      ]
+    }
+  },
+  {
+    "id": -8937237291375802490,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "黄土高原",
+          "start": 1,
+          "end": 5
+        },
+        {
+          "text": "固定",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "表土",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "减少",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "降低",
+          "start": 39,
+          "end": 41
+        },
+        {
+          "text": "风速",
+          "start": 41,
+          "end": 43
+        }
+      ],
+      "in_background": [
+        {
+          "text": "黄土高原",
+          "start": 51,
+          "end": 55
+        },
+        {
+          "text": "水土流失",
+          "start": 55,
+          "end": 59
+        },
+        {
+          "text": "变化",
+          "start": 100,
+          "end": 102
+        }
+      ]
+    }
+  },
+  {
+    "id": 3884677034241490848,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "水库",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "泥沙",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "放水",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "下游",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "河床",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "淤积",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "水库",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "放水",
+          "start": 40,
+          "end": 42
+        }
+      ],
+      "in_background": [
+        {
+          "text": "河流",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "水库",
+          "start": 71,
+          "end": 73
+        },
+        {
+          "text": "下游",
+          "start": 94,
+          "end": 96
+        }
+      ]
+    }
+  },
+  {
+    "id": 7453232988628325463,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "山水",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "林田湖",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "生命",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "共同体",
+          "start": 11,
+          "end": 14
+        },
+        {
+          "text": "蕴涵",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "地理",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "原理",
+          "start": 20,
+          "end": 22
+        }
+      ],
+      "in_background": [
+        {
+          "text": "河流",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "山水",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "林田湖",
+          "start": 111,
+          "end": 114
+        },
+        {
+          "text": "生命",
+          "start": 117,
+          "end": 119
+        },
+        {
+          "text": "共同体",
+          "start": 119,
+          "end": 122
+        }
+      ]
+    }
+  },
+  {
+    "id": -6436761748750620767,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "导致",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "黄河",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "入海",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "水量",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "变化",
+          "start": 8,
+          "end": 10
+        }
+      ],
+      "in_background": [
+        {
+          "text": "河流",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "黄河",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "入海",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "水量",
+          "start": 25,
+          "end": 27
+        },
+        {
+          "text": "总体",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "下降",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "趋势",
+          "start": 64,
+          "end": 66
+        }
+      ]
+    }
+  },
+  {
+    "id": 3701963740331882164,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "黄河",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "入海",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "水量",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "减少",
+          "start": 6,
+          "end": 8
+        }
+      ],
+      "in_background": [
+        {
+          "text": "河流",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "黄河",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "入海",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "水量",
+          "start": 25,
+          "end": 27
+        },
+        {
+          "text": "总体",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "下降",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "趋势",
+          "start": 64,
+          "end": 66
+        }
+      ]
+    }
+  },
+  {
+    "id": -9033392818405354534,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "南方",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "区",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "text": "江河水库",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "text": "功能",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "退化",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "大坝",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "拆除",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "text": "河流",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "生态系统",
+          "start": 32,
+          "end": 36
+        },
+        {
+          "text": "稳定",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "text": "拆坝",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "变化",
+          "start": 53,
+          "end": 55
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": 933682885163621495,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "长白山",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "西北坡",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "冻害",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "in_background": [
+        {
+          "text": "冻害",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "长白山",
+          "start": 42,
+          "end": 45
+        },
+        {
+          "text": "冻害",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "海拔",
+          "start": 64,
+          "end": 66
+        },
+        {
+          "text": "无关",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "西北坡",
+          "start": 71,
+          "end": 74
+        },
+        {
+          "text": "冻害",
+          "start": 75,
+          "end": 77
+        }
+      ]
+    }
+  },
+  {
+    "id": 25833414117195349,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "气候",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "变暖",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "冻害",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "加剧",
+          "start": 7,
+          "end": 9
+        }
+      ],
+      "in_background": [
+        {
+          "text": "全球",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "气候",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "变暖",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "背景",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "高山",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "苔原",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "冻害",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "加剧",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "text": "冻害",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "海拔",
+          "start": 64,
+          "end": 66
+        },
+        {
+          "text": "无关",
+          "start": 68,
+          "end": 70
+        },
+        {
+          "text": "冻害",
+          "start": 75,
+          "end": 77
+        }
+      ]
+    }
+  },
+  {
+    "id": 241268424473714662,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "地带性",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "text": "地球",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "形状",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "地球",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "运动",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "特征",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "地球",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "太阳辐",
+          "start": 30,
+          "end": 33
+        },
+        {
+          "text": "规律",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "分异",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "变化",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "地带性",
+          "start": 63,
+          "end": 66
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": 509802778467017324,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "教授",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "阿尔泰山",
+          "start": 7,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "教授",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "阿尔泰山",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "text": "身后",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "森林",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "戛然而止",
+          "start": 33,
+          "end": 37
+        },
+        {
+          "text": "眼前",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "text": "簇簇",
+          "start": 40,
+          "end": 42
+        },
+        {
+          "text": "花草",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "相映",
+          "start": 44,
+          "end": 46
+        },
+        {
+          "text": "再往上",
+          "start": 47,
+          "end": 50
+        },
+        {
+          "text": "星星点点",
+          "start": 59,
+          "end": 63
+        }
+      ]
+    }
+  },
+  {
+    "id": 3542614083541345022,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "南坡",
+          "start": 4,
+          "end": 6
+        }
+      ],
+      "in_background": []
+    }
+  },
+  {
+    "id": -2696076715364839152,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "城归",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "返乡",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "创业",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "现象",
+          "start": 8,
+          "end": 10
+        }
+      ],
+      "in_background": [
+        {
+          "text": "返乡",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "创业",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "城归",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "城归",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "明确提出",
+          "start": 83,
+          "end": 87
+        },
+        {
+          "text": "乡村",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "振兴",
+          "start": 92,
+          "end": 94
+        },
+        {
+          "text": "战略",
+          "start": 94,
+          "end": 96
+        },
+        {
+          "text": "实施",
+          "start": 97,
+          "end": 99
+        },
+        {
+          "text": "城归",
+          "start": 106,
+          "end": 108
+        },
+        {
+          "text": "返乡",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "创业",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "乡村",
+          "start": 117,
+          "end": 119
+        },
+        {
+          "text": "经济",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "发展",
+          "start": 126,
+          "end": 128
+        },
+        {
+          "text": "影响",
+          "start": 137,
+          "end": 139
+        }
+      ]
+    }
+  },
+  {
+    "id": -3460121101725660529,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "城归",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "乡村",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "带来",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "人口",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "红利",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "升级",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "人口",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "红利",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "升级",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "城归",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "人员",
+          "start": 31,
+          "end": 33
+        }
+      ],
+      "in_background": [
+        {
+          "text": "农民工",
+          "start": 20,
+          "end": 23
+        },
+        {
+          "text": "返乡",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "创业",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "城归",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "城归",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "乡村",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "城归",
+          "start": 106,
+          "end": 108
+        },
+        {
+          "text": "返乡",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "创业",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "乡村",
+          "start": 117,
+          "end": 119
+        },
+        {
+          "text": "经济",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "发展",
+          "start": 126,
+          "end": 128
+        },
+        {
+          "text": "带来",
+          "start": 128,
+          "end": 130
+        }
+      ]
+    }
+  },
+  {
+    "id": 771910972708433345,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "城归",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "现象",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "乡村",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "最先",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "带来",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "效益",
+          "start": 16,
+          "end": 18
+        }
+      ],
+      "in_background": [
+        {
+          "text": "积累",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "专长",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "农民工",
+          "start": 20,
+          "end": 23
+        },
+        {
+          "text": "返乡",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "创业",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "城归",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "城归",
+          "start": 62,
+          "end": 64
+        },
+        {
+          "text": "明确提",
+          "start": 83,
+          "end": 86
+        },
+        {
+          "text": "乡村",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "振兴",
+          "start": 92,
+          "end": 94
+        },
+        {
+          "text": "城归",
+          "start": 106,
+          "end": 108
+        },
+        {
+          "text": "返乡",
+          "start": 109,
+          "end": 111
+        },
+        {
+          "text": "创业",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "乡村",
+          "start": 117,
+          "end": 119
+        },
+        {
+          "text": "社会",
+          "start": 122,
+          "end": 124
+        },
+        {
+          "text": "经济",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "发展",
+          "start": 126,
+          "end": 128
+        },
+        {
+          "text": "带来",
+          "start": 128,
+          "end": 130
+        }
+      ]
+    }
+  },
+  {
+    "id": -5135657129556754730,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "该国",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "in_background": [
+        {
+          "text": "人口",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "人口",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "增长",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "人口",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "text": "人口",
+          "start": 51,
+          "end": 53
+        }
+      ]
+    }
+  },
+  {
+    "id": -8829051053859156608,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "该国",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "人口",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "增长",
+          "start": 32,
+          "end": 34
+        },
+        {
+          "text": "人口",
+          "start": 41,
+          "end": 43
+        }
+      ]
+    }
+  },
+  {
+    "id": 2149947195016924387,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "人口",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "流动",
+          "start": 6,
+          "end": 8
+        }
+      ],
+      "in_background": [
+        {
+          "text": "流动人口",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "text": "城乡",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "text": "人口",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "流动",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "text": "流动",
+          "start": 39,
+          "end": 41
+        }
+      ]
+    }
+  },
+  {
+    "id": -3595110599553983022,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "空心化",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "text": "现象",
+          "start": 5,
+          "end": 7
+        }
+      ],
+      "in_background": [
+        {
+          "text": "农村",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "有院",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "无人",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "无人",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "空心化",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "text": "现象",
+          "start": 32,
+          "end": 34
+        }
+      ]
+    }
+  },
+  {
+    "id": -666431869528237734,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "有院",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "无人",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "无人",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "带来",
+          "start": 13,
+          "end": 15
+        }
+      ],
+      "in_background": [
+        {
+          "text": "农村",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "有院",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "无人",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "无人",
+          "start": 23,
+          "end": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": 1009315100517091789,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "斯塔德",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "text": "地区",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "空间规划",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "text": "地区",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "核心",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "城市",
+          "start": 23,
+          "end": 25
+        }
+      ],
+      "in_background": [
+        {
+          "text": "斯塔德",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "text": "地区",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "空间",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "城市",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "接近",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "绿心",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "四个",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "核心",
+          "start": 79,
+          "end": 81
+        },
+        {
+          "text": "城市",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "环状",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "分布",
+          "start": 92,
+          "end": 94
+        },
+        {
+          "text": "绿心",
+          "start": 96,
+          "end": 98
+        },
+        {
+          "text": "城镇",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "之间",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "设置",
+          "start": 107,
+          "end": 109
+        },
+        {
+          "text": "侵占",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "绿地",
+          "start": 114,
+          "end": 116
+        },
+        {
+          "text": "四个",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "核心",
+          "start": 120,
+          "end": 122
+        },
+        {
+          "text": "城市",
+          "start": 122,
+          "end": 124
+        },
+        {
+          "text": "各具",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "职能",
+          "start": 128,
+          "end": 130
+        },
+        {
+          "text": "城市",
+          "start": 132,
+          "end": 134
+        },
+        {
+          "text": "分工",
+          "start": 134,
+          "end": 136
+        },
+        {
+          "text": "快速",
+          "start": 141,
+          "end": 143
+        },
+        {
+          "text": "交通系",
+          "start": 143,
+          "end": 146
+        },
+        {
+          "text": "地区",
+          "start": 170,
+          "end": 172
+        },
+        {
+          "text": "城镇",
+          "start": 172,
+          "end": 174
+        },
+        {
+          "text": "城镇",
+          "start": 188,
+          "end": 190
+        }
+      ]
+    }
+  },
+  {
+    "id": -1074461634890767789,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "斯塔德",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "text": "空间规划",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "实施",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "地区",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "同类",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "text": "产业",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "text": "活动",
+          "start": 24,
+          "end": 26
+        }
+      ],
+      "in_background": [
+        {
+          "text": "斯塔德",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "text": "地区",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "空间规",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "text": "城市",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "四个",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "核心",
+          "start": 79,
+          "end": 81
+        },
+        {
+          "text": "城市",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "环状",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "分布",
+          "start": 92,
+          "end": 94
+        },
+        {
+          "text": "绿心",
+          "start": 96,
+          "end": 98
+        },
+        {
+          "text": "城镇",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "之间",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "设置",
+          "start": 107,
+          "end": 109
+        },
+        {
+          "text": "四个",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "核心",
+          "start": 120,
+          "end": 122
+        },
+        {
+          "text": "城市",
+          "start": 122,
+          "end": 124
+        },
+        {
+          "text": "各具",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "城市",
+          "start": 132,
+          "end": 134
+        },
+        {
+          "text": "分工",
+          "start": 134,
+          "end": 136
+        },
+        {
+          "text": "地区",
+          "start": 170,
+          "end": 172
+        },
+        {
+          "text": "城镇",
+          "start": 172,
+          "end": 174
+        }
+      ]
+    }
+  },
+  {
+    "id": -1551157997693003076,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "斯塔德",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "text": "空间规划",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "实施",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "斯塔德",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "text": "空间规",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "text": "城市",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "空间",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "text": "特征",
+          "start": 43,
+          "end": 45
+        },
+        {
+          "text": "该区",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "接近",
+          "start": 53,
+          "end": 55
+        },
+        {
+          "text": "平方",
+          "start": 61,
+          "end": 63
+        },
+        {
+          "text": "千米",
+          "start": 63,
+          "end": 65
+        },
+        {
+          "text": "绿心",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "乡村",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "地带",
+          "start": 74,
+          "end": 76
+        },
+        {
+          "text": "四个",
+          "start": 77,
+          "end": 79
+        },
+        {
+          "text": "核心",
+          "start": 79,
+          "end": 81
+        },
+        {
+          "text": "城市",
+          "start": 81,
+          "end": 83
+        },
+        {
+          "text": "环状",
+          "start": 90,
+          "end": 92
+        },
+        {
+          "text": "分布",
+          "start": 92,
+          "end": 94
+        },
+        {
+          "text": "绿心",
+          "start": 96,
+          "end": 98
+        },
+        {
+          "text": "城镇",
+          "start": 103,
+          "end": 105
+        },
+        {
+          "text": "之间",
+          "start": 105,
+          "end": 107
+        },
+        {
+          "text": "设置",
+          "start": 107,
+          "end": 109
+        },
+        {
+          "text": "侵占",
+          "start": 111,
+          "end": 113
+        },
+        {
+          "text": "绿地",
+          "start": 114,
+          "end": 116
+        },
+        {
+          "text": "四个",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "核心",
+          "start": 120,
+          "end": 122
+        },
+        {
+          "text": "城市",
+          "start": 122,
+          "end": 124
+        },
+        {
+          "text": "各具",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "职能",
+          "start": 128,
+          "end": 130
+        },
+        {
+          "text": "城市",
+          "start": 132,
+          "end": 134
+        },
+        {
+          "text": "分工",
+          "start": 134,
+          "end": 136
+        },
+        {
+          "text": "城镇",
+          "start": 172,
+          "end": 174
+        },
+        {
+          "text": "城镇",
+          "start": 188,
+          "end": 190
+        }
+      ]
+    }
+  },
+  {
+    "id": 6850334214091771147,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "地基",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "建设",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "用地",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "in_background": [
+        {
+          "text": "建设",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "用地",
+          "start": 82,
+          "end": 84
+        }
+      ]
+    }
+  },
+  {
+    "id": 1435240905893644021,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "农民",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "握手",
+          "start": 4,
+          "end": 6
+        }
+      ],
+      "in_background": [
+        {
+          "text": "珠江三角洲",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "text": "中心",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "城市",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "农民",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "宅基地",
+          "start": 21,
+          "end": 24
+        },
+        {
+          "text": "握手",
+          "start": 29,
+          "end": 31
+        }
+      ]
+    }
+  },
+  {
+    "id": 6090508159686041550,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "握手",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "修建",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "中心",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "城市",
+          "start": 13,
+          "end": 15
+        }
+      ],
+      "in_background": [
+        {
+          "text": "中心",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "城市",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "农民",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "宅基地",
+          "start": 21,
+          "end": 24
+        },
+        {
+          "text": "握手",
+          "start": 29,
+          "end": 31
+        }
+      ]
+    }
+  },
+  {
+    "id": 6857322839432341630,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "缓解",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "北京市",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "钟摆",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "交通",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "现象",
+          "start": 13,
+          "end": 15
+        }
+      ],
+      "in_background": [
+        {
+          "text": "城市",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "text": "钟摆",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "交通",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "text": "现象",
+          "start": 47,
+          "end": 49
+        }
+      ]
+    }
+  },
+  {
+    "id": -777058344271452065,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "南方",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "稻米",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "相比",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "text": "乌江",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "贡米",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "品质",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "优良",
+          "start": 18,
+          "end": 20
+        }
+      ],
+      "in_background": [
+        {
+          "text": "省",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "text": "乌江镇",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "乌江",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "贡米",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "乌江",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "种植",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "品质",
+          "start": 43,
+          "end": 45
+        },
+        {
+          "text": "优良",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "text": "乌江镇",
+          "start": 57,
+          "end": 60
+        },
+        {
+          "text": "乌江",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "贡米",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "种植",
+          "start": 78,
+          "end": 80
+        },
+        {
+          "text": "乌江鎮",
+          "start": 92,
+          "end": 95
+        },
+        {
+          "text": "乌江",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "贡米",
+          "start": 126,
+          "end": 128
+        },
+        {
+          "text": "乌江镇",
+          "start": 142,
+          "end": 145
+        },
+        {
+          "text": "乌江",
+          "start": 148,
+          "end": 150
+        },
+        {
+          "text": "贡米",
+          "start": 150,
+          "end": 152
+        },
+        {
+          "text": "乌江",
+          "start": 168,
+          "end": 170
+        },
+        {
+          "text": "贡米",
+          "start": 170,
+          "end": 172
+        }
+      ]
+    }
+  },
+  {
+    "id": 1625159663876231628,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "世纪",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "年代",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "乌江",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "text": "贡米",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "销声匿迹",
+          "start": 22,
+          "end": 26
+        },
+        {
+          "text": "主导",
+          "start": 27,
+          "end": 29
+        },
+        {
+          "text": "因素",
+          "start": 29,
+          "end": 31
+        }
+      ],
+      "in_background": [
+        {
+          "text": "甘肃省",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "text": "乌江镇",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "位于",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "乌江",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "贡米",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "乌江",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "世纪",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "年代",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "text": "乌江镇",
+          "start": 57,
+          "end": 60
+        },
+        {
+          "text": "乌江",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "贡米",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "乌江鎮",
+          "start": 92,
+          "end": 95
+        },
+        {
+          "text": "乌江",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "贡米",
+          "start": 126,
+          "end": 128
+        },
+        {
+          "text": "销声匿迹",
+          "start": 131,
+          "end": 135
+        },
+        {
+          "text": "乌江镇",
+          "start": 142,
+          "end": 145
+        },
+        {
+          "text": "乌江",
+          "start": 148,
+          "end": 150
+        },
+        {
+          "text": "贡米",
+          "start": 150,
+          "end": 152
+        },
+        {
+          "text": "乌江",
+          "start": 168,
+          "end": 170
+        },
+        {
+          "text": "贡米",
+          "start": 170,
+          "end": 172
+        }
+      ]
+    }
+  },
+  {
+    "id": 8135005349523944913,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "乌江镇",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "text": "恢复",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "乌江",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "贡米",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "text": "生产",
+          "start": 17,
+          "end": 19
+        }
+      ],
+      "in_background": [
+        {
+          "text": "乌江镇",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "text": "乌江",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "贡米",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "乌江",
+          "start": 23,
+          "end": 25
+        },
+        {
+          "text": "种植",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "text": "乌江镇",
+          "start": 57,
+          "end": 60
+        },
+        {
+          "text": "传统",
+          "start": 69,
+          "end": 71
+        },
+        {
+          "text": "乌江",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "text": "贡米",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "text": "种植",
+          "start": 78,
+          "end": 80
+        },
+        {
+          "text": "面积",
+          "start": 80,
+          "end": 82
+        },
+        {
+          "text": "萎缩",
+          "start": 84,
+          "end": 86
+        },
+        {
+          "text": "乌江鎮",
+          "start": 92,
+          "end": 95
+        },
+        {
+          "text": "国家级",
+          "start": 99,
+          "end": 102
+        },
+        {
+          "text": "杂交",
+          "start": 102,
+          "end": 104
+        },
+        {
+          "text": "玉米",
+          "start": 104,
+          "end": 106
+        },
+        {
+          "text": "育种",
+          "start": 106,
+          "end": 108
+        },
+        {
+          "text": "基地",
+          "start": 108,
+          "end": 110
+        },
+        {
+          "text": "推进",
+          "start": 114,
+          "end": 116
+        },
+        {
+          "text": "节水",
+          "start": 118,
+          "end": 120
+        },
+        {
+          "text": "农业",
+          "start": 120,
+          "end": 122
+        },
+        {
+          "text": "乌江",
+          "start": 124,
+          "end": 126
+        },
+        {
+          "text": "贡米",
+          "start": 126,
+          "end": 128
+        },
+        {
+          "text": "销声匿迹",
+          "start": 131,
+          "end": 135
+        },
+        {
+          "text": "乌江镇",
+          "start": 142,
+          "end": 145
+        },
+        {
+          "text": "乌江",
+          "start": 148,
+          "end": 150
+        },
+        {
+          "text": "贡米",
+          "start": 150,
+          "end": 152
+        },
+        {
+          "text": "标准化",
+          "start": 153,
+          "end": 156
+        },
+        {
+          "text": "栽培",
+          "start": 156,
+          "end": 158
+        },
+        {
+          "text": "示范",
+          "start": 158,
+          "end": 160
+        },
+        {
+          "text": "基地",
+          "start": 160,
+          "end": 162
+        },
+        {
+          "text": "恢复",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "text": "乌江",
+          "start": 168,
+          "end": 170
+        },
+        {
+          "text": "贡米",
+          "start": 170,
+          "end": 172
+        },
+        {
+          "text": "生产",
+          "start": 174,
+          "end": 176
+        }
+      ]
+    }
+  },
+  {
+    "id": -8729523962384672719,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "荷兰",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "山东",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "蔬菜",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "text": "生产",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "蔬菜",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "text": "生产",
+          "start": 18,
+          "end": 20
+        },
+        {
+          "text": "条件",
+          "start": 25,
+          "end": 27
+        }
+      ],
+      "in_background": [
+        {
+          "text": "荷兰",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "位于",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "欧洲",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "利用",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "温室",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "方式",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "text": "种植",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "text": "花卉",
+          "start": 21,
+          "end": 23
+        },
+        {
+          "text": "蔬菜",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "蔬菜",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "生产",
+          "start": 37,
+          "end": 39
+        },
+        {
+          "text": "荷兰",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "蔬菜",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "生产",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "采用",
+          "start": 59,
+          "end": 61
+        },
+        {
+          "text": "温室",
+          "start": 61,
+          "end": 63
+        },
+        {
+          "text": "种植",
+          "start": 63,
+          "end": 65
+        }
+      ]
+    }
+  },
+  {
+    "id": 7709199493590927546,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "蔬菜",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "text": "生产",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "荷兰",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "兴建",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "text": "蔬菜",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "text": "生产",
+          "start": 15,
+          "end": 17
+        }
+      ],
+      "in_background": [
+        {
+          "text": "荷兰",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "欧洲",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "text": "利用",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "text": "蔬菜",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "text": "蔬菜",
+          "start": 35,
+          "end": 37
+        },
+        {
+          "text": "生产",
+          "start": 37,
+          "end": 39
+        },
+        {
+          "text": "荷兰",
+          "start": 42,
+          "end": 44
+        },
+        {
+          "text": "兴建",
+          "start": 46,
+          "end": 48
+        },
+        {
+          "text": "蔬菜",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "text": "生产",
+          "start": 50,
+          "end": 52
+        },
+        {
+          "text": "基地",
+          "start": 54,
+          "end": 56
+        }
+      ]
+    }
+  },
+  {
+    "id": -7468526285274248007,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "北方",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "产区",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "相比",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "罗田",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "text": "板栗",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "text": "上市",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "text": "时间",
+          "start": 14,
+          "end": 16
+        }
+      ],
+      "in_background": [
+        {
+          "text": "板栗",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "板栗",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "产区",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "text": "板栗",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "罗田",
+          "start": 93,
+          "end": 95
+        },
+        {
+          "text": "板栗",
+          "start": 96,
+          "end": 98
+        }
+      ]
+    }
+  },
+  {
+    "id": 4944854419435110267,
+    "keywords": {
+      "in_question": [
+        {
+          "text": "提高",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "text": "罗田",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "text": "板栗",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "text": "经济效益",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "text": "措施",
+          "start": 15,
+          "end": 17
+        }
+      ],
+      "in_background": [
+        {
+          "text": "板栗",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "text": "板栗",
+          "start": 65,
+          "end": 67
+        },
+        {
+          "text": "板栗",
+          "start": 72,
+          "end": 74
+        },
+        {
+          "text": "罗田",
+          "start": 93,
+          "end": 95
+        },
+        {
+          "text": "板栗",
+          "start": 96,
+          "end": 98
+        },
+        {
+          "text": "加工",
+          "start": 105,
+          "end": 107
+        }
+      ]
+    }
+  }
+]
