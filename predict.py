@@ -65,9 +65,9 @@ def convert_raw_sentence_to_features(question,
         raise Exception
     finally:
         print("tokens: {}".format(" ".join([str(x) for x in tokens])))
-        print("input_ids: {}".format(" ".join([str(x) for x in input_ids])))
-        print("input_mask: {}".format(" ".join([str(x) for x in input_mask])))
-        print("segment_ids: {}".format(" ".join([str(x) for x in segment_ids])))
+        # print("input_ids: {}".format(" ".join([str(x) for x in input_ids])))
+        # print("input_mask: {}".format(" ".join([str(x) for x in input_mask])))
+        # print("segment_ids: {}".format(" ".join([str(x) for x in segment_ids])))
         return tokens, input_ids, input_mask, segment_ids, input_len
 
 
@@ -81,7 +81,6 @@ class Predict:
         import warnings
 
         warnings.filterwarnings("ignore")
-        args.device = '-1'
 
         processor = CnerProcessor()
         label_list = processor.get_labels()
@@ -91,25 +90,31 @@ class Predict:
         args.label2id = {label: i for i, label in enumerate(label_list)}
 
         self.args = args
+        self.device = torch.device(
+            'cuda:{}'.format(args.device) if torch.cuda.is_available() and args.device != '-1' else 'cpu')
+
         self.tokenizer = BertTokenizer.from_pretrained(args.bert_path)
         self.model = load_model(args=args, num_labels=num_labels,
-                                model_path=model_path)
+                                model_path=model_path).to(self.device)
 
     def predict(self, question, background):
-        question_l = process_raw_sentence(question)
-        background_l = process_raw_sentence(background)
+        # 预处理
+        # question = process_raw_sentence(question)
+        # background = process_raw_sentence(background)
+
         # print(question_l)
         # print(background_l)
 
         # tokens, input_ids, input_mask, segment_ids, input_len
-        data_tuple = convert_raw_sentence_to_features(question=question_l,
-                                                      background=background_l,
+        data_tuple = convert_raw_sentence_to_features(question=question,
+                                                      background=background,
+                                                      max_seq_length=self.args.max_seq_length,
                                                       tokenizer=self.tokenizer)
         with torch.no_grad():
-            input_ids = torch.LongTensor([data_tuple[1]])
-            input_mask = torch.LongTensor([data_tuple[2]])
-            segment_ids = torch.LongTensor([data_tuple[3]])
-            input_len = torch.LongTensor([data_tuple[4]])
+            input_ids = torch.LongTensor([data_tuple[1]]).to(self.device)
+            input_mask = torch.LongTensor([data_tuple[2]]).to(self.device)
+            segment_ids = torch.LongTensor([data_tuple[3]]).to(self.device)
+            input_len = torch.LongTensor([data_tuple[4]]).to(self.device)
             inputs = {'input_ids': input_ids, 'attention_mask': input_mask, 'token_type_ids': segment_ids,
                       'input_lens': input_len}
             outputs = self.model(**inputs)
@@ -119,13 +124,14 @@ class Predict:
             # print(tags.size()) [1,1,max_seq_len]
             tags = tags.squeeze(0).cpu().numpy().tolist()
 
-            res = {'predict_entity': get_entity_from_labels(tokens=data_tuple[0], labels=tags,
-                                                            id2label=self.args.id2label),
-                   'tag_seq': tags}
-            return res
+            predict_entity = get_entity_from_labels(tokens=data_tuple[0], labels=tags, detail=True,
+                                                    id2label=self.args.id2label)
+            # res = {'predict_entity': predict_entity,
+            #        'tag_seq': tags}
+            return predict_entity
 
     def __call__(self, question, background):
-        print(self.predict(question, background))
+        return self.predict(question, background)
 
 
 if __name__ == '__main__':

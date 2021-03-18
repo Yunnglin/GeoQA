@@ -1,7 +1,5 @@
-import json
 import logging
 import os
-import random
 import re
 from collections import defaultdict, OrderedDict
 
@@ -64,7 +62,10 @@ class Word:
         return type(self) == type(other) and self.text == other.text
 
     def __str__(self):
-        return {'text': self.text, 'start': self.start, 'end': self.end}.__str__()
+        return str(self.to_dict())
+
+    def to_dict(self):
+        return {'text': self.text, 'start': self.start, 'end': self.end}
 
     def strip(self, s):
         if self.text.startswith(s):

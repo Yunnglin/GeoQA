@@ -4,8 +4,10 @@ from typing import List
 import numpy as np
 from seqeval.metrics.sequence_labeling import get_entities, precision_recall_fscore_support
 
+from raw_data_process import Word
 
-def get_entity_from_labels(tokens: [str], labels: [str], id2label=None) -> list:
+
+def get_entity_from_labels(tokens: [str], labels: [str], detail=False, id2label=None) -> list:
     """
     extract entity from labels
     :param tokens: 输入序列
@@ -13,13 +15,36 @@ def get_entity_from_labels(tokens: [str], labels: [str], id2label=None) -> list:
     :param id2label: 标签id转化
     :return: tokens中抽取的str序列
     """
-    res = []
+
+    def get_token_words(_tokens, _labels):
+        _res: [Word] = []
+        for chunk in split_entity(_labels):
+            start = chunk[1]
+            end = chunk[2] + 1
+            text = ''.join(_tokens[start:end])
+            _res.append(Word(text, start, end))
+        return _res
+
     if id2label:
         label_id_to_label(labels, id2label)
-    chunks = split_entity(labels)
-    for chunk in chunks:
-        res.append(''.join(tokens[chunk[1]:chunk[2] + 1]))
-    return res
+    if not detail:
+        return get_token_words(tokens, labels)
+    else:
+        res = {'in_question': [], 'in_background': []}
+        # 获取特殊标签位置
+        cls_index = tokens.index('[CLS]')
+        sep1_index = tokens.index('[SEP]')
+        sep2_index = tokens.index('[SEP]', sep1_index + 1)
+        # 分割tokens
+        question_tokens = tokens[cls_index + 1:sep1_index]
+        background_tokens = tokens[sep1_index + 1:sep2_index]
+        # 分割labels
+        question_labels = labels[0][cls_index + 1:sep1_index]
+        background_labels = labels[0][sep1_index + 1:sep2_index]
+        # 抽取结果
+        res['in_question'] = [word.to_dict() for word in get_token_words(question_tokens, question_labels)]
+        res['in_background'] = [word.to_dict() for word in get_token_words(background_tokens, background_labels)]
+        return res
 
 
 def split_entity(label_sequence):
