@@ -1,5 +1,6 @@
 import logging
 import os
+import random
 import re
 from collections import defaultdict, OrderedDict
 
@@ -147,22 +148,22 @@ class RawProcessor:
         """
         _words = words if self.redundant else list(set(words))
 
-        counter_path = os.path.join(self.store_path, 'word_count.json')
-        if not os.path.exists(counter_path):
-            return _words
-        else:
-            counter_dict = read_json(counter_path)
-            # 倒序遍历，在遍历时删除
-            for i in range(len(_words) - 1, -1, -1):
-                word = _words[i]
-                word.strip('的')
-                word.strip('在')
-                word.strip('原因')
-                # 长度不符合或只包含数字和字母
-                if len(word.text) < self.least_word_len or word.text.isnumeric():
-                    _words.remove(word)
-                    continue
-            return _words
+        # counter_path = os.path.join(self.store_path, 'word_count.json')
+        # if not os.path.exists(counter_path):
+        #     return _words
+        # else:
+        #     counter_dict = read_json(counter_path)
+        # 倒序遍历，在遍历时删除
+        for i in range(len(_words) - 1, -1, -1):
+            word = _words[i]
+            word.strip('的')
+            word.strip('在')
+            word.strip('与')
+            word.strip('于')
+            # 长度不符合或只包含数字和字母
+            if len(word.text) < self.least_word_len or word.text.isnumeric():
+                _words.remove(word)
+        return _words
 
     @staticmethod
     def generate_tags(sequence_len: int, words: [Word]):
@@ -186,6 +187,8 @@ class RawProcessor:
         处理原始数据
         """
         # 循环读取文件
+        if self.use_cut:
+            jieba.load_userdict("data/geo_words_no_normal.txt")
         for file_path in self.file_paths:
             # 读取raw_data
             raw_data = read_json(file_path)
@@ -198,13 +201,15 @@ class RawProcessor:
                 background = total_question[background_key]
                 explain = total_question['explanation']
                 question = total_question['question']
+
+                # 跳过没有背景信息或解析的题目
+                if not background or not explain or len(explain) < 50:
+                    continue
+
                 # 预处理
                 background = preprocess(background)
                 explain = preprocess(explain)
                 question = preprocess(question)
-                # 跳过没有背景信息或解析的题目
-                if not background or not explain:
-                    continue
 
                 # 寻找重合词
                 if self.use_cut:
@@ -260,7 +265,7 @@ class RawProcessor:
         按照一定的比例将处理好的数据写入指定文件
         :param data_split_dict:
         """
-        # random.shuffle(processed_data)
+        random.shuffle(self.processed_data)
         total_size = len(self.processed_data)
         train_size = int(data_split_dict['train'] * total_size)
         dev_size = int(data_split_dict['dev'] * total_size)
@@ -283,9 +288,9 @@ def write_counter(counter: dict, path, key=None, reverse=False):
 
 def start():
     # 数据存储路径
-    data_process_types = ['data_no_graph']
+    data_process_types = ['data_all']
     cuts = ['cut', 'no_cut']
-    redundants = ['redundant', 'no_redundant']
+    redundants = ['redundant']
 
     for data_process_type in data_process_types:
         data_path = os.path.join('./data/raw', data_process_type)
@@ -324,5 +329,6 @@ if __name__ == '__main__':
     setup_logging(default_path='./utils/logger_config.yaml')
     logger = logging.getLogger("data_logger")
 
-    subprocess.call(r'find . -name *_data -type f -print -exec rm {} \;', shell=True)
-    # start()
+    start()
+    subprocess.call(r'find ./data/processed/data_all -name *_data -type f -print -exec rm {} \;', shell=True)
+
