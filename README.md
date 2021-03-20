@@ -1,12 +1,12 @@
 # GeoQA
 
 > 高考地理问答系统，题目背景关键词抽取部分代码
->
-> **注：github中不包括BERT模型、训练数据和训练完成的模型完整项目位置在 `/home/data_ti5_d/maoyl/GeoQA`**
+
+**注：[github](https://github.com/Yunnglin/GeoQA)中不包括BERT模型、训练数据和训练完成的模型完整项目位置在 `/home/data_ti5_d/maoyl/GeoQA`**
 
 ## 项目主要文件简述
 
-```bash
+```txt
 GeoQA
 │  config.py # argparse 项目的主要配置文件
 │  data_process.py # 将BIO文本数据处理成BERT需要的形式
@@ -110,7 +110,7 @@ data_split_dict={'train': 0.7, 'dev': 0.2, 'test': 0.1}
 
 示例：
 
-```python
+```txt
 -DOC_START- # 标志example的开始
 该 O
 区 O
@@ -176,7 +176,7 @@ python predict.py
 
 对predict的进一步封装
 
-```python
+```bash
 python test.py
 ```
 
@@ -197,16 +197,16 @@ models = [ModelInfo(bert_type='bert_base_chinese',
 ```python
 [
   {
-    "id": -6943376012003136193, #hash(question)
-    "keywords": {			#关键词
-      "in_question": [		#问题中的关键词
+    "id": -6943376012003136193, # hash(question)
+    "keywords": {# 关键词
+      "in_question": [# 问题中的关键词
         {
-          "text": "热电站",  #关键词内容
-          "start": 22,		#开始位置
-          "end": 25			#结束位置
+          "text": "热电站",  # 关键词内容
+          "start": 22,	# 开始位置
+          "end": 25	# 结束位置
         }
       ],
-      "in_background": [	#背景中的关键词
+      "in_background": [ # 背景中的关键词
         {
           "text": "太阳",
           "start": 3,
@@ -220,7 +220,6 @@ models = [ModelInfo(bert_type='bert_base_chinese',
       ]
     }
   },
-......
 ]
 ```
 
@@ -236,6 +235,34 @@ models = [ModelInfo(bert_type='bert_base_chinese',
 
 [chinese-roberta-wwm-ext-large](https://huggingface.co/hfl/chinese-roberta-wwm-ext-large)
 
+## 一些中间结果
+
+**question与background长度和 频率累计直方图**
+
+128的长度可以覆盖48%的数据，而256的长度可以覆盖97%的数据。
+![](https://i.loli.net/2021/03/20/MFWrILdujNPg4t9.png)
+
+**抽取关键词词频 对数直方图**
+
+出现词频在7及以下的有90%，根据信息量的定义，其包含的信息量较大。
+![](https://i.loli.net/2021/03/20/LpXJgtFmSOUj49Q.png)
+
+**4种BERT与是否使用CRF**
+
+8个模型实验，训练数据5k+，`max_seq_len=128`。
+
+除了ALBERT，模型效果相似。
+![loss](https://i.loli.net/2021/03/20/iMmYVGjHxaJzcr6.png)
+![f1](https://i.loli.net/2021/03/20/z7T6bnfHdeDpUqj.png)
+
+**2种BERT与是否使用jieba分词，是否保留重复词**
+
+8个模型实验，训练数据9k+，`max_seq_len=256`，同时去掉一定噪声。
+
+是否分词对模型效果影响较大，其他条件相同情况下，模型效果好坏基本为：
+`cut >> no_cut ; redundant > no_redundant`
+![loss](https://i.loli.net/2021/03/20/uSgPEthFLZ18pV3.png)
+![f1](https://i.loli.net/2021/03/20/EIU6lBWjDQrLkvA.png)
 
 
 
