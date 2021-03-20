@@ -170,7 +170,6 @@ if __name__ == "__main__":
     cuts = ['cut', 'no_cut']
     redundants = ['redundant']
 
-    args.use_lstm = True
     for name in bert_names:
         args.bert_path = './bert/' + name
         for data_process_type in data_process_types:

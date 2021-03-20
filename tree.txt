@@ -1,0 +1,39 @@
+卷 DATA 的文件夹 PATH 列表
+卷序列号为 D881-3E94
+D:.
+├─.idea
+│  └─inspectionProfiles
+├─.vscode
+├─bert
+│  ├─albert_chinese_large
+│  ├─bert_base_chinese
+│  ├─chinese_bert_wwm_ext
+│  └─chinese_roberta_wwm_ext_large
+├─data
+│  ├─processed
+│  │  ├─data_all
+│  │  │  ├─cut
+│  │  │  │  └─redundant
+│  │  │  └─no_cut
+│  │  │      └─redundant
+│  │  └─data_no_graph
+│  │      ├─cut
+│  │      │  ├─no_redundant
+│  │      │  └─redundant
+│  │      └─no_cut
+│  │          ├─no_redundant
+│  │          └─redundant
+│  ├─raw
+│  │  ├─data_all
+│  │  └─data_no_graph
+│  └─test_data
+├─jupyter_notes
+├─logs
+├─model
+│  └─__pycache__
+├─result
+│  └─figures
+├─save_model
+├─utils
+│  └─__pycache__
+└─__pycache__

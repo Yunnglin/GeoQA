@@ -143,13 +143,14 @@ class Performance:
         self.performance['true_sum'] += new_performance[2].item()
 
     def _cal_performance(self):
+        """
+        计算指标
+        """
         try:
             self.res_dict['precision'] = self.performance['tp_sum'] / self.performance['pred_sum']
             self.res_dict['recall'] = self.performance['tp_sum'] / self.performance['true_sum']
             self.res_dict['f1_score'] = 2 * self.res_dict['precision'] * self.res_dict['recall'] / (
                     self.res_dict['recall'] + self.res_dict['precision'])
-            for key in self.res_dict:
-                self.res_dict[key] = self.res_dict[key]
         except ZeroDivisionError as e:
             pass
 

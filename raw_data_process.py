@@ -330,5 +330,6 @@ if __name__ == '__main__':
     logger = logging.getLogger("data_logger")
 
     start()
+    # 清理已保存的数据
     subprocess.call(r'find ./data/processed/data_all -name *_data -type f -print -exec rm {} \;', shell=True)
 

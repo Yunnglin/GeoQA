@@ -5,12 +5,12 @@ def get_argparse():
     parser = argparse.ArgumentParser()
     # paths
     parser.add_argument("--device", type=str, default="2", help="which device to use, if -1 use cpu, else use gpu")
-    parser.add_argument("--data_dir", type=str, default='./data/processed/data_no_graph', help="this is dataset path")
+    parser.add_argument("--data_dir", type=str, default='./data/processed/data_no_graph', help="dataset path")
     parser.add_argument("--checkpoint_path", type=str, default='./save_model', help="path to save the model")
-    parser.add_argument("--bert_path", type=str, default="./bert/",
-                        help="path that stores bert_base_chinese model")
+    parser.add_argument("--bert_path", type=str, default="./bert",
+                        help="path that stores downloaded BERT model")
     parser.add_argument("--result_path", type=str, default="./result", help="path to save result")
-    parser.add_argument("--store_name", type=str, default="model", help="saved model name")
+    parser.add_argument("--store_name", type=str, default="model", help="current train model name")
 
     parser.add_argument("--max_seq_length", type=int, default=170, help='the length of sequence')
     parser.add_argument("--do_train", type=bool, default=True, help="For distant debugging.")
