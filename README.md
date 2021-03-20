@@ -252,7 +252,8 @@ models = [ModelInfo(bert_type='bert_base_chinese',
 8个模型实验，训练数据5k+，`max_seq_len=128`。
 
 除了ALBERT，模型效果相似。
-![loss](https://i.loli.net/2021/03/20/iMmYVGjHxaJzcr6.png)
+
+![loss](https://i.loli.net/2021/03/20/uSgPEthFLZ18pV3.png)
 ![f1](https://i.loli.net/2021/03/20/z7T6bnfHdeDpUqj.png)
 
 **2种BERT与是否使用jieba分词，是否保留重复词**
@@ -261,7 +262,8 @@ models = [ModelInfo(bert_type='bert_base_chinese',
 
 是否分词对模型效果影响较大，其他条件相同情况下，模型效果好坏基本为：
 `cut >> no_cut ; redundant > no_redundant`
-![loss](https://i.loli.net/2021/03/20/uSgPEthFLZ18pV3.png)
+
+![loss](https://i.loli.net/2021/03/20/iMmYVGjHxaJzcr6.png)
 ![f1](https://i.loli.net/2021/03/20/EIU6lBWjDQrLkvA.png)
 
 
