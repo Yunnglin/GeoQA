@@ -101,7 +101,6 @@ data_split_dict={'train': 0.7, 'dev': 0.2, 'test': 0.1}
     "explanation": "材料显示贵州喀斯特山区生态环境脆弱，则可持续发展的基础是保护和恢复生态环境",
     "other_exp": "易错分析扩大粮食生产面积和扩大农业产业化规模，会加剧生态环境破坏"
   },
-......
 ]
 ```
 
@@ -195,19 +194,19 @@ models = [ModelInfo(bert_type='bert_base_chinese',
 - 输入：同原始输入数据
 - 输出：每道题目的关键词，保存在`./result`下，格式如下：
 
-```json
+```python
 [
   {
-    "id": -6943376012003136193, //hash(question)
-    "keywords": {			//关键词
-      "in_question": [		//问题中的关键词
+    "id": -6943376012003136193, #hash(question)
+    "keywords": {			#关键词
+      "in_question": [		#问题中的关键词
         {
-          "text": "热电站", //关键词内容
-          "start": 22,		//开始位置
-          "end": 25			//结束位置
+          "text": "热电站",  #关键词内容
+          "start": 22,		#开始位置
+          "end": 25			#结束位置
         }
       ],
-      "in_background": [	//背景中的关键词
+      "in_background": [	#背景中的关键词
         {
           "text": "太阳",
           "start": 3,
