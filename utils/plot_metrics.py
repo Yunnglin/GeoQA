@@ -57,8 +57,8 @@ def plot_data(label_data, metric, save_path):
         my_y_ticks = np.arange(0, 1, 0.1)
         plt.yticks(my_y_ticks)
     # x轴范围
-    plt.xlim(1, 15)
-    my_x_ticks = np.arange(1, 15, 1)
+    plt.xlim(1, 10)
+    my_x_ticks = np.arange(1, 10, 1)
     plt.xticks(my_x_ticks)
 
     # 设置坐标轴名称和标题
@@ -66,13 +66,13 @@ def plot_data(label_data, metric, save_path):
     plt.ylabel(metric)
     plt.title(metric + " figure")
 
-    plt.savefig(save_path)
+    # plt.savefig(save_path)
     plt.show()
 
 
 if __name__ == '__main__':
     label_data = []
-    path = "../logs/ach_info_cut_redandunt.log"
+    path = "../logs/arch_info_data_all.log"
     for r in process_info(path):
         data = Data(r['model_type'])
         for d in r['data']:

@@ -1,4 +1,5 @@
 import os
+import uuid
 
 from config import get_argparse
 from predict import Predict
@@ -18,7 +19,7 @@ class Test:
         print('running test')
         predict_res = []
         for data in self.test_data:
-            data_id = hash(data['question'])
+            data_id = data['id'] if 'id' in data else str(uuid.uuid3(uuid.NAMESPACE_DNS, data['question']))
             question = data['question']
             background = data['background']
             key_words = self.predict(question, background)
@@ -36,13 +37,14 @@ class ModelInfo:
 if __name__ == '__main__':
     args = get_argparse().parse_args()
     args.max_seq_length = 256
-    data_paths = ['data/test_data/53_no_graph_test_data_95.json', 'data/test_data/53_graph_test_data_133.json']
+    data_paths = ['/home/data_ti5_d/maoyl/nlp_scqa_geo/final_test_data/beijingSimulation.json']
+    # data_paths = ['data/test_data/53_no_graph_test_data_95.json', 'data/test_data/53_graph_test_data_133.json']
     models = [ModelInfo('bert_base_chinese',
-                        'bert_base_chinese-lstm-crf-cut-redundant-epoch_14.bin',
-                        '/home/data_ti5_d/maoyl/GeoQA/save_model/data_no_graph'),
+                        'bert_base_chinese-lstm-crf-cut-redundant-epoch_9.bin',
+                        '/home/data_ti5_d/maoyl/GeoQA/save_model'),
               ModelInfo('bert_base_chinese',
-                        'bert_base_chinese-lstm-crf-no_cut-redundant-epoch_14.bin',
-                        '/home/data_ti5_d/maoyl/GeoQA/save_model/data_no_graph'), ]
+                        'bert_base_chinese-lstm-crf-no_cut-redundant-epoch_9.bin',
+                        '/home/data_ti5_d/maoyl/GeoQA/save_model'), ]
     for data_path in data_paths:
         test = Test(data_path)
         test.read_test_data()

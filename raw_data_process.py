@@ -290,7 +290,7 @@ def start():
     # 数据存储路径
     data_process_types = ['data_all']
     cuts = ['cut', 'no_cut']
-    redundants = ['redundant']
+    redundants = ['no_redundant']
 
     for data_process_type in data_process_types:
         data_path = os.path.join('./data/raw', data_process_type)

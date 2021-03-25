@@ -64,7 +64,7 @@ def convert_raw_sentence_to_features(question,
         print("ERROR: ")
         raise Exception
     finally:
-        print("tokens: {}".format(" ".join([str(x) for x in tokens])))
+        # print("tokens: {}".format(" ".join([str(x) for x in tokens])))
         # print("input_ids: {}".format(" ".join([str(x) for x in input_ids])))
         # print("input_mask: {}".format(" ".join([str(x) for x in input_mask])))
         # print("segment_ids: {}".format(" ".join([str(x) for x in segment_ids])))

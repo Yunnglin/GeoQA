@@ -165,8 +165,8 @@ if __name__ == "__main__":
         os.mkdir(args.checkpoint_path)
 
     # bert_names = ['bert_base_chinese', 'albert_chinese_large', 'chinese_bert_wwm_ext', 'chinese_roberta_wwm_ext_large']
-    bert_names = ['chinese_bert_wwm_ext']
-    data_process_types = ['data_no_graph']
+    bert_names = ['bert_base_chinese']
+    data_process_types = ['data_all']
     cuts = ['cut', 'no_cut']
     redundants = ['redundant']
 

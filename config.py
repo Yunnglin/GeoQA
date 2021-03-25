@@ -14,9 +14,9 @@ def get_argparse():
 
     parser.add_argument("--max_seq_length", type=int, default=170, help='the length of sequence')
     parser.add_argument("--do_train", type=bool, default=True, help="For distant debugging.")
-    parser.add_argument("--train_batch_size", type=int, default=20, help="For distant debugging.")
+    parser.add_argument("--train_batch_size", type=int, default=64, help="For distant debugging.")
     parser.add_argument("--predict_batch_size", type=int, default=20, help="For distant debugging.")
-    parser.add_argument("--eval_batch_size", type=int, default=16, help="For distant debugging.")
+    parser.add_argument("--eval_batch_size", type=int, default=64, help="For distant debugging.")
 
     parser.add_argument("--epochs", type=int, default=10, help="For distant debugging.")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1, help="For distant debugging.")

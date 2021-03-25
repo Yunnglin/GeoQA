@@ -197,7 +197,7 @@ models = [ModelInfo(bert_type='bert_base_chinese',
 ```python
 [
   {
-    "id": -6943376012003136193, # hash(question)
+    "id": -6943376012003136193, # 题目有id字段则为id，否则为uuid(question)
     "keywords": {# 关键词
       "in_question": [# 问题中的关键词
         {
