@@ -280,3 +280,4 @@ models = [ModelInfo(bert_type='bert_base_chinese',
 6. [BERT的下接结构调参](https://zhuanlan.zhihu.com/p/107378382)
 7. [BERT原理及应用](https://zhuanlan.zhihu.com/p/101570806)
 8. [写作框架参考](https://zhuanlan.zhihu.com/p/100884995)
+9. [TF-IDF与余弦相似性](http://www.ruanyifeng.com/blog/2013/03/tf-idf.html)
