@@ -47,12 +47,8 @@ class Searcher:
         else:
             cut_words_path = './data/all_kng_kb/kb_cut_use_geoV_kng.json'
         not_cut_path = './data/all_kng_kb/kb_not_cut_kng.json'
-        if use_cut:
-            self.word_count_path = './data/processed/data_all/cut/redundant/word_count.json'
-            # self.mapping_path = 'data/mappings/cut_mapping.json'
-        else:
-            self.word_count_path = './data/processed/data_all/no_cut/redundant/word_count.json'
-            # self.mapping_path = 'data/mappings/no_cut_mapping.json'
+
+        self.word_count_path = './data/all_kng_kb/kb_word_count.json'
         self.mapping_path = './data/mappings/kb_mapping.json'
         self.use_cut = use_cut
         self.use_search_cut = False
@@ -177,23 +173,11 @@ class Searcher:
         pass
 
 
-def generate_mapping_from_kb():
-    counting = collections.defaultdict(int)
-    mapping = collections.defaultdict(list)
-    for _id, values in read_json('./data/all_kng_kb/kb_cut_use_geoV_kng.json').items():
-        for v in set(values):
-            # 去掉纯数字
-            if len(v) > 1 and not v.isnumeric():
-                counting[v] += 1
-                mapping[v].append(_id)
-    write_json(file_path='./data/mappings/kb_mapping.json', data=mapping)
-    write_json(file_path='./data/all_kng_kb/kb_word_count.json', data=counting)
-
-
 class Converter:
-    def __init__(self, data_path: str, has_answer: bool, searcher: Searcher, knowledge_num=15):
+    def __init__(self, data_path: str, output_path, has_answer: bool, searcher: Searcher, knowledge_num=15):
         self.searcher = searcher
         self.data_path = data_path
+        self.output_path = output_path
         self.has_answer = has_answer
         self.knowledge_num = knowledge_num
         self.processed_data = []
@@ -207,7 +191,7 @@ class Converter:
         for ques_dic in raw_data:
             self.processed_data.append(self._get_ques_option(ques_dic))
         self._search_in_kb()
-        write_json('./output/search_result.json', self.processed_data)
+        write_json(self.output_path, self.processed_data)
         print('Process Done.')
 
     def _search_in_kb(self):
@@ -266,12 +250,30 @@ class Converter:
         return ques_option
 
 
+def generate_mapping_from_kb():
+    counting = collections.defaultdict(int)
+    mapping = collections.defaultdict(list)
+    for _id, values in read_json('./data/all_kng_kb/kb_cut_use_geoV_kng.json').items():
+        for v in set(values):
+            # 去掉纯数字
+            if len(v) > 1:  # and not v.isnumeric():
+                counting[v] += 1
+                mapping[v].append(_id)
+    write_json(file_path='./data/mappings/kb_mapping.json', data=mapping)
+    write_json(file_path='./data/all_kng_kb/kb_word_count.json', data=counting)
+    print('Generating Done.')
+
+
 def test():
     time_start = time.time()
     # data_path = './data/test_data/beijingSimulation.json'
-    data_path = './data/raw/data_all/53_data.json'
+    # data_path = './data/raw/data_all/53_data.json'
+    file_index = 'D'
+    data_path = f'./data/test_data/test_{file_index}.json'
+    output_path = f'output/search_result_{file_index}.json'
     searcher = Searcher(use_geo_vocabu=True, use_cut=True)
-    converter = Converter(data_path=data_path, has_answer=True, searcher=searcher, knowledge_num=15)
+    converter = Converter(data_path=data_path, output_path=output_path, has_answer=True, searcher=searcher,
+                          knowledge_num=15)
     converter.process_data()
     time_end = time.time()
     print('time cost', time_end - time_start, 's')
