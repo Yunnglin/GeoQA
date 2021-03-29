@@ -7,18 +7,35 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 
 # https://cloud.tencent.com/developer/article/1145941
 
-def jaccard_similarity_set(s1: set, s2: set) -> float:
+def tfidf_index(terms, total_terms, total_docs, docs):
+    return (terms / total_terms) * (math.log(total_docs / (docs + 1)))
+
+
+def jaccard_similarity_set(s1, s2) -> float:
     """
     杰卡德相似度，偏向于短句
     """
-    return len(s1 & s2) / len(s1 | s2)
+    if not isinstance(s1, set):
+        s1 = set(s1)
+    if not isinstance(s2, set):
+        s2 = set(s2)
+    if s1 or s2:
+        return len(s1 & s2) / len(s1 | s2)
+    return 0.0
 
 
-def text_rank_similarity(s1: set, s2: set) -> float:
+def text_rank_similarity(s1, s2) -> float:
     """
     TextRank 分母这样设计可以遏制较长的句子在相似度计算上的优势
     """
-    return len(s1 & s2) / (math.log(len(s1)) + math.log(len(s2)))
+    if not isinstance(s1, set):
+        s1 = set(s1)
+    if not isinstance(s2, set):
+        s2 = set(s2)
+    try:
+        return len(s1 & s2) / (math.log(len(s1)) + math.log(len(s2)))
+    except Exception:
+        return 0.0
 
 
 def jaccard_similarity(s1, s2):
@@ -65,4 +82,3 @@ def tfidf_similarity(s1, s2):
     vectors = cv.fit_transform(corpus).toarray()
     # 计算TF idf系数
     return np.dot(vectors[0], vectors[1]) / (norm(vectors[0]) * norm(vectors[1]))
-

@@ -11,10 +11,10 @@ from predict import Predict
 from raw_data_process import get_stopwords
 from test import ModelInfo
 from utils.json_io import read_json, write_json
-from utils.similarity import tf_similarity
+from utils.similarity import tf_similarity, jaccard_similarity_set, text_rank_similarity, tfidf_index
 
 
-def merge_dict(dict1: dict, dict2: dict, limit=None):
+def merge_dict(dict1: dict, dict2: dict, limit=None) -> dict:
     if len(dict1) > len(dict2):
         dict1, dict2 = dict2, dict1
     # dict1 < dict2 遍历dict1
@@ -26,20 +26,22 @@ def merge_dict(dict1: dict, dict2: dict, limit=None):
         return dict2.copy()
 
 
-def get_dict_topk(origin_dict, topk):
-    new_dict = collections.defaultdict(lambda: 1.0)
+def get_dict_topk(origin_dict, topk) -> dict:
+    new_dict = collections.defaultdict(float)
     new_dict.update(sorted(origin_dict.items(), key=lambda kv: (kv[1], kv[0]), reverse=True)[:topk])
     return new_dict
 
 
 def norm_dict_value(origin_dict: dict):
+    if not origin_dict.values():
+        return
     max_value = max(origin_dict.values())
     for k in origin_dict:
         origin_dict[k] /= max_value
 
 
 class Searcher:
-    def __init__(self, use_geo_vocabu: bool, use_cut=True, use_tf_idf=True):
+    def __init__(self, use_geo_vocabu: bool, use_cut=True):
         if not use_geo_vocabu:
             cut_words_path = './data/all_kng_kb/kb_cut_kng.json'
         else:
@@ -47,11 +49,11 @@ class Searcher:
         not_cut_path = './data/all_kng_kb/kb_not_cut_kng.json'
         if use_cut:
             self.word_count_path = './data/processed/data_all/cut/redundant/word_count.json'
-            self.mapping_path = './data/cut_mapping.json'
+            # self.mapping_path = 'data/mappings/cut_mapping.json'
         else:
             self.word_count_path = './data/processed/data_all/no_cut/redundant/word_count.json'
-            self.mapping_path = './data/no_cut_mapping.json'
-
+            # self.mapping_path = 'data/mappings/no_cut_mapping.json'
+        self.mapping_path = './data/mappings/kb_mapping.json'
         self.use_cut = use_cut
         self.use_search_cut = False
         self.use_geo_vocabu = use_geo_vocabu
@@ -63,7 +65,7 @@ class Searcher:
         self.kb_raw_dic = read_json(not_cut_path)
         print('加载词频统计...')
         self.word_count_dic = read_json(self.word_count_path)
-        self.word_weight_dic = self._load_word_count(use_tf_idf=use_tf_idf)
+        self.word_weight_dic = collections.defaultdict(lambda: 1.0)
         print('加载倒排索引...')
         self.keyword_id_mapping = self._load_mapping()
         print('加载关键词抽取模型...')
@@ -72,25 +74,11 @@ class Searcher:
         if use_geo_vocabu:
             jieba.load_userdict('./data/geo_words_no_normal.txt')
 
-    def _load_word_count(self, use_tf_idf) -> dict:
-        """
-        频数信息转为 词频-逆向文件频率
-        """
-        if not use_tf_idf:
-            new_dict = collections.defaultdict(lambda: 1.0)
-            return new_dict
-        else:
-            word_no_redundant = read_json(self.word_count_path.replace('redundant', 'no_redundant'))
-            total_terms, total_docs = 0, 84370
-            for k in self.word_count_dic:
-                total_terms += self.word_count_dic[k]
-            # 计算TF-IDF
-            TF_IDF = lambda terms, docs: (terms / total_terms) * (math.log10(total_docs / (docs + 1)))
-            # 不存在时默认值 频率为1
-            new_dict = collections.defaultdict(lambda: TF_IDF(1, 0))
-            for k in self.word_count_dic:
-                new_dict[k] = TF_IDF(self.word_count_dic[k], word_no_redundant[k])
-            return new_dict
+    def get_key_tfidf(self, key, sentence) -> float:
+        return tfidf_index(terms=sentence.count(key),
+                           total_terms=len(sentence),
+                           docs=self.word_count_dic[key],
+                           total_docs=len(self.kb_raw_dic))
 
     def _load_mapping(self) -> dict:
         """
@@ -113,7 +101,7 @@ class Searcher:
 
     def _load_predict(self) -> Predict:
         self.args = get_argparse().parse_args()
-        self.args.device = '-1'
+        self.args.device = device
         if self.use_cut:
             model = ModelInfo('bert_base_chinese',
                               'bert_base_chinese-lstm-crf-cut-redundant-epoch_9.bin',
@@ -177,16 +165,29 @@ class Searcher:
         :param kb_dict: 解析库语句id
         """
         qa_list = self._cut_without_stopwords(qa_str)
-        new_dict = collections.defaultdict(lambda: 1.0)
+        new_dict = collections.defaultdict(float)
         for k in kb_dict:
             # TODO 选择合适的相似度算法，并附加权重
-            similarity = tf_similarity(qa_list, self.kb_cut_dic[k])
+            similarity = jaccard_similarity_set(qa_list, self.kb_cut_dic[k])
             new_dict[k] = similarity
             kb_dict[k] += similarity
         return new_dict
 
     def extract_keywords_from_corpus(self, corpus_id: [str]):
         pass
+
+
+def generate_mapping_from_kb():
+    counting = collections.defaultdict(int)
+    mapping = collections.defaultdict(list)
+    for _id, values in read_json('./data/all_kng_kb/kb_cut_use_geoV_kng.json').items():
+        for v in set(values):
+            # 去掉纯数字
+            if len(v) > 1 and not v.isnumeric():
+                counting[v] += 1
+                mapping[v].append(_id)
+    write_json(file_path='./data/mappings/kb_mapping.json', data=mapping)
+    write_json(file_path='./data/all_kng_kb/kb_word_count.json', data=counting)
 
 
 class Converter:
@@ -230,7 +231,7 @@ class Converter:
                 option_doc_id_dict, option_oov = self.searcher.option_search(option=qa_str.split(':')[-1],
                                                                              weight=self.weight['option'])
                 # 与上一步权重相加
-                kb_dict = merge_dict(option_doc_id_dict, qb_kb_dict, limit=self.corpus_limit)
+                kb_dict = merge_dict(option_doc_id_dict, qb_kb_dict, limit=3000)
                 # 权重归一
                 norm_dict_value(kb_dict)
                 # 计算相似度, 同时与kb_dict相加
@@ -265,14 +266,18 @@ class Converter:
         return ques_option
 
 
-if __name__ == '__main__':
-    # searcher = Searcher(use_geo_vocabu=True, use_cut=False)
+def test():
     time_start = time.time()
-    data_path = './data/test_data/beijingSimulation.json'
-    # data_path = './data/raw/data_all/53_data.json'
-    searcher = Searcher(use_geo_vocabu=True, use_cut=True, use_tf_idf=True)
-    # TODO 测试不同数量知识对结果的影响
+    # data_path = './data/test_data/beijingSimulation.json'
+    data_path = './data/raw/data_all/53_data.json'
+    searcher = Searcher(use_geo_vocabu=True, use_cut=True)
     converter = Converter(data_path=data_path, has_answer=True, searcher=searcher, knowledge_num=15)
     converter.process_data()
     time_end = time.time()
     print('time cost', time_end - time_start, 's')
+
+
+if __name__ == '__main__':
+    device = '2'
+    test()
+    # generate_mapping_from_kb()
