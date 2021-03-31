@@ -41,7 +41,7 @@ def norm_dict_value(origin_dict: dict):
 
 
 class Searcher:
-    def __init__(self, use_geo_vocabu: bool, use_cut=True):
+    def __init__(self, use_geo_vocabu: bool, use_cut=True, use_tfidf=False):
         if not use_geo_vocabu:
             cut_words_path = './data/all_kng_kb/kb_cut_kng.json'
         else:
@@ -51,9 +51,10 @@ class Searcher:
         self.word_count_path = './data/all_kng_kb/kb_word_count.json'
         self.mapping_path = './data/mappings/kb_mapping.json'
         self.use_cut = use_cut
+        self.use_tfidf = use_tfidf
         self.use_search_cut = False
         self.use_geo_vocabu = use_geo_vocabu
-        self.stop_words = set()
+
         print('加载停用词表...')
         self.stop_words = get_stopwords('./data/stopwords.txt')
         print('加载知识库...')
@@ -70,11 +71,19 @@ class Searcher:
         if use_geo_vocabu:
             jieba.load_userdict('./data/geo_words_no_normal.txt')
 
-    def get_key_tfidf(self, key, sentence) -> float:
-        return tfidf_index(terms=sentence.count(key),
-                           total_terms=len(sentence),
-                           docs=self.word_count_dic[key],
-                           total_docs=len(self.kb_raw_dic))
+    def get_sentence_tfidf(self, sentence) -> dict:
+        """
+        计算句子中每个词的tfidf，并返回字典
+        """
+        res = {}
+        if isinstance(sentence, str):
+            sentence = self._cut_without_stopwords(sentence)
+        for key in sentence:
+            res[key] = tfidf_index(terms=sentence.count(key),
+                                   total_terms=len(sentence),
+                                   docs=len(self.keyword_id_mapping[key]),
+                                   total_docs=len(self.kb_raw_dic))
+        return res
 
     def _load_mapping(self) -> dict:
         """
@@ -113,9 +122,7 @@ class Searcher:
 
     def _cut_without_stopwords(self, sentence):
         """
-
-        :param sentence:
-        :return:
+        jieba分词并去掉停用词
         """
         res = []
         if self.use_search_cut:
@@ -132,12 +139,17 @@ class Searcher:
         对option分词，并查找
         """
         option_keywords = set(self._cut_without_stopwords(option))
-        return self.keywords_search(option_keywords, weight)
+        return self.keywords_search(option, option_keywords, weight)
 
-    def keywords_search(self, keywords: [str], weight: float) -> (dict, set):
-        # 从倒排索引中查找句子id并计算权重
+    def keywords_search(self, origin_sentence, keywords: [str], weight: float) -> (dict, set):
+        """从倒排索引中查找句子id并计算权重"""
         # e.g: key:weight {'1':0.3}
-        keywords_doc_id_weight = collections.defaultdict(float)
+        if self.use_tfidf:
+            word_weight_dic = self.get_sentence_tfidf(origin_sentence)
+        else:
+            word_weight_dic = self.word_weight_dic
+
+        key_id_weight_dict = collections.defaultdict(float)
         oov_keys = set()
         for keyword in keywords:
             if keyword not in self.keyword_id_mapping:
@@ -145,8 +157,11 @@ class Searcher:
                 continue
             ids = self.keyword_id_mapping[keyword]
             for _id in ids:
-                keywords_doc_id_weight[_id] += self.word_weight_dic[_id] * weight
-        return keywords_doc_id_weight, oov_keys
+                key_id_weight_dict[_id] += word_weight_dic[_id] * weight
+        return key_id_weight_dict, oov_keys
+
+    def corpus_search(self, corpus_id_weight_dict: dict) -> dict:
+        pass
 
     def get_keywords(self, question: str, background: str) -> (set, set):
         keywords = self.predict(question, background)
@@ -163,14 +178,10 @@ class Searcher:
         qa_list = self._cut_without_stopwords(qa_str)
         new_dict = collections.defaultdict(float)
         for k in kb_dict:
-            # TODO 选择合适的相似度算法，并附加权重
+            # 选择合适的相似度算法，并附加权重
             similarity = jaccard_similarity_set(qa_list, self.kb_cut_dic[k])
             new_dict[k] = similarity
-            kb_dict[k] += similarity
         return new_dict
-
-    def extract_keywords_from_corpus(self, corpus_id: [str]):
-        pass
 
 
 class Converter:
@@ -199,31 +210,40 @@ class Converter:
             print(f'Searching {index}')
             # 1. question和background中查找
             # 利用模型抽取关键词
-            ques_key, back_key = self.searcher.get_keywords(ques_dic['question'], ques_dic['background'])
+            ques_str, back_str = ques_dic['question'], ques_dic['background']
+            ques_key, back_key = self.searcher.get_keywords(ques_str, back_str)
             # 关键词倒排检索
-            ques_doc_id_dict, ques_oov = self.searcher.keywords_search(keywords=ques_key,
+            ques_doc_id_dict, ques_oov = self.searcher.keywords_search(origin_sentence=ques_str,
+                                                                       keywords=ques_key,
                                                                        weight=self.weight['question'])
-            back_doc_id_dict, back_oov = self.searcher.keywords_search(keywords=back_key,
+            back_doc_id_dict, back_oov = self.searcher.keywords_search(origin_sentence=back_str,
+                                                                       keywords=back_key,
                                                                        weight=self.weight['background'])
-            # ques+back 权重相加
+            # ques+back权重相加
             qb_kb_dict = merge_dict(ques_doc_id_dict, back_doc_id_dict, limit=self.corpus_limit)
             # 2. option中查找
             for option in self.options:
                 qa_str = ques_dic[option]
                 ques_dic[option] = {}
-                # option检索关键词
+                # option关键词检索
                 option_doc_id_dict, option_oov = self.searcher.option_search(option=qa_str.split(':')[-1],
                                                                              weight=self.weight['option'])
                 # 与上一步权重相加
                 kb_dict = merge_dict(option_doc_id_dict, qb_kb_dict, limit=3000)
                 # 权重归一
                 norm_dict_value(kb_dict)
-                # 计算相似度, 同时与kb_dict相加
+                # 3. 计算question+option与句子的相似度, 同时结果与kb_dict相加
                 similarity_dict = self.searcher.cal_similarity(qa_str=qa_str, kb_dict=kb_dict)
-                # 获取topK个
-                ordered_kb = get_dict_topk(kb_dict, topk=self.knowledge_num)
-                print(f"oov words: {[ques_oov, back_oov, option_oov]}")
+                # 获取topK个，得到第一步检索结果
+                # ordered_kb = get_dict_topk(kb_dict, topk=self.knowledge_num*10)
+                simi_kb_dict = merge_dict(kb_dict, similarity_dict, limit=self.knowledge_num * 10)
+                # 权重归一，完成第一步检索
+                norm_dict_value(simi_kb_dict)
+                # TODO 4. 分析第一步检索结果，抽取额外的关键词继续检索
+                ordered_kb = self.searcher.corpus_search(simi_kb_dict)
+                # 5. 记录检索到的知识
                 ques_dic[option][qa_str] = [self.searcher.kb_raw_dic[k] for k in ordered_kb]
+                print(f"oov words: {[ques_oov, back_oov, option_oov]}")
 
     def _get_ques_option(self, ques_dic):
         """
@@ -268,7 +288,8 @@ def test():
     time_start = time.time()
     # data_path = './data/test_data/beijingSimulation.json'
     # data_path = './data/raw/data_all/53_data.json'
-    file_index = 'D'
+    # output_path = './output/search_result_.json'
+    file_index = 'F'
     data_path = f'./data/test_data/test_{file_index}.json'
     output_path = f'output/search_result_{file_index}.json'
     searcher = Searcher(use_geo_vocabu=True, use_cut=True)

@@ -44,20 +44,25 @@ def convert_xml2json(input_path: str, output_path: str, answers):
             # options
             for option in sub_question.getElementsByTagName('option'):
                 doc_dic[option.getAttribute('value')] = trim_space(option.childNodes[0].data)
-            print(doc_dic)
             doc_dic_list.append(doc_dic)
     write_json(file_path=output_path, data=doc_dic_list)
     return doc_dic_list
 
 
-if __name__ == '__main__':
-    file_label = 'D'
-    if file_label == 'D':
-        answers = 'DBABDDAACCCBACC'
-    else:
-        answers = None
+def run_test():
+    file_label = ['D', 'F', 'G']
+    answer_dict = {
+        'D': 'DBABDDAACCCBACC',
+        'F': 'CADBBCDCCCDABBB',
+        'G': 'DBCDBDCBAACDCDA'
+    }
 
-    input_path = f'../data/test_data/test_{file_label}.xml'
-    output_path = f'../data/test_data/test_{file_label}.json'
-    res = convert_xml2json(input_path, output_path, answers)
-    print(res)
+    for label in file_label:
+        input_path = f'../data/test_data/test_{label}.xml'
+        output_path = f'../data/test_data/test_{label}.json'
+        res = convert_xml2json(input_path, output_path, answer_dict[label])
+        print(res)
+
+
+if __name__ == '__main__':
+    run_test()
