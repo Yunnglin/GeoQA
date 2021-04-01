@@ -14,12 +14,15 @@ from utils.json_io import read_json, write_json
 from utils.similarity import tf_similarity, jaccard_similarity_set, text_rank_similarity, tfidf_index
 
 
-def merge_dict(dict1: dict, dict2: dict, limit=None) -> dict:
+def merge_dict(dict1: dict, dict2: dict, weight1=1.0, weight2=1.0, limit=None) -> dict:
+    """
+    合并两个dict，同时指定dict值的权重
+    """
     if len(dict1) > len(dict2):
-        dict1, dict2 = dict2, dict1
+        dict1, dict2, weight1, weight2 = dict2, dict1, weight2, weight1
     # dict1 < dict2 遍历dict1
     for k in dict1:
-        dict2[k] += dict1[k]
+        dict2[k] = dict2[k] * weight2 + dict1[k] * weight1
     if limit:
         return get_dict_topk(dict2, limit)
     else:
@@ -71,17 +74,17 @@ class Searcher:
         if use_geo_vocabu:
             jieba.load_userdict('./data/geo_words_no_normal.txt')
 
-    def get_sentence_tfidf(self, sentence) -> dict:
+    def _get_sentence_tfidf(self, sentence, keywords=None) -> dict:
         """
         计算句子中每个词的tfidf，并返回字典
         """
         res = {}
-        if isinstance(sentence, str):
-            sentence = self._cut_without_stopwords(sentence)
-        for key in sentence:
+        if not keywords:
+            keywords = self.cut_with_stopwords(sentence)
+        for key in keywords:
             res[key] = tfidf_index(terms=sentence.count(key),
                                    total_terms=len(sentence),
-                                   docs=len(self.keyword_id_mapping[key]),
+                                   docs=0 if key not in self.keyword_id_mapping else len(self.keyword_id_mapping[key]),
                                    total_docs=len(self.kb_raw_dic))
         return res
 
@@ -120,7 +123,7 @@ class Searcher:
         print('model_path: ' + model_path)
         return Predict(self.args, model_path)
 
-    def _cut_without_stopwords(self, sentence):
+    def cut_with_stopwords(self, sentence):
         """
         jieba分词并去掉停用词
         """
@@ -134,18 +137,11 @@ class Searcher:
                 res.append(cut_w)
         return res
 
-    def option_search(self, option: str, weight: float):
-        """
-        对option分词，并查找
-        """
-        option_keywords = set(self._cut_without_stopwords(option))
-        return self.keywords_search(option, option_keywords, weight)
-
-    def keywords_search(self, origin_sentence, keywords: [str], weight: float) -> (dict, set):
+    def keywords_search(self, origin_sentence, keywords: [str], weight: float = 1.0) -> (dict, set):
         """从倒排索引中查找句子id并计算权重"""
         # e.g: key:weight {'1':0.3}
         if self.use_tfidf:
-            word_weight_dic = self.get_sentence_tfidf(origin_sentence)
+            word_weight_dic = self._get_sentence_tfidf(origin_sentence, keywords)
         else:
             word_weight_dic = self.word_weight_dic
 
@@ -155,13 +151,30 @@ class Searcher:
             if keyword not in self.keyword_id_mapping:
                 oov_keys.add(keyword)
                 continue
+            # keywords对应的句子id
             ids = self.keyword_id_mapping[keyword]
             for _id in ids:
-                key_id_weight_dict[_id] += word_weight_dic[_id] * weight
+                key_id_weight_dict[_id] += word_weight_dic[keyword] * weight
         return key_id_weight_dict, oov_keys
 
-    def corpus_search(self, corpus_id_weight_dict: dict) -> dict:
-        pass
+    def corpus_search(self, corpus_id_weight_dict: dict, exist_keys: [set]) -> dict:
+        """
+        从corpus中再抽取新的关键字
+        :param corpus_id_weight_dict: corpus索引列表
+        :param exist_keys: 已有的key，需去除
+        """
+        corpus_key_dict = collections.defaultdict(int)
+        exist_keys = [key for keys in exist_keys for key in keys]  # 扁平化列表
+        # 对corpus关键词频率计数
+        for _id in corpus_id_weight_dict:
+            for key in self.kb_cut_dic[_id]:
+                if key in exist_keys or key in self.stop_words:
+                    continue
+                corpus_key_dict[key] += 1
+        # 取新关键词前20个进行计算
+        corpus_key_dict = get_dict_topk(corpus_key_dict, 20)
+        new_kb_dict, _ = self.keywords_search(origin_sentence=None, keywords=corpus_key_dict.keys(), weight=1.0)
+        return get_dict_topk(new_kb_dict, 100)
 
     def get_keywords(self, question: str, background: str) -> (set, set):
         keywords = self.predict(question, background)
@@ -172,10 +185,10 @@ class Searcher:
     def cal_similarity(self, qa_str: str, kb_dict: [str]) -> dict:
         """
         计算相似度
-        :param qa_str: question+option
+        :param qa_str: question:option
         :param kb_dict: 解析库语句id
         """
-        qa_list = self._cut_without_stopwords(qa_str)
+        qa_list = self.cut_with_stopwords(qa_str)
         new_dict = collections.defaultdict(float)
         for k in kb_dict:
             # 选择合适的相似度算法，并附加权重
@@ -223,27 +236,33 @@ class Converter:
             qb_kb_dict = merge_dict(ques_doc_id_dict, back_doc_id_dict, limit=self.corpus_limit)
             # 2. option中查找
             for option in self.options:
-                qa_str = ques_dic[option]
+                qa_str = ques_dic[option]  # question:option
+                option_str = qa_str.split(':')[-1]
+                option_key = set(self.searcher.cut_with_stopwords(option_str))
                 ques_dic[option] = {}
                 # option关键词检索
-                option_doc_id_dict, option_oov = self.searcher.option_search(option=qa_str.split(':')[-1],
-                                                                             weight=self.weight['option'])
+                option_doc_id_dict, option_oov = self.searcher.keywords_search(origin_sentence=option_str,
+                                                                               keywords=option_key,
+                                                                               weight=self.weight['option'])
                 # 与上一步权重相加
-                kb_dict = merge_dict(option_doc_id_dict, qb_kb_dict, limit=3000)
+                kb_dict = merge_dict(option_doc_id_dict, qb_kb_dict, limit=self.knowledge_num * 200)
                 # 权重归一
                 norm_dict_value(kb_dict)
                 # 3. 计算question+option与句子的相似度, 同时结果与kb_dict相加
                 similarity_dict = self.searcher.cal_similarity(qa_str=qa_str, kb_dict=kb_dict)
-                # 获取topK个，得到第一步检索结果
+                # 获取topK个，权重归一,得到第一步检索结果
                 # ordered_kb = get_dict_topk(kb_dict, topk=self.knowledge_num*10)
                 simi_kb_dict = merge_dict(kb_dict, similarity_dict, limit=self.knowledge_num * 10)
-                # 权重归一，完成第一步检索
                 norm_dict_value(simi_kb_dict)
-                # TODO 4. 分析第一步检索结果，抽取额外的关键词继续检索
-                ordered_kb = self.searcher.corpus_search(simi_kb_dict)
-                # 5. 记录检索到的知识
-                ques_dic[option][qa_str] = [self.searcher.kb_raw_dic[k] for k in ordered_kb]
-                print(f"oov words: {[ques_oov, back_oov, option_oov]}")
+                # 4. 分析第一步检索结果，抽取额外的关键词继续检索
+                extend_kb_dict = self.searcher.corpus_search(simi_kb_dict, [ques_key, back_key, option_key])
+                norm_dict_value(extend_kb_dict)
+                # 5. 合并额外的知识
+                res_kb_dict = merge_dict(simi_kb_dict, extend_kb_dict, weight1=0.8, weight2=0.2,
+                                         limit=self.knowledge_num * 2)
+                # 记录检索到的知识
+                ques_dic[option][qa_str] = [self.searcher.kb_raw_dic[k] for k in res_kb_dict]
+                # print(f"oov words: {[ques_oov, back_oov, option_oov]}")
 
     def _get_ques_option(self, ques_dic):
         """
@@ -286,13 +305,13 @@ def generate_mapping_from_kb():
 
 def test():
     time_start = time.time()
-    # data_path = './data/test_data/beijingSimulation.json'
+    data_path = './data/test_data/beijingSimulation.json'
     # data_path = './data/raw/data_all/53_data.json'
-    # output_path = './output/search_result_.json'
-    file_index = 'F'
-    data_path = f'./data/test_data/test_{file_index}.json'
-    output_path = f'output/search_result_{file_index}.json'
-    searcher = Searcher(use_geo_vocabu=True, use_cut=True)
+    output_path = './output/search_result.json'
+    # file_index = 'F'
+    # data_path = f'./data/test_data/test_{file_index}.json'
+    # output_path = f'output/search_result_{file_index}.json'
+    searcher = Searcher(use_geo_vocabu=True, use_cut=True, use_tfidf=False)
     converter = Converter(data_path=data_path, output_path=output_path, has_answer=True, searcher=searcher,
                           knowledge_num=15)
     converter.process_data()
